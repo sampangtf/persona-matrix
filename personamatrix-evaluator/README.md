@@ -325,6 +325,8 @@ class Criterion:
 
 ### Available Personas
 
+The framework includes 6 predefined personas for legal document evaluation, each designed around specific user needs and usage patterns. The complete persona definitions and design rationale can be found in `src/models/persona.py`.
+
 Access predefined personas for legal document evaluation:
 
 ```python
@@ -332,15 +334,27 @@ from src.models.persona import get_all_personas, get_persona_names, get_persona
 
 # Get all available persona names
 persona_names = get_persona_names()
-# Returns: ['litigation_professional', 'legal_education', 'policy_researcher', 
-#          'civil_rights_researcher', 'general_public_legal_service', 'journalistic_coverage']
+# Returns: ['litigation_professional', 'legal_education', 'journalism_media', 
+#          'policy_advocacy', 'public_self_help', 'academic_research']
 
 # Get all persona objects
 all_personas = get_all_personas()
 
 # Get specific persona
 persona = get_persona("litigation_professional")
+print(persona.description)  # Civil rights litigators who need precise legal information
+print(persona.usage)        # How this persona uses legal summaries
 ```
+
+**Available Personas:**
+1. **Litigation Professional** - Civil rights litigators needing precise legal information for case preparation
+2. **Legal Education Community** - Law professors, teachers, and students who need educational content
+3. **Journalism & Media** - Court reporters and legal affairs editors who need accessible information
+4. **Policy & Advocacy Stakeholders** - Civil rights NGOs and think tanks focused on policy implications
+5. **Public Self-Help Users** - Pro se litigants and individuals representing themselves
+6. **Academic & Data-Science Researchers** - Empirical legal scholars focused on data analysis
+
+Each persona includes detailed informational needs, evaluation dimensions, and usage patterns. See `src/models/persona.py` for complete specifications.
 
 ### Utility Functions
 
