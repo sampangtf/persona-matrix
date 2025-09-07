@@ -1,0 +1,26 @@
+# LangChain core dependencies
+langchain-core>=0.1.0
+langchain-community>=0.0.10
+
+# LLM provider packages
+langchain-google-genai>=2.0.0  # For Gemini models (prioritized)
+langchain-openai>=0.0.5  # For OpenAI models (GPT-3.5, GPT-4, etc.)
+langchain-anthropic>=0.1.0  # For Claude models including Sonnet 4
+
+# Output parsing
+langchain>=0.1.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Pydantic for data validation and structured output
+pydantic>=2.0.0
+
+# Standard dependencies
+typing-extensions>=4.0.0
+
+# LangGraph for workflow orchestration
+langgraph>=0.0.40
+
+# Additional dependencies for code execution and testing
+pytest>=7.0.0

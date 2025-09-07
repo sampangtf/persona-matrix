@@ -1,0 +1,238 @@
+{
+  "task_key": "legal_summary_eval_gemini-2.5-flash",
+  "criteria": [
+    {
+      "name": "Audience-Appropriate Language",
+      "description": "Evaluates whether the language, terminology, and level of detail used in the summary are clear, understandable, and appropriate for the specified target user type, considering their presumed legal background and avoiding unnecessary jargon or oversimplification.",
+      "sub_criteria": [
+        {
+          "name": "Clarity of Terminology",
+          "description": "Assesses if legal terms are explained, simplified, or used appropriately for the target audience's presumed legal knowledge level, avoiding unexplained jargon or overly simplistic explanations where precision is needed.",
+          "accepted_values": [
+            "Excellent: All terminology is perfectly clear and appropriate for the audience.",
+            "Good: Most terminology is clear; minor instances of jargon or oversimplification exist but don't hinder understanding.",
+            "Fair: Several instances of inappropriate jargon or oversimplification, occasionally hindering understanding.",
+            "Poor: Terminology is consistently unclear or inappropriate, making the summary difficult to comprehend."
+          ]
+        },
+        {
+          "name": "Simplification/Complexity Balance",
+          "description": "Evaluates whether the overall level of detail and explanation is appropriate for the audience, striking a balance between providing sufficient context and avoiding unnecessary complexity or oversimplification.",
+          "accepted_values": [
+            "Optimal: Perfect balance of detail; neither too complex nor too simplistic.",
+            "Good: Generally well-balanced; minor instances of being slightly too complex or simplistic.",
+            "Fair: Noticeably leans towards being too complex or too simplistic, requiring extra effort from the reader.",
+            "Poor: Significantly too complex or simplistic, failing to meet the audience's needs for detail."
+          ]
+        },
+        {
+          "name": "Tone and Style",
+          "description": "Assesses if the tone and writing style of the summary are professional, objective, and suitable for a legal document intended for the specific target user type.",
+          "accepted_values": [
+            "Excellent: Professional, objective, and perfectly suited to the audience and context.",
+            "Good: Generally professional and objective, with very minor stylistic deviations.",
+            "Fair: Occasional lapses in professionalism or objectivity, or stylistic choices that slightly detract from utility.",
+            "Poor: Unprofessional, biased, or inappropriate tone/style, significantly undermining credibility."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Information Density and Brevity",
+      "description": "Assesses how efficiently the summary conveys essential information without unnecessary verbosity or being overly concise, considering the typical time constraints and specific information needs of the target user for their stated purpose.",
+      "sub_criteria": [
+        {
+          "name": "Conciseness (Lack of Redundancy)",
+          "description": "Determines if the summary contains any redundant phrases, sentences, or paragraphs that do not add new information or clarity, making it unnecessarily longer.",
+          "accepted_values": [
+            "Excellent: No discernible redundancy; every word serves a purpose.",
+            "Good: Minimal redundancy; very few instances of repeated information or superfluous words.",
+            "Fair: Moderate redundancy; some sentences or phrases could be removed without loss of meaning.",
+            "Poor: High redundancy; the summary is significantly longer due to repeated or unnecessary information."
+          ]
+        },
+        {
+          "name": "Completeness for Length",
+          "description": "Evaluates the balance between the summary's brevity and the amount of information it conveys. It assesses if the summary is concise without being excessively terse, ensuring that essential context for quick understanding is not omitted due to extreme brevity, nor is it overly verbose for a summary format.",
+          "accepted_values": [
+            "Optimal: Perfect balance of detail for its length; neither too terse nor too verbose.",
+            "Good: Generally well-balanced; minor instances of being slightly too terse or verbose for a summary.",
+            "Fair: Noticeably leans towards being too terse (omitting minor but helpful context) or too verbose (including some unnecessary detail for a summary).",
+            "Poor: Excessively terse, making it difficult to grasp basic understanding without significant effort, or excessively verbose, undermining its utility as a summary."
+          ]
+        },
+        {
+          "name": "Efficiency of Information Transfer",
+          "description": "Assesses how quickly and easily the target user can grasp the core information and key takeaways from the summary without excessive effort or re-reading.",
+          "accepted_values": [
+            "Excellent: Information is conveyed with maximum efficiency; core understanding is immediate.",
+            "Good: Information is largely efficient; occasional points require slight re-reading.",
+            "Fair: Information transfer is somewhat inefficient; requires moderate effort to grasp core points.",
+            "Poor: Information transfer is highly inefficient; significant effort and multiple readings are needed for comprehension."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Purpose-Driven Completeness",
+      "description": "Determines if the summary includes all the necessary factual and legal points required for the target user to achieve their stated objective (e.g., understand the case's core, identify key holdings, prepare for a discussion) without requiring them to consult the full case or external resources.",
+      "sub_criteria": [
+        {
+          "name": "Coverage of Key Facts",
+          "description": "Checks if all essential factual details (e.g., parties, dates, events leading to the case, procedural history relevant to the holding) necessary for the target user's purpose are included.",
+          "accepted_values": [
+            "Excellent: All key factual details relevant to the purpose are present and sufficient.",
+            "Good: Most key factual details are present; very minor, non-critical omissions exist.",
+            "Fair: Some important factual details are missing, potentially impacting the user's understanding of the context.",
+            "Poor: Significant key factual details are missing, making the summary largely unhelpful for its purpose."
+          ]
+        },
+        {
+          "name": "Coverage of Legal Holdings/Principles",
+          "description": "Evaluates if all critical legal holdings, principles, and reasoning (e.g., ratio decidendi, key statutes, precedents) necessary for the target user's purpose are accurately and comprehensively presented.",
+          "accepted_values": [
+            "Excellent: All critical legal holdings and principles relevant to the purpose are fully covered.",
+            "Good: Most critical legal holdings and principles are covered; minor nuances or less central points may be omitted.",
+            "Fair: Important legal holdings or principles are missing or vaguely described, hindering the user's legal understanding.",
+            "Poor: Critical legal holdings or principles are absent or fundamentally misunderstood, rendering the summary misleading or useless."
+          ]
+        },
+        {
+          "name": "Self-Sufficiency for Purpose",
+          "description": "Assesses whether the summary provides enough standalone information for the target user to achieve their stated objective without needing to consult the full case or external legal resources.",
+          "accepted_values": [
+            "Excellent: Completely self-sufficient for the stated purpose; no external consultation needed.",
+            "Good: Mostly self-sufficient; very minor, non-critical details might be enhanced by external consultation but not required.",
+            "Fair: Requires moderate external consultation to fully achieve the stated purpose.",
+            "Poor: Heavily reliant on external consultation; fails to provide sufficient information to achieve the purpose independently."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Key Information Relevance",
+      "description": "Evaluates whether the summary accurately identifies and emphasizes the most crucial legal principles, case facts, arguments, and outcomes that are pertinent to the target user's likely area of focus or specific need, avoiding inclusion of irrelevant or distracting details.",
+      "sub_criteria": [
+        {
+          "name": "Identification of Core Case Elements",
+          "description": "Evaluates whether the summary clearly identifies and includes the fundamental structural and substantive components of a legal case (e.g., case name, citation, court, date, primary issue(s), core facts, holding, and reasoning) that are crucial for a target user to quickly understand the case's essence and relevance.",
+          "accepted_values": [
+            "Excellent: All fundamental case components are clearly identified, present, and relevant to the user's context.",
+            "Good: Most fundamental case components are identified and present; very minor, less critical elements might be missing or less clearly identified.",
+            "Fair: Several fundamental case components are missing or not adequately identified, reducing the summary's immediate utility.",
+            "Poor: Many fundamental case components are missing or obscured, severely impacting the understanding of the case's essence and relevance."
+          ]
+        },
+        {
+          "name": "Exclusion of Irrelevant Data",
+          "description": "Assesses whether the summary effectively filters out details that are not pertinent to the target user's likely area of focus or specific need, preventing cognitive overload and distraction.",
+          "accepted_values": [
+            "Excellent: Completely free of irrelevant or distracting details.",
+            "Good: Contains minimal irrelevant details that do not significantly detract from focus.",
+            "Fair: Includes some irrelevant details that occasionally distract or slightly dilute the focus.",
+            "Poor: Contains significant irrelevant details, making it difficult to identify the core relevant information."
+          ]
+        },
+        {
+          "name": "Emphasis on User-Specific Needs",
+          "description": "Evaluates if the summary prioritizes and emphasizes the aspects of the case (e.g., specific legal tests, dissenting opinions, factual nuances) that are most relevant to the target user's unique purpose or area of interest.",
+          "accepted_values": [
+            "Excellent: Clearly emphasizes all aspects most critical to the user's specific needs.",
+            "Good: Mostly emphasizes user-specific needs, with only minor areas lacking emphasis.",
+            "Fair: Some critical user-specific needs are not adequately emphasized, requiring the user to search for them.",
+            "Poor: Fails to emphasize key information relevant to the user's specific needs, making the summary less targeted."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Structural Clarity and Navigability",
+      "description": "Assesses the organization, formatting (e.g., headings, bullet points), and logical flow of the summary, making it easy for the target user to quickly locate specific information, follow the legal arguments, and understand the progression of the case.",
+      "sub_criteria": [
+        {
+          "name": "Logical Flow and Organization",
+          "description": "Evaluates if the information is presented in a coherent, logical sequence that aids understanding of the case's progression and legal arguments.",
+          "accepted_values": [
+            "Excellent: Perfectly logical and coherent flow; easy to follow the narrative and arguments.",
+            "Good: Mostly logical flow; very minor deviations that do not significantly impede understanding.",
+            "Fair: Some breaks in logical flow or inconsistent organization, making it occasionally difficult to follow.",
+            "Poor: Disorganized and illogical flow, making the summary confusing and hard to interpret."
+          ]
+        },
+        {
+          "name": "Formatting and Readability",
+          "description": "Assesses the effective use of formatting elements (e.g., headings, subheadings, bullet points, paragraph breaks, bold text) to enhance readability, scannability, and visual appeal.",
+          "accepted_values": [
+            "Excellent: Optimal use of formatting for maximum readability and scannability.",
+            "Good: Generally good formatting; minor improvements could enhance readability further.",
+            "Fair: Inconsistent or insufficient use of formatting, making the text denser and less scannable.",
+            "Poor: Lack of proper formatting makes the summary a wall of text, severely impacting readability."
+          ]
+        },
+        {
+          "name": "Ease of Information Retrieval",
+          "description": "Determines how quickly and effortlessly a target user can locate specific pieces of information (e.g., holding, specific facts, court decision) within the summary.",
+          "accepted_values": [
+            "Excellent: Specific information can be located almost instantly.",
+            "Good: Specific information is easily locatable with minimal scanning.",
+            "Fair: Locating specific information requires some effort and careful reading.",
+            "Poor: Extremely difficult to locate specific information; requires thorough re-reading."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Internal Factual Consistency",
+      "description": "Checks whether all facts, dates, names, legal principles, and their applications presented within the summary are consistent with each other, without contradictions or conflicting statements that would confuse the reader or undermine reliability.",
+      "sub_criteria": [
+        {
+          "name": "Consistency of Factual Details",
+          "description": "Verifies that all factual details (e.g., names, dates, amounts, events, parties involved) are consistent throughout the summary, without any contradictions or discrepancies.",
+          "accepted_values": [
+            "Excellent: All factual details are perfectly consistent throughout the summary.",
+            "Good: Minor, inconsequential factual inconsistencies that do not impact understanding.",
+            "Fair: Noticeable factual inconsistencies that may cause slight confusion or require re-reading.",
+            "Poor: Significant factual contradictions that undermine the summary's reliability."
+          ]
+        },
+        {
+          "name": "Consistency of Legal Principles/Holdings",
+          "description": "Ensures that stated legal principles, rules, and holdings are consistently presented and applied throughout the summary, without conflicting interpretations or outcomes.",
+          "accepted_values": [
+            "Excellent: All legal principles and holdings are consistently presented and applied.",
+            "Good: Minor, non-critical inconsistencies in legal phrasing that do not alter meaning.",
+            "Fair: Some inconsistencies in legal principles or holdings that may cause confusion.",
+            "Poor: Major contradictions in legal principles or holdings, rendering the summary misleading."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Accuracy against Source",
+      "description": "Evaluates the fidelity of the summary's content (facts, legal principles, holdings, reasoning) to the original legal case document it summarizes, ensuring no misrepresentation or factual errors relative to the source. This is crucial for the utility of the summary, as users rely on its truthful representation of the original case.",
+      "sub_criteria": [
+        {
+          "name": "Factual Accuracy",
+          "description": "Assesses whether all factual details (e.g., parties, dates, events, procedural history) presented in the summary precisely match those in the original legal case document.",
+          "accepted_values": [
+            "Excellent: All factual details are 100% accurate and consistent with the original source.",
+            "Good: Very minor, non-critical factual discrepancies (e.g., slight date variations, minor name misspelling) that do not alter the meaning or impact understanding.",
+            "Fair: Noticeable factual errors or omissions that could potentially mislead or cause minor misunderstanding of the case's context.",
+            "Poor: Significant factual inaccuracies or omissions that fundamentally misrepresent the case or lead to incorrect conclusions."
+          ]
+        },
+        {
+          "name": "Legal Accuracy (Holdings, Reasoning, Principles)",
+          "description": "Evaluates whether the summary accurately reflects the legal holdings, reasoning, statutes, precedents, and principles as presented and applied in the original legal case document, avoiding misinterpretations or misstatements of law.",
+          "accepted_values": [
+            "Excellent: All legal holdings, reasoning, and principles are precisely and accurately represented as per the original source.",
+            "Good: Minor nuances or less central legal points might be slightly simplified or paraphrased, but the core legal meaning and outcome remain accurate.",
+            "Fair: Some important legal holdings, reasoning, or principles are misinterpreted, misstated, or omitted, potentially leading to a flawed understanding of the law.",
+            "Poor: Critical legal holdings, reasoning, or principles are fundamentally inaccurate, misleading, or entirely absent, rendering the summary legally unsound."
+          ]
+        }
+      ]
+    }
+  ],
+  "timestamp": "2025-08-11T00:31:43.747044"
+}

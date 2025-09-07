@@ -1,0 +1,884 @@
+{
+  "task_key": "legal_summary_eval_gpt-5-mini-medium-reasoning",
+  "criteria": [
+    {
+      "name": "Relevance to Target Audience",
+      "description": "Evaluates whether the summary is purposefully tailored to the intended user type(s) (e.g., litigators, in-house counsel, judges, law students, non-lawyers) by matching level of detail, framing, and tone to their needs and decisions. This criterion judges the summary's fit for its declared or implicit audience based solely on the content presented.",
+      "sub_criteria": [
+        {
+          "name": "Audience Identification",
+          "description": "Whether the summary states or clearly signals which user type(s) it targets.",
+          "accepted_values": [
+            "Explicitly stated and consistent",
+            "Implied consistently but not stated",
+            "Only partially implied; mixed signals",
+            "No indication of intended audience"
+          ]
+        },
+        {
+          "name": "Level-of-Detail Appropriateness",
+          "description": "Whether the depth and granularity of facts, law, and reasoning match the presumed expertise and needs of the target audience.",
+          "accepted_values": [
+            "Detail level well-matched (neither over- nor under-detailed)",
+            "Slight mismatch (minor trimming or elaboration needed)",
+            "Clear mismatch in places (notable missing or excessive detail)",
+            "Overall inappropriate level (too superficial or too technical)"
+          ]
+        },
+        {
+          "name": "Framing and Emphasis",
+          "description": "Whether the summary highlights aspects most important to the audience (e.g., practical consequences for business users, precedential effects for litigators).",
+          "accepted_values": [
+            "Emphasis consistently aligns with audience priorities",
+            "Generally appropriate emphasis with a few omissions",
+            "Mixed emphasis; several audience-relevant points underplayed",
+            "Emphasis mismatched to audience priorities"
+          ]
+        },
+        {
+          "name": "Tone Suitability",
+          "description": "Whether the summary's tone (neutral, advisory, explanatory) is appropriate for the audience and use case.",
+          "accepted_values": [
+            "Tone appropriately matched to audience and use case",
+            "Minor tonal mismatches but generally suitable",
+            "Tone occasionally inappropriate for audience expectations",
+            "Tone largely unsuitable (e.g., overly advisory for a neutral summary)"
+          ]
+        },
+        {
+          "name": "Use-case Specificity",
+          "description": "Whether the summary addresses the specific practical scenarios in which a user would rely on it (e.g., quick triage, litigation memo, client advisory, classroom teaching).",
+          "accepted_values": [
+            "Clearly tailored to one or more specific use-cases",
+            "Generally useful across common use-cases with minor gaps",
+            "Only broadly applicable; lacks situational detail",
+            "Not helpful for any identifiable use-case"
+          ]
+        },
+        {
+          "name": "Decision-impact Relevance",
+          "description": "Whether the information provided supports the kinds of decisions the target audience typically needs to make (e.g., whether to litigate, settle, change policy, pursue further research).",
+          "accepted_values": [
+            "Directly supports likely user decisions",
+            "Provides useful input but requires additional tailoring",
+            "Limited decision support; mostly informational",
+            "Not actionable for decision-making"
+          ]
+        },
+        {
+          "name": "Domain Focus Alignment (Litigation vs. Regulatory vs. Transactional)",
+          "description": "Whether the summary's content and emphasis fit the relevant legal domain (e.g., addresses precedential tests for litigators, compliance steps for regulatory audiences, contractual drafting implications for transactional counsel).",
+          "accepted_values": [
+            "Clear alignment with the relevant legal domain",
+            "Partial alignment; some domain-specific aspects missing",
+            "Generic legal framing without domain-specific focus",
+            "Misaligned domain focus for the intended audience"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Completeness of Core Case Elements",
+      "description": "Assesses whether the summary includes the essential structural elements (e.g., parties, caption, court, jurisdiction, dates, procedural posture, issues, holdings, reasoning, disposition) necessary for a reader to understand the case from the summary alone.",
+      "sub_criteria": [
+        {
+          "name": "Parties and Caption",
+          "description": "Presence and clarity of the parties' names and their roles (plaintiff/appellant/defendant/respondent) and the case caption.",
+          "accepted_values": [
+            "Present and roles clearly identified",
+            "Present but roles or relationships partly unclear",
+            "Parties named without roles",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Court and Jurisdiction",
+          "description": "Identification of the deciding court and the jurisdictional context relevant to applicability.",
+          "accepted_values": [
+            "Court and jurisdiction explicitly stated and clear",
+            "Court named; jurisdiction implied or partially stated",
+            "Only implicit cues to forum present",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Decision Date and Procedural Posture",
+          "description": "Inclusion of the decision date and procedural posture (how case reached the deciding court).",
+          "accepted_values": [
+            "Date and posture clearly stated",
+            "Date present but posture partially ambiguous",
+            "Only one of date or posture present",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Issues Presented",
+          "description": "Clear statement of the legal question(s) the court decided.",
+          "accepted_values": [
+            "Issues precisely and succinctly stated",
+            "Issues present but somewhat ambiguous or verbose",
+            "Issues only implied, not clearly articulated",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Holding(s)",
+          "description": "Clear statement of the court's holding(s) as the legal rule(s) decided.",
+          "accepted_values": [
+            "Holdings explicitly and clearly stated",
+            "Holdings present but could be clearer or more concise",
+            "Holdings implied or fragmented",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Summary of Reasoning",
+          "description": "Concise capture of the court's core reasoning and principal bases for the holding (major steps, key precedent reliance, statutory interpretation, policy considerations).",
+          "accepted_values": [
+            "Reasoning clearly summarized and traceable to holding",
+            "Reasoning present but simplified; main links visible",
+            "Reasoning fragmentary or missing key links",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Disposition and Remedies",
+          "description": "Statement of the court's final disposition (affirmed/reversed/remanded) and any relief or remedial orders imposed.",
+          "accepted_values": [
+            "Disposition and any remedies clearly described",
+            "Disposition clear; remedies partially described or implicit",
+            "Disposition implied but not explicit",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Procedural History (Concise)",
+          "description": "Whether prior proceedings and essential rulings below are summarized sufficiently for comprehension of the posture.",
+          "accepted_values": [
+            "Concise, coherent procedural history provided",
+            "Basic procedural history included but some gaps",
+            "Procedural history cursory and incomplete",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Standard of Review",
+          "description": "Whether the summary identifies the standard of review applied by the court (e.g., de novo, abuse of discretion), as this affects the strength and scope of holdings.",
+          "accepted_values": [
+            "Standard of review identified and linked to the analysis",
+            "Standard noted but not clearly connected to conclusions",
+            "Standard implied but not explicitly stated",
+            "No mention of standard of review"
+          ]
+        },
+        {
+          "name": "Statutes/Regulations/Key Authorities Identified",
+          "description": "Whether the summary lists the principal statutes, regulations, or authorities that the court applied or interpreted.",
+          "accepted_values": [
+            "Key statutes/regulations/authorities clearly identified",
+            "Some authorities noted but not emphasized",
+            "Only general references to statutory/regulatory framework",
+            "No mention of applicable statutes/regulations"
+          ]
+        },
+        {
+          "name": "Factual Background Sufficiency",
+          "description": "Whether the factual narrative includes the facts necessary to understand why the court decided as it did (material events, critical facts, contractual terms where relevant).",
+          "accepted_values": [
+            "Factual background sufficient and focused on material facts",
+            "Basic facts included but some important details omitted",
+            "Factual narrative incomplete; reader must infer key facts",
+            "Insufficient factual background"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Internal Consistency and Factual Clarity",
+      "description": "Assesses internal coherence of facts, dates, party references, and defined terms within the summary (i.e., free from contradictions or ambiguous references), without comparing to external sources.",
+      "sub_criteria": [
+        {
+          "name": "Consistency of Core Facts",
+          "description": "Whether names, dates, outcomes, and other core facts are presented consistently across the summary.",
+          "accepted_values": [
+            "Core facts consistent everywhere",
+            "Minor factual inconsistencies present but not material",
+            "Notable contradictions requiring reconciliation",
+            "Major contradictions that undermine comprehension"
+          ]
+        },
+        {
+          "name": "Clarity of References and Pronouns",
+          "description": "Whether references to parties, prior rulings, or entities avoid ambiguous pronouns and unclear antecedents.",
+          "accepted_values": [
+            "References and pronouns unambiguous",
+            "Occasional ambiguity but inferable from context",
+            "Frequent ambiguous references requiring re-reading",
+            "Ambiguous references throughout obstructing clarity"
+          ]
+        },
+        {
+          "name": "Chronology and Timeline Clarity",
+          "description": "Whether the sequence of events and dates are presented in a clear and logical order.",
+          "accepted_values": [
+            "Timeline clear and chronological",
+            "Mostly chronological with minor ordering issues",
+            "Timeline scattered; reader must infer order",
+            "No clear chronology; dates/events confusing"
+          ]
+        },
+        {
+          "name": "Term and Definition Consistency",
+          "description": "Whether specialized labels or defined terms are used consistently and not redefined within the summary.",
+          "accepted_values": [
+            "Terms consistently used and defined where necessary",
+            "Minor inconsistencies that do not impede understanding",
+            "Notable inconsistent usage causing confusion",
+            "Terms redefined or used inconsistently throughout"
+          ]
+        },
+        {
+          "name": "Citation and Reference Consistency",
+          "description": "Whether internal references to cases, statutes, or exhibits are consistently formatted and point to the same items throughout the summary.",
+          "accepted_values": [
+            "Citations/references consistent and unambiguous",
+            "Minor citation format inconsistencies but referents clear",
+            "Frequent citation inconsistencies requiring cross-checking",
+            "Citations/references inconsistent and confusing"
+          ]
+        },
+        {
+          "name": "Numeric and Quantitative Consistency",
+          "description": "Whether numerical data (damages amounts, percentages, timelines) are consistent and free from conflicting figures.",
+          "accepted_values": [
+            "Numeric data consistent and clearly presented",
+            "Minor numeric discrepancies that do not affect understanding",
+            "Notable numeric inconsistencies present",
+            "Numeric data conflicting and undermining clarity"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Clarity and Precision of Issues, Holdings, and Rules",
+      "description": "Evaluates whether the summary communicates the controlling legal question(s), the court's holding(s), and any abstracted rule or test precisely and unambiguously, distinguishing holding from dicta and facts.",
+      "sub_criteria": [
+        {
+          "name": "Issue Formulation",
+          "description": "Precision and concision of the stated legal question(s), including appropriate scope qualifiers.",
+          "accepted_values": [
+            "Issue(s) precisely and succinctly stated",
+            "Issue(s) present but somewhat wordy or ambiguous",
+            "Issue(s) implied rather than explicitly stated",
+            "Issue(s) unclear or absent"
+          ]
+        },
+        {
+          "name": "Holding Statement Precision",
+          "description": "Whether the holding is rendered as a clear rule with scope/limits, not conflated with dicta or mere factual description.",
+          "accepted_values": [
+            "Holding stated as a clear rule with scope qualifiers",
+            "Holding present but lacks clear scope or mixes with facts",
+            "Holding ambiguous or muddled with narrative",
+            "No discernible holding statement"
+          ]
+        },
+        {
+          "name": "Rule/Test Abstraction",
+          "description": "Whether the summary abstracts the holding into a usable rule or test when appropriate to enable application in other contexts.",
+          "accepted_values": [
+            "Rule/test clearly abstracted and usable",
+            "Rule stated but needs refinement to reuse",
+            "Only high-level or vague rule provided",
+            "No usable rule or test presented"
+          ]
+        },
+        {
+          "name": "Distinguishing and Limits Noted",
+          "description": "Whether the summary identifies limits to the holding and cautions against overgeneralization.",
+          "accepted_values": [
+            "Limits appropriately identified and explained",
+            "Some limits noted but could be clearer",
+            "Tendency to overgeneralize; limits underemphasized",
+            "Overbroad presentation without limits"
+          ]
+        },
+        {
+          "name": "Separation of Dicta vs. Holding",
+          "description": "Whether the summary explicitly indicates which parts of the opinion are binding holding and which are dicta or illustrative commentary.",
+          "accepted_values": [
+            "Dicta vs. holding clearly distinguished",
+            "Some attempt to separate but not fully clear",
+            "Dicta and holding often conflated",
+            "No distinction made between dicta and holding"
+          ]
+        },
+        {
+          "name": "Scope Qualifiers and Temporal Limits",
+          "description": "Whether the summary notes any temporal or fact-specific qualifiers (e.g., applies to particular contract types, timeframes).",
+          "accepted_values": [
+            "Scope qualifiers and temporal limits clearly reported",
+            "Some qualifiers present but could be clearer",
+            "Qualifiers only implied",
+            "No qualifiers noted though relevant"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Accuracy of Reasoning Representation",
+      "description": "Judges whether the summary preserves the structure and principal logical steps of the court's analysis (key premises, how precedent/statutes were treated, and consideration of counterarguments) as presented in the summary itself.",
+      "sub_criteria": [
+        {
+          "name": "Logical Flow",
+          "description": "Whether the summary presents the court's argument in a coherent, stepwise manner that a reader can follow.",
+          "accepted_values": [
+            "Logical, stepwise presentation",
+            "Mostly logical with minor gaps",
+            "Fragmented; reader must infer several links",
+            "Illogical or incoherent presentation"
+          ]
+        },
+        {
+          "name": "Treatment of Precedent and Authorities",
+          "description": "Whether the summary identifies which prior decisions or statutes the court relied on, distinguished, or declined to follow, and explains their role in the analysis as presented in the summary.",
+          "accepted_values": [
+            "Precedent/statute use clearly identified and explained",
+            "Key authorities mentioned though role only partly explained",
+            "Authorities cited without clear explanation of relevance",
+            "No meaningful coverage of precedent/statute treatment"
+          ]
+        },
+        {
+          "name": "Consideration of Counterarguments or Separate Opinions",
+          "description": "Whether opposing arguments, concurrences, or dissents are summarized when relevant to the outcome or reasoning.",
+          "accepted_values": [
+            "Counterarguments and separate opinions captured and contextualized",
+            "Major counterarguments or dissent noted but not fully explored",
+            "Only cursory mention of opposing views",
+            "No mention of counterarguments or separate opinions when relevant"
+          ]
+        },
+        {
+          "name": "Explanation of Interpretive Approach",
+          "description": "Whether the summary indicates and summarizes the interpretive method (e.g., textualist, purposivist) or policy considerations the court used.",
+          "accepted_values": [
+            "Interpretive approach and policy rationale clearly explained",
+            "Approach noted but explanation brief",
+            "Interpretive approach referenced without useful explanation",
+            "No discussion of interpretive rationale where relevant"
+          ]
+        },
+        {
+          "name": "Assumptions and Inference Transparency",
+          "description": "Whether the summary distinguishes premises the court assumed from factual findings and whether inferential leaps are reported transparently.",
+          "accepted_values": [
+            "Assumptions and inferences clearly flagged and explained",
+            "Some assumptions noted; a few inferences unclarified",
+            "Many inferential steps implicit and not identified",
+            "Assumptions/inferences obscured or misrepresented"
+          ]
+        },
+        {
+          "name": "Relative Weighting of Factors",
+          "description": "Whether the summary communicates which factors the court treated as dispositive versus those given lesser weight.",
+          "accepted_values": [
+            "Relative weighting clearly indicated",
+            "Major factors identifiable though weighting not explicit",
+            "Weighting ambiguous across several factors",
+            "No sense of factor weighting provided"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Practical Implications and Actionability",
+      "description": "Assesses whether the summary identifies practical consequences, recommended actions, or watchpoints for the intended audience and whether suggested next steps are realistic given the information in the summary (without requiring external verification).",
+      "sub_criteria": [
+        {
+          "name": "Specific Recommended Actions",
+          "description": "Whether the summary proposes concrete steps (e.g., research follow-ups, contract edits, litigation tactics) appropriate to the information given.",
+          "accepted_values": [
+            "Specific, practical actions clearly recommended",
+            "Some actionable suggestions that need tailoring",
+            "Vague suggestions of limited use",
+            "No recommended actions"
+          ]
+        },
+        {
+          "name": "Audience-specific Guidance",
+          "description": "Whether implications and recommended actions are tailored to different user roles where appropriate (e.g., in-house counsel vs. plaintiff's counsel).",
+          "accepted_values": [
+            "Guidance clearly segmented by audience role",
+            "General guidance with some audience notes",
+            "Guidance generic and not role-specific",
+            "No audience-specific guidance"
+          ]
+        },
+        {
+          "name": "Risk Indicators and Prioritization",
+          "description": "Whether the summary highlights which issues pose higher practical risk or priority and suggests monitoring or mitigation priorities.",
+          "accepted_values": [
+            "Clear risk indicators and prioritized actions provided",
+            "Some risk commentary but lacking prioritization",
+            "General risk remarks without prioritization",
+            "No mention of risks or priorities"
+          ]
+        },
+        {
+          "name": "Suggested Research and Resources",
+          "description": "Whether the summary recommends next-step research areas or authorities to consult (as internal suggestions in the summary).",
+          "accepted_values": [
+            "Clear, prioritized research pointers and authorities suggested",
+            "Some useful research leads provided",
+            "Only general research suggestions without specifics",
+            "No research suggestions"
+          ]
+        },
+        {
+          "name": "Compliance and Policy Implications",
+          "description": "Whether the summary explicitly notes likely compliance, policy, or operational consequences for organizations or regulated entities.",
+          "accepted_values": [
+            "Clear, concrete compliance/policy implications provided",
+            "Some implications noted but lacking operational detail",
+            "High-level implications only",
+            "No compliance or policy implications mentioned"
+          ]
+        },
+        {
+          "name": "Confidence and Uncertainty Signaling",
+          "description": "Whether the summary indicates the degree of confidence or uncertainty about practical implications (e.g., tentative guidance vs. firm conclusion) without making external predictions.",
+          "accepted_values": [
+            "Confidence levels or caveats clearly signaled for recommendations",
+            "Some uncertainty noted but not quantified or contextualized",
+            "Uncertainty rarely mentioned despite relevance",
+            "Recommendations presented without any uncertainty signaling"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jurisdictional and Precedential Context (as Stated)",
+      "description": "Evaluates whether the summary itself clearly states the jurisdictional reach, whether the decision is described as binding or persuasive for particular forums, and any explicit limiting language reported in the opinion (assessment confined to whether the summary reports these items).",
+      "sub_criteria": [
+        {
+          "name": "Binding vs. Persuasive Status (Reported)",
+          "description": "Whether the summary states whether the decision is binding or merely persuasive for likely reader forums.",
+          "accepted_values": [
+            "Status explicitly reported and clearly phrased",
+            "Status mentioned but with ambiguity",
+            "Status only implied through court name or context",
+            "No mention of status"
+          ]
+        },
+        {
+          "name": "Geographic and Hierarchical Scope",
+          "description": "Whether the summary states the geographic and hierarchical limits (e.g., state supreme court vs. federal circuit) of the case's authority.",
+          "accepted_values": [
+            "Geographic and hierarchical scope explicitly stated",
+            "Some scope information provided but incomplete",
+            "Scope only implied by court name or omitted",
+            "No scope information"
+          ]
+        },
+        {
+          "name": "Express Limiting Language from Opinion (Reported)",
+          "description": "Whether the summary reports any explicit limiting language the court used (e.g., narrow factual basis, limited holding).",
+          "accepted_values": [
+            "Explicit limits from the opinion clearly reported and explained",
+            "Some limits reported but not fully articulated",
+            "Limits exist in summary only implicitly",
+            "No reporting of limits when relevant"
+          ]
+        },
+        {
+          "name": "Precedential Character Commentary (Reported)",
+          "description": "Whether the summary includes any internal commentary on how the decision is likely to be treated (as reported or stated in the opinion). This assesses reporting, not predictive accuracy.",
+          "accepted_values": [
+            "Precedential commentary reported and contextualized",
+            "Some commentary present but tentative",
+            "Brief or unclear commentary reported",
+            "No precedential commentary included"
+          ]
+        },
+        {
+          "name": "Subsequent History / Treatment (If Reported)",
+          "description": "Whether the summary reports any subsequent procedural history or later treatment of the decision that the author included (e.g., rehearing, cert. petition, citations in later opinions).",
+          "accepted_values": [
+            "Subsequent history/treatment reported and contextualized",
+            "Some later history noted but incomplete",
+            "Only cursory mention of subsequent treatment",
+            "No subsequent history reported"
+          ]
+        },
+        {
+          "name": "Vertical Stare Decisis and Bindingness Nuances",
+          "description": "Whether the summary explains nuances of bindingness within multi-tiered courts (e.g., panel vs. en banc, state court interpreting federal law) when relevant.",
+          "accepted_values": [
+            "Nuances of bindingness clearly explained",
+            "Some nuance noted but could be clearer",
+            "Nuances implied but not explained",
+            "No discussion of bindingness nuances"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Citation Completeness and Traceability",
+      "description": "Assesses whether the summary provides sufficient citation and locator information (case citation, reporter, docket number, pinpoint cites, paragraph numbers, or links) to enable a reader to retrieve the underlying opinion from the summary alone.",
+      "sub_criteria": [
+        {
+          "name": "Full Case Citation",
+          "description": "Presence of the full official citation (case name, reporter/neutral citation, volume/page or paragraph numbers, year).",
+          "accepted_values": [
+            "Complete official citation provided",
+            "Mostly complete (minor elements missing)",
+            "Only case name and year or partial cite present",
+            "Absent"
+          ]
+        },
+        {
+          "name": "Pinpoint or Paragraph Citations",
+          "description": "Whether pinpoint citations for key holdings or direct quotations are provided when useful.",
+          "accepted_values": [
+            "Pinpoint citations provided for key points/quotations",
+            "Pinpoints provided selectively; some useful ones missing",
+            "No pinpoints though some would help",
+            "No pinpoint citations"
+          ]
+        },
+        {
+          "name": "Docket Numbers and Links",
+          "description": "Whether docket numbers, decision IDs, or working links to the opinion or court docket are included.",
+          "accepted_values": [
+            "Docket numbers and working links included",
+            "Either docket number or link present (not both)",
+            "Only a basic reporter citation without docket/link",
+            "No docket/link information"
+          ]
+        },
+        {
+          "name": "Machine-readable Metadata",
+          "description": "Whether machine-readable identifiers or metadata (stable URLs, identifiers) are provided to support automated retrieval or integration.",
+          "accepted_values": [
+            "Machine-readable identifiers or stable links included",
+            "Some metadata present but incomplete",
+            "No machine-readable metadata though manual retrieval possible",
+            "No metadata or easy retrieval path"
+          ]
+        },
+        {
+          "name": "Citation Format Consistency",
+          "description": "Whether citations follow a consistent, recognizable format (e.g., Bluebook, neutral citation) to aid quick retrieval and reduce ambiguity.",
+          "accepted_values": [
+            "Citations consistently follow a recognized format",
+            "Mostly consistent with occasional deviations",
+            "Inconsistent citation formats that cause mild confusion",
+            "Citation formats inconsistent and confusing"
+          ]
+        },
+        {
+          "name": "Vendor/Platform Locators",
+          "description": "Whether vendor-specific identifiers or platform locators (e.g., Westlaw/LEXIS/other IDs) are provided when relevant for the intended audience.",
+          "accepted_values": [
+            "Vendor/platform locators included and correct",
+            "Some vendor locators present but incomplete",
+            "No vendor locators though might be useful",
+            "No platform-specific locators provided"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neutrality, Balance, and Editorial Objectivity",
+      "description": "Assesses whether the summary maintains an objective, non-advocacy tone appropriate for a case summary, and whether any opinions or recommendations are clearly labeled as such.",
+      "sub_criteria": [
+        {
+          "name": "Tone Objectivity",
+          "description": "Whether overall language is neutral and descriptive rather than persuasive or promotional.",
+          "accepted_values": [
+            "Consistently objective and neutral",
+            "Mostly neutral; occasional subjective phrasing",
+            "Noticeable subjective or persuasive language",
+            "Predominantly advocacy or promotional tone"
+          ]
+        },
+        {
+          "name": "Unlabeled Editorial Assertions",
+          "description": "Whether normative judgments or conclusions not directly supported by the summary's text are presented without being labeled as opinion.",
+          "accepted_values": [
+            "No unlabeled editorial assertions; opinions labeled",
+            "Minor editorial statements clearly identified as opinion",
+            "Several editorial assertions not clearly labeled",
+            "Frequent unsupported assertions presented as fact"
+          ]
+        },
+        {
+          "name": "Balance in Describing Parties' Positions",
+          "description": "Whether competing arguments or positions are presented fairly and without obvious slant.",
+          "accepted_values": [
+            "Parties' positions presented impartially and balanced",
+            "Generally balanced with small slant toward one side",
+            "Noticeable imbalance favoring one party",
+            "One-sided portrayal undermining impartiality"
+          ]
+        },
+        {
+          "name": "Disclosure of Author Perspective or Sponsorship",
+          "description": "Whether the summary discloses author affiliation, sponsorship, or potential conflicts that could affect neutrality.",
+          "accepted_values": [
+            "Author/sponsorship disclosed and any conflicts noted",
+            "Affiliation present but conflict implications not discussed",
+            "Affiliation absent though could be relevant",
+            "No disclosure of authorship or sponsorship"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Readability and Accessibility",
+      "description": "Measures linguistic clarity, sentence and paragraph structure, appropriate use and explanation of legal terms for the target audience, and whether formatting supports quick comprehension.",
+      "sub_criteria": [
+        {
+          "name": "Sentence and Paragraph Clarity",
+          "description": "Assesses sentence length, punctuation, and paragraph structure for ease of reading.",
+          "accepted_values": [
+            "Sentences and paragraphs clear and well-structured",
+            "Occasional long/complex sentences but overall readable",
+            "Frequent long/complex sentences that require concentration",
+            "Overly convoluted or terse sentences impeding comprehension"
+          ]
+        },
+        {
+          "name": "Appropriate Use and Explanation of Legal Terms",
+          "description": "Whether legal jargon is used accurately and either explained for lay readers or left precise for legal professionals.",
+          "accepted_values": [
+            "Jargon used appropriately with clear explanations where needed",
+            "Some jargon present; mostly understandable to intended audience",
+            "Heavy jargon likely to confuse non-experts",
+            "Inaccurate/gratuitous jargon that obscures meaning"
+          ]
+        },
+        {
+          "name": "Plain-language Clarifications (when relevant)",
+          "description": "For non-legal audiences, whether key concepts are translated into plain language or illustrated with helpful analogies.",
+          "accepted_values": [
+            "Plain-language explanations provided and effective",
+            "Some plain-language clarification but inconsistent",
+            "Minimal plain-language explanation despite need",
+            "No plain-language explanation when audience would benefit"
+          ]
+        },
+        {
+          "name": "Formatting and Visual Aids",
+          "description": "Whether headings, bullets, bolding, or other formatting choices aid scanning and comprehension.",
+          "accepted_values": [
+            "Formatting clearly enhances readability and skimming",
+            "Formatting adequate but could be improved",
+            "Inconsistent formatting; sometimes hinders reading",
+            "Poor formatting that impedes comprehension"
+          ]
+        },
+        {
+          "name": "Accessibility Considerations",
+          "description": "Whether the summary considers accessibility (e.g., plain text alternatives, clear contrast, simple structure) for diverse readers and assistive technologies.",
+          "accepted_values": [
+            "Accessibility features present and effective",
+            "Some accessibility considerations present",
+            "Accessibility largely unaddressed though feasible",
+            "No accessibility considerations evident"
+          ]
+        },
+        {
+          "name": "Readability Level and Jargon Density",
+          "description": "Whether overall readability (e.g., sentence complexity and jargon density) matches the intended audience's comprehension level.",
+          "accepted_values": [
+            "Readability level well matched to audience",
+            "Slight mismatch but generally usable",
+            "Noticeable mismatch requiring effort for intended users",
+            "Readability inappropriate for intended users"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Organization, Navigability, and Concision",
+      "description": "Evaluates the summary's structure for discoverability of key elements (headings, TL;DR, lists), whether length is appropriate relative to case complexity, and whether the content avoids unnecessary redundancy.",
+      "sub_criteria": [
+        {
+          "name": "High-level Structure and Headings",
+          "description": "Whether logical headings and sections make key elements discoverable (Issues, Holding, Reasoning, Implications).",
+          "accepted_values": [
+            "Clear headings enabling quick scanning",
+            "Reasonable structure but some headings missing or ambiguous",
+            "Inconsistent headings; hard to locate some elements",
+            "No useful structure or headings"
+          ]
+        },
+        {
+          "name": "Executive Summary / TL;DR",
+          "description": "Presence and quality of a brief top-level summary that conveys the essential points quickly.",
+          "accepted_values": [
+            "Concise, effective executive summary present",
+            "Executive summary present but could be clearer",
+            "No formal TL;DR but opening paragraph provides a summary",
+            "No quick overview or executive summary"
+          ]
+        },
+        {
+          "name": "Brevity vs. Necessary Detail",
+          "description": "Whether the summary balances concision with inclusion of necessary context and reasoning.",
+          "accepted_values": [
+            "Balanced: concise without losing necessary detail",
+            "Slightly verbose or slightly terse but usable",
+            "Tends to omit important details or includes superfluous content",
+            "Either too brief (missing essentials) or too verbose (dilutes key points)"
+          ]
+        },
+        {
+          "name": "Redundancy and Relevance",
+          "description": "Whether the summary avoids repetitive or irrelevant tangents.",
+          "accepted_values": [
+            "No redundancy; content focused",
+            "Minor repetition that does not impair usefulness",
+            "Noticeable repetition or tangents",
+            "Substantial irrelevant or repetitive content"
+          ]
+        },
+        {
+          "name": "Navigational Aids (Anchors, Links, TOC)",
+          "description": "Whether the summary includes navigational aids (table of contents, internal links, anchors) that facilitate quick access to sections.",
+          "accepted_values": [
+            "Useful navigational aids included and functional",
+            "Some navigational aids present but limited",
+            "Minimal navigational support despite lengthy content",
+            "No navigational aids present"
+          ]
+        },
+        {
+          "name": "Key-info Time-to-find",
+          "description": "Qualitative assessment of how quickly a typical user can locate core items (holding, issue, disposition) in the summary.",
+          "accepted_values": [
+            "Key info immediately locatable (very quick)",
+            "Key info locatable with minor scanning",
+            "Requires time-consuming reading to find key info",
+            "Key info hard to find or obscured"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Identification and Explanation of Limitations and Caveats",
+      "description": "Assesses whether the summary explicitly calls out factual limits, procedural caveats, distinguishing facts, unresolved issues, or conditions that restrict the holding's applicability as presented within the summary.",
+      "sub_criteria": [
+        {
+          "name": "Explicit Limiting Factors",
+          "description": "Whether explicit limitations (e.g., narrow facts, statutory exceptions) are listed and explained.",
+          "accepted_values": [
+            "Explicit limitations listed and explained",
+            "Key limitations mentioned but not fully explained",
+            "Limitations implied but not clearly stated",
+            "No explicit limitations mentioned"
+          ]
+        },
+        {
+          "name": "Distinguishing Facts and Key Nuances",
+          "description": "Whether the summary identifies factual details that were crucial to the decision and that limit generalizability.",
+          "accepted_values": [
+            "Crucial distinguishing facts clearly identified and linked to the holding",
+            "Some important facts noted though links to limits could be stronger",
+            "Distinguishing facts superficially mentioned",
+            "No distinguishing facts identified though relevant"
+          ]
+        },
+        {
+          "name": "Procedural and Doctrinal Caveats",
+          "description": "Whether special procedural or doctrinal rules (e.g., standing, mootness, jurisdictional bars) that limit application are noted.",
+          "accepted_values": [
+            "Procedural/doctrinal caveats clearly stated",
+            "Some caveats noted but lacking detail",
+            "Caveats only mentioned in passing",
+            "No procedural/doctrinal caveats identified"
+          ]
+        },
+        {
+          "name": "Uncertainties and Open Questions",
+          "description": "Whether the summary flags unresolved issues, areas of unsettled law, or questions left open by the opinion.",
+          "accepted_values": [
+            "Open questions and uncertainties clearly highlighted",
+            "Some uncertainties noted but not fully contextualized",
+            "Uncertainties largely unaddressed",
+            "No mention of uncertainties where relevant"
+          ]
+        },
+        {
+          "name": "Applicability Disclaimers and Recommended Verification",
+          "description": "Whether the summary includes appropriate cautionary language recommending review of the full opinion or further verification where necessary.",
+          "accepted_values": [
+            "Appropriate disclaimers and verification recommendations included",
+            "Disclaimers present but lightly phrased",
+            "Only perfunctory disclaimer present",
+            "No disclaimers or verification suggestions"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Terminology Management and Glossary Use",
+      "description": "Assesses whether specialized legal terms, acronyms, and statutory phrases are defined or clarified at a level appropriate to the intended audience, and whether consistent conventions (expanding acronyms on first use) are followed.",
+      "sub_criteria": [
+        {
+          "name": "Acronym Expansion and Consistent Abbreviations",
+          "description": "Whether acronyms and abbreviations are expanded on first use and used consistently thereafter.",
+          "accepted_values": [
+            "Acronyms expanded on first use and used consistently",
+            "Mostly expanded with minor lapses",
+            "Some acronyms not expanded; inconsistent use",
+            "Acronyms/abbreviations used without expansion"
+          ]
+        },
+        {
+          "name": "Glossary or Defined Terms Section",
+          "description": "Presence of a glossary or dedicated definitions section for specialized terms when helpful to the audience.",
+          "accepted_values": [
+            "Helpful glossary/definitions present",
+            "Key terms defined inline but no dedicated glossary",
+            "Few terms defined though a glossary would help",
+            "No definitions or glossary provided"
+          ]
+        },
+        {
+          "name": "Complexity-appropriate Explanation Level",
+          "description": "Whether explanations of terms match the technical depth expected by the target audience (plain-language for lay users; concise precision for legal users).",
+          "accepted_values": [
+            "Explanation level well matched to audience",
+            "Slight mismatch in a few places",
+            "Frequent mismatches in explanation level",
+            "Explanation level inappropriate for the audience"
+          ]
+        },
+        {
+          "name": "Inline Clarifications and Parentheticals",
+          "description": "Whether terms are clarified inline or with brief parentheticals at first use where helpful.",
+          "accepted_values": [
+            "Inline clarifications consistently provided where needed",
+            "Most key terms clarified inline; occasional omissions",
+            "Rare inline clarifications; many terms left unexplained",
+            "No inline clarifications"
+          ]
+        },
+        {
+          "name": "Statutory/Regulatory Term Cross-references",
+          "description": "Whether statutory or regulatory terms are cross-referenced to the statutory provision or regulatory definition when relevant.",
+          "accepted_values": [
+            "Statutory/regulatory term cross-references provided",
+            "Some cross-references present but incomplete",
+            "Occasional cross-references though many missing",
+            "No cross-references for statutory/regulatory terms"
+          ]
+        }
+      ]
+    }
+  ],
+  "timestamp": "2025-08-10T23:56:07.976757"
+}

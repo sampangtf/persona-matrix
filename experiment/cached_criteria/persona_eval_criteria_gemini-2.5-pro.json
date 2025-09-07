@@ -1,0 +1,936 @@
+{
+  "task_key": "legal_summary_persona_eval_gemini-2.5-pro",
+  "persona_criteria": {
+    "Litigation Professional": [
+      {
+        "name": "Identification of Case Context",
+        "description": "Evaluates whether the summary provides the essential context of who the parties are and which court decided the case. This is fundamental for determining the case's relevance and whether its precedent is binding or persuasive.",
+        "sub_criteria": [
+          {
+            "name": "Clarity of Parties and Roles",
+            "description": "Assesses if the summary clearly identifies the primary parties and their roles in the litigation (e.g., Plaintiff-Appellant, Defendant-Appellee).",
+            "accepted_values": [
+              "Explicitly Clear: All key parties and their specific roles are clearly and correctly stated.",
+              "Generally Clear: Roles can be inferred from the context but are not explicitly stated using procedural terms.",
+              "Ambiguous or Confusing: It is difficult to determine who is who, or their roles are mixed up.",
+              "Absent: Party roles are not mentioned."
+            ]
+          },
+          {
+            "name": "Jurisdictional Identification",
+            "description": "Evaluates if the summary explicitly names the court and jurisdiction, which is essential for determining the weight of its authority.",
+            "accepted_values": [
+              "Precise: The full court name and jurisdiction are provided (e.g., 'U.S. Court of Appeals for the Ninth Circuit').",
+              "Partial: Identifies the court level (e.g., 'federal appellate court') but not the specific jurisdiction.",
+              "Vague: Implies jurisdiction but provides no specifics that would allow a user to find the case.",
+              "Absent: There is no mention of the deciding court or jurisdiction."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sufficiency of Procedural History",
+        "description": "Evaluates whether the summary adequately details the case's journey through the court system to its current posture. This is critical for understanding the context of the ruling, the standard of review, and how to frame the case in a motion.",
+        "sub_criteria": [
+          {
+            "name": "Completeness of Procedural Path",
+            "description": "Assesses if the summary includes all critical procedural stages, such as lower court decisions, key motions, and the path to the current court.",
+            "accepted_values": [
+              "Comprehensive: All key stages are detailed (e.g., trial court, specific motion, appellate decision).",
+              "Sufficient: The main path (e.g., trial court to appeal) is clear, but minor intermediate steps are omitted.",
+              "Partial: Mentions a prior stage but lacks detail on what happened or how the case progressed.",
+              "Absent or Incorrect: No meaningful procedural history is provided."
+            ]
+          },
+          {
+            "name": "Clarity of Current Posture",
+            "description": "Evaluates how clearly the summary explains the specific legal question or motion being decided by the court (e.g., 'appeal from summary judgment on a specific count').",
+            "accepted_values": [
+              "Explicitly Clear: The exact issue(s) on appeal and their procedural origin are stated.",
+              "Generally Clear: The reason for the appeal can be understood from context but is not explicitly stated.",
+              "Vague: It is unclear what specific decision or issue is being reviewed.",
+              "Misleading or Absent: The procedural posture is not mentioned or is stated incorrectly."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Inclusion of Dispositive Facts",
+        "description": "Assesses whether the summary includes the specific, outcome-determinative facts that were essential to the court's reasoning and application of the law. A litigator must know these facts to argue by analogy or distinguish the case.",
+        "sub_criteria": [
+          {
+            "name": "Relevance of Included Facts",
+            "description": "Evaluates the signal-to-noise ratio of the factual summary. Does it focus on outcome-determinative facts or include irrelevant background details?",
+            "accepted_values": [
+              "Highly Relevant: Only dispositive facts are included; there is no irrelevant clutter.",
+              "Mostly Relevant: Contains dispositive facts along with some minor, non-essential details.",
+              "Mixed Relevance: A significant amount of irrelevant detail obscures the key facts.",
+              "Mostly Irrelevant: The summary focuses on background details while omitting key dispositive facts."
+            ]
+          },
+          {
+            "name": "Completeness of Dispositive Facts",
+            "description": "Assesses whether any critical, outcome-determinative facts are missing from the summary.",
+            "accepted_values": [
+              "Fully Complete: All necessary dispositive facts are present.",
+              "Substantially Complete: Minor supporting facts are missing, but the core factual basis is intact.",
+              "Incomplete: Key dispositive facts are missing, hindering a full understanding of the court's reasoning.",
+              "Critically Incomplete: The factual summary is absent or missing the most crucial fact(s) needed to understand the case."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Clarity and Accuracy of Holding(s)",
+        "description": "Assesses how clearly, accurately, and concisely the summary identifies and articulates the court's core legal ruling(s) or the 'rule of law' from the case. A litigator needs to quickly grasp the precedential value and the exact legal principle established or applied.",
+        "sub_criteria": [
+          {
+            "name": "Accuracy of the Holding",
+            "description": "Evaluates whether the stated legal rule is a factually correct representation of the court's actual holding.",
+            "accepted_values": [
+              "Fully Accurate: The summary's holding is a perfect and precise reflection of the court's ruling.",
+              "Substantially Accurate: The holding is correct in its essence but may lack minor nuance or a stated condition.",
+              "Partially Accurate but Misleading: The holding is technically correct in part, but omits critical elements that change its meaning or application.",
+              "Inaccurate: The holding is fundamentally misstated or incorrect."
+            ]
+          },
+          {
+            "name": "Clarity of the Holding",
+            "description": "Assesses the lucidity and precision of the language used to state the holding. Is it free from jargon and ambiguity?",
+            "accepted_values": [
+              "Crystal Clear: The language is precise, unambiguous, and easily understood on first reading.",
+              "Generally Clear: The holding is understandable but may contain some minor ambiguity or require re-reading.",
+              "Vague: The language used is imprecise or overly broad, making the exact legal rule difficult to determine.",
+              "Incomprehensible: The holding is nonsensical or so poorly written it cannot be understood."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Articulation of Court's Rationale",
+        "description": "Evaluates how well the summary explains the court's reasoning process, connecting the dispositive facts and the relevant law to reach its holding. This is crucial for applying the case's logic to a new set of facts.",
+        "sub_criteria": [
+          {
+            "name": "Clarity of Analytical Path",
+            "description": "Assesses how well the summary explains the logical steps the court took, connecting the facts to the legal standard to reach its conclusion.",
+            "accepted_values": [
+              "Excellent: The step-by-step reasoning is clear, logical, and easy to follow.",
+              "Good: The general reasoning is present but lacks some logical connectors or nuance.",
+              "Fair: The reasoning is stated conclusorily without explaining the 'how' or 'why'.",
+              "Poor: The reasoning is absent, illogical, or merely restates the holding."
+            ]
+          },
+          {
+            "name": "Identification of Key Legal Authorities",
+            "description": "Evaluates whether the summary identifies the key legal authorities (statutes, precedent cases, regulations) that the court relied on in its reasoning.",
+            "accepted_values": [
+              "Comprehensive: Names the specific key statutes and/or controlling precedents.",
+              "Sufficient: Mentions the general area of law or a key precedent but not all.",
+              "Vague: Alludes to 'the law' or 'precedent' without any specifics.",
+              "Absent: No mention of the legal authorities used in the reasoning."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Clarity of Final Disposition",
+        "description": "Assesses whether the summary clearly and correctly states the final, practical order of the court (e.g., Affirmed, Reversed, Vacated, Remanded). This is a top-level, critical piece of information for a litigator.",
+        "sub_criteria": [
+          {
+            "name": "Accuracy of Disposition",
+            "description": "Assesses whether the stated outcome (e.g., Affirmed, Reversed, Remanded) correctly reflects the court's final order.",
+            "accepted_values": [
+              "Fully Accurate: The disposition is stated correctly and completely (e.g., 'Reversed and Remanded').",
+              "Partially Accurate: The disposition is mostly correct but omits a key part (e.g., says 'Reversed' but not 'and Remanded').",
+              "Inaccurate: The stated disposition is wrong (e.g., says 'Affirmed' when it was 'Reversed').",
+              "Absent: The disposition is not mentioned at all."
+            ]
+          },
+          {
+            "name": "Clarity and Prominence of Disposition",
+            "description": "Evaluates how clearly and prominently the disposition is presented. It should be immediately identifiable to the user.",
+            "accepted_values": [
+              "Explicit and Prominent: The disposition is stated clearly and is easy to find, often at the beginning or end, and may be bolded or in its own section.",
+              "Stated but Buried: The disposition is correctly stated but is located within a paragraph, requiring the user to search for it.",
+              "Implied or Vague: The disposition is not stated directly but must be inferred from the summary's language (e.g., 'The court agreed with the lower court\u2019s decision.').",
+              "Incomprehensible or Absent: The language is too confusing to determine the disposition, or it is not mentioned."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Structural Utility for Litigation Practice",
+        "description": "Assesses how the summary is formatted and organized for quick use by a busy litigator. The structure should allow for rapid identification of key components without needing to read the entire text.",
+        "sub_criteria": [
+          {
+            "name": "Logical Organization",
+            "description": "Evaluates if the summary follows a clear, predictable structure (e.g., Facts, Procedural History, Holding, Rationale).",
+            "accepted_values": [
+              "Excellent: Follows a standard, logical structure with clearly demarcated sections.",
+              "Good: Has a discernible structure, but components may be slightly out of order or combined.",
+              "Fair: Key components are present but mixed together in a single narrative block without clear separation.",
+              "Poor: No discernible structure; information is presented chaotically."
+            ]
+          },
+          {
+            "name": "Scannability",
+            "description": "Assesses the use of formatting elements like headings, bolding, or lists to help the user locate information quickly.",
+            "accepted_values": [
+              "Highly Scannable: Uses clear headings, bold text for key terms (e.g., holding, disposition), and/or bullet points effectively.",
+              "Moderately Scannable: Some formatting is used, but inconsistently or ineffectively.",
+              "Poorly Scannable: Presented as a single, unformatted wall of text that resists quick review.",
+              "Not Applicable: The content is too short for scannability to be a meaningful metric."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Audience Appropriateness",
+        "description": "Evaluates whether the language, tone, and level of detail are appropriate for the target audience of legal professionals. The summary should be professional, concise, and avoid overly simplistic or academic language.",
+        "sub_criteria": [
+          {
+            "name": "Conciseness and Brevity",
+            "description": "Assesses whether the summary is appropriately brief, conveying all necessary information without unnecessary verbiage or digressions. A litigator values time.",
+            "accepted_values": [
+              "Highly Concise: Every sentence serves a purpose; no wasted words. Delivers maximum information in minimum text.",
+              "Generally Concise: Mostly brief, but contains some redundant phrasing or slightly verbose sentences.",
+              "Verbose: Contains significant unnecessary detail, long-winded sentences, or digressions that slow down comprehension.",
+              "Overly Terse: So brief that it omits necessary context or detail, sacrificing clarity for brevity."
+            ]
+          },
+          {
+            "name": "Professional Tone and Terminology",
+            "description": "Evaluates if the summary uses appropriate legal terminology and maintains a professional, objective tone, avoiding casual language or overt editorializing.",
+            "accepted_values": [
+              "Highly Professional: Uses precise legal terminology correctly and maintains an objective, formal tone throughout.",
+              "Generally Professional: The tone is appropriate, but there may be minor inaccuracies in terminology or slight informality.",
+              "Somewhat Unprofessional: Contains some casual language or subjective/editorial comments that detract from its authority.",
+              "Highly Unprofessional: The tone is inappropriate, language is overly casual, or terminology is consistently misused."
+            ]
+          }
+        ]
+      }
+    ],
+    "Legal Education Community": [
+      {
+        "name": "Accuracy of Core Components",
+        "description": "Evaluates the faithfulness of the summary to the source legal opinion. It assesses whether the material facts, procedural history, legal questions (issues), court's answers (holdings), and judicial reasoning are represented without error or misinterpretation.",
+        "sub_criteria": [
+          {
+            "name": "Factual Accuracy",
+            "description": "Assesses whether the summary correctly presents the material facts of the case that are necessary for understanding the legal issue and the court's decision.",
+            "accepted_values": [
+              "Excellent: All material facts are correctly and precisely stated as in the source.",
+              "Good: Minor factual inaccuracies or omissions exist but do not alter the overall understanding of the case.",
+              "Fair: Contains significant factual errors that could mislead a student about the context of the case.",
+              "Poor: The facts are fundamentally misrepresented or are absent."
+            ]
+          },
+          {
+            "name": "Procedural History Accuracy",
+            "description": "Assesses whether the summary accurately describes the case's path through the lower courts and its posture before the current court.",
+            "accepted_values": [
+              "Excellent: The procedural history is perfectly and clearly described.",
+              "Good: The procedural history is generally correct but contains minor omissions or errors.",
+              "Fair: Key stages of the procedural history are misrepresented or omitted, causing confusion.",
+              "Poor: The procedural history is wrong or absent."
+            ]
+          },
+          {
+            "name": "Legal Issue(s) Accuracy",
+            "description": "Assesses whether the summary accurately frames the central legal question(s) the court sought to answer.",
+            "accepted_values": [
+              "Excellent: The legal issue(s) are framed precisely and accurately as in the opinion.",
+              "Good: The legal issue(s) are correctly identified but could be framed with greater precision or clarity.",
+              "Fair: The summary misidentifies a secondary issue as the primary one or misstates the primary issue.",
+              "Poor: The legal issue(s) are wrong or absent."
+            ]
+          },
+          {
+            "name": "Holding(s) Accuracy",
+            "description": "Assesses whether the summary accurately states the court's direct answer to the legal question(s).",
+            "accepted_values": [
+              "Excellent: The court's holding(s) are stated with complete accuracy and precision.",
+              "Good: The holding(s) are generally correct but lack nuance or full context.",
+              "Fair: The summary misrepresents the scope or substance of the holding(s).",
+              "Poor: The holding(s) are wrong or absent."
+            ]
+          },
+          {
+            "name": "Judicial Reasoning Accuracy",
+            "description": "Assesses whether the summary accurately captures the court's rationale, including the legal rules and analysis used to reach the holding.",
+            "accepted_values": [
+              "Excellent: The summary correctly and clearly explains the court's chain of reasoning.",
+              "Good: The summary captures the main points of the reasoning but omits some supporting logic or nuance.",
+              "Fair: The summary misrepresents key parts of the court's reasoning, leading to a flawed understanding of the decision.",
+              "Poor: The reasoning is fundamentally misrepresented or absent."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pedagogical Structure and Clarity",
+        "description": "Assesses the summary's effectiveness as an educational tool, focusing on its structure, clarity, and conciseness, which are essential for student comprehension and learning.",
+        "sub_criteria": [
+          {
+            "name": "Logical Organization",
+            "description": "Evaluates if the summary follows a logical, predictable structure (e.g., Facts, Issue, Holding, Reasoning) that helps students deconstruct the case and find key information easily.",
+            "accepted_values": [
+              "Excellent: Follows a clear, standard case brief structure, making it exceptionally easy to find and understand each component.",
+              "Good: Generally well-structured, but the flow could be improved or some sections are slightly disorganized.",
+              "Fair: Lacks a clear, discernible structure, making it difficult for a student to follow the case analysis.",
+              "Poor: Disorganized and chaotic, significantly hindering comprehension."
+            ]
+          },
+          {
+            "name": "Clarity of Expression",
+            "description": "Evaluates the readability and intelligibility of the language used. It assesses whether sentences are well-structured and the prose is free from convoluted phrasing or ambiguity, facilitating easy comprehension.",
+            "accepted_values": [
+              "Excellent: The language is exceptionally clear, fluid, and easy to read. Complex ideas are expressed with simplicity and elegance.",
+              "Good: The language is largely clear, but contains minor instances of awkward or convoluted phrasing that may require a second reading.",
+              "Fair: The language is frequently unclear or ambiguous, with poorly constructed sentences that hinder comprehension.",
+              "Poor: The language is incomprehensible, making it impossible to understand the summary's content."
+            ]
+          },
+          {
+            "name": "Precision in Legal Terminology",
+            "description": "Evaluates the correct and appropriate use of legal terms of art. The summary should use technical legal language accurately, as a law student would be expected to.",
+            "accepted_values": [
+              "Excellent: All legal terms are used with perfect accuracy and in the correct context, serving as a model for a student.",
+              "Good: Legal terms are generally used correctly, but there may be a minor error or a term used in a slightly imprecise way.",
+              "Fair: Contains significant errors in the use of legal terminology, which could lead a student to misunderstand legal concepts.",
+              "Poor: Legal terminology is consistently misused, absent when necessary, or replaced with inaccurate colloquialisms."
+            ]
+          },
+          {
+            "name": "Didactic Conciseness",
+            "description": "Evaluates the summary's ability to distill the case to its essential components for a learning objective. It should omit extraneous details (e.g., non-dispositive dicta, irrelevant facts) without sacrificing information crucial for understanding the core legal lesson.",
+            "accepted_values": [
+              "Excellent: Perfectly balanced, providing all essential information for the case's lesson without any superfluous detail.",
+              "Good: Mostly concise, but includes some minor non-essential details or is slightly too brief in one area.",
+              "Fair: Overly verbose with significant irrelevant information, or so brief that it omits critical context needed for learning.",
+              "Poor: Fails to distill the case, being either a dense wall of text or a superficial sketch."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Focus on Key Legal Principles",
+        "description": "Evaluates how effectively the summary isolates, explains, and emphasizes the primary legal rule or principle that the case is known for illustrating. This is crucial for using the case as a primary example in teaching a specific legal concept.",
+        "sub_criteria": [
+          {
+            "name": "Identification of the Core Rule",
+            "description": "Assesses whether the summary correctly identifies the primary legal principle, test, or doctrine that the case establishes or exemplifies.",
+            "accepted_values": [
+              "Excellent: The summary clearly and accurately identifies and articulates the core legal rule.",
+              "Good: The core rule is correctly identified but could be stated more precisely or explicitly.",
+              "Fair: The summary identifies a minor rule as the core one, or misstates the core rule.",
+              "Poor: The summary fails to identify the core legal rule."
+            ]
+          },
+          {
+            "name": "Prominence of the Core Rule",
+            "description": "Assesses whether the identified core rule is given appropriate prominence, making it clear to the student that this is the key takeaway of the case.",
+            "accepted_values": [
+              "Excellent: The core rule is highlighted or otherwise emphasized, making it the clear focal point of the summary.",
+              "Good: The rule is a central part of the summary's analysis but is not explicitly highlighted, requiring some reading to locate.",
+              "Fair: The core rule is mentioned but is buried among other less important details, obscuring its importance.",
+              "Poor: The core rule is given no more weight than any other legal point mentioned, failing to guide the student's focus."
+            ]
+          },
+          {
+            "name": "Explanation of the Rule's Application",
+            "description": "Assesses how well the summary explains the connection between the core rule and the material facts of the case, demonstrating the 'analysis' portion of legal reasoning.",
+            "accepted_values": [
+              "Excellent: Clearly and concisely explains how the court applied the rule to the specific facts to reach its conclusion.",
+              "Good: The application is explained, but the connection between fact and rule could be more direct or clear.",
+              "Fair: The summary mentions the rule and the facts but does not adequately explain the link between them.",
+              "Poor: The summary fails to explain how the rule was applied to the facts."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Analytical Depth and Context",
+        "description": "Measures whether the summary includes components necessary for a deeper analysis of the case's legal significance, including alternative viewpoints and its position within the broader legal landscape.",
+        "sub_criteria": [
+          {
+            "name": "Summarization of Separate Opinions",
+            "description": "Assesses whether the summary acknowledges and accurately summarizes the core arguments of significant concurring and/or dissenting opinions, which are vital for understanding legal debate and the evolution of law.",
+            "accepted_values": [
+              "Excellent: Accurately and concisely summarizes the main arguments of significant concurring and/or dissenting opinions.",
+              "Sufficient: Mentions the existence and basic stance of other opinions but lacks detail on their reasoning.",
+              "Insufficient: Only notes that other opinions exist without summarizing them, or misrepresents their arguments.",
+              "Missing: Fails to mention significant concurring/dissenting opinions that are present in the source.",
+              "Not Applicable: No significant concurring or dissenting opinions were present in the source case."
+            ]
+          },
+          {
+            "name": "Situational Context",
+            "description": "Assesses whether the summary provides context to help a student understand the case's significance (e.g., noting that it overruled a prior case, created a new legal test, or resolved a circuit split).",
+            "accepted_values": [
+              "Excellent: Provides crucial context about the case's impact or its place in the legal landscape, explaining why it is a landmark case.",
+              "Good: Provides some helpful context but could be more explicit or detailed.",
+              "Limited: Hints at context but does not explain it (e.g., mentions another case name without explaining the relationship).",
+              "None: The case is presented in a vacuum, with no information on its broader significance."
+            ]
+          },
+          {
+            "name": "Articulation of Rule Nuances and Limitations",
+            "description": "Assesses whether the summary explains the scope, limitations, or exceptions to the primary legal rule as discussed by the court. This demonstrates a deeper analysis beyond a simple statement of the rule.",
+            "accepted_values": [
+              "Excellent: Clearly articulates the nuances of the legal rule, including its scope, limitations, or any specific exceptions mentioned by the court.",
+              "Good: Mentions that nuances or limitations exist but does not explain them in detail.",
+              "Limited: Hints at the rule's limitations but in a vague or confusing way.",
+              "Poor: Presents the legal rule as a simple, absolute statement with no mention of scope or limitations discussed in the opinion.",
+              "Not Applicable: The source opinion presents the rule without discussing specific nuances or limitations."
+            ]
+          }
+        ]
+      }
+    ],
+    "Journalism & Media": [
+      {
+        "name": "Factual Foundation for Reporting",
+        "description": "Evaluates whether the summary provides the fundamental, non-negotiable facts required for the lead paragraph of any news story about the case. This covers the 'who, what, where, and why' of the legal dispute.",
+        "sub_criteria": [
+          {
+            "name": "Identification of Key Parties",
+            "description": "Assesses if the summary clearly and concisely identifies the primary parties (e.g., plaintiff, defendant) and their essential roles in the dispute."
+          },
+          {
+            "name": "Clarity of the Central Conflict",
+            "description": "Evaluates how well the summary explains the core issue that initiated the legal action in simple, accessible terms."
+          },
+          {
+            "name": "Identification of Court and Case Origin",
+            "description": "Assesses if the summary clearly states the court that issued the decision (e.g., U.S. Supreme Court, Ninth Circuit) and the case's procedural origin (e.g., 'on appeal from...'). This information is vital for proper attribution in reporting."
+          }
+        ]
+      },
+      {
+        "name": "Headline-Worthiness of the Outcome",
+        "description": "Assesses how effectively the summary presents the court's final decision. For a journalist, this is the most critical piece of information, forming the basis of the headline and news alert.",
+        "sub_criteria": [
+          {
+            "name": "Clarity of the Ruling",
+            "description": "Evaluates the unambiguity of the language used to state the court's final decision and its practical result (i.e., who won and what happens next)."
+          },
+          {
+            "name": "Prominence of the Ruling",
+            "description": "Evaluates how easily the final decision can be located within the summary. A prominent placement is crucial for a journalist on a deadline."
+          }
+        ]
+      },
+      {
+        "name": "Journalistic Usability",
+        "description": "Evaluates the overall utility of the summary for a journalist working under time constraints. This assesses readability, scannability, and conciseness.",
+        "sub_criteria": [
+          {
+            "name": "Readability and Plain Language",
+            "description": "Assesses the clarity of the language, focusing on the absence of legal jargon and the use of clear, direct sentence structures."
+          },
+          {
+            "name": "Structural Scannability",
+            "description": "Evaluates how the summary's format and organization help a reader quickly locate specific information."
+          },
+          {
+            "name": "Conciseness and Relevance",
+            "description": "Evaluates whether the summary is appropriately brief and free of extraneous details that are not essential for a news report."
+          }
+        ]
+      },
+      {
+        "name": "Newsworthiness and Significance",
+        "description": "Evaluates whether the summary explains the 'so what?' of the case. This helps a journalist gauge the story's importance and explain it to their audience.",
+        "sub_criteria": [
+          {
+            "name": "Explanation of Legal Significance",
+            "description": "Assesses if the summary explains the case's importance in a legal context, such as setting a new precedent, overturning an old one, or resolving a conflict among lower courts."
+          },
+          {
+            "name": "Articulation of Real-World Impact",
+            "description": "Assesses whether the summary explains the potential real-world consequences of the decision on the public, specific industries, or society at large."
+          }
+        ]
+      },
+      {
+        "name": "Report-Building Elements",
+        "description": "Assesses whether the summary provides ready-to-use material, such as powerful quotes or well-phrased arguments, that can be directly incorporated into a news article.",
+        "sub_criteria": [
+          {
+            "name": "Inclusion of 'Money Quotes'",
+            "description": "Evaluates if the summary includes powerful, concise, and clearly attributed direct quotations from the court's opinion that capture the essence of the ruling."
+          },
+          {
+            "name": "Quality of Reportable Paraphrasing",
+            "description": "Evaluates if the summary's own language, when paraphrasing the court's reasoning, is concise, accurate, and impactful enough for a journalist to use as an indirect quote or a clear explanation in their story."
+          }
+        ]
+      }
+    ],
+    "Policy & Advocacy Stakeholders": [
+      {
+        "name": "Clarity of Case Outcome and Immediate Effect",
+        "description": "Evaluates how clearly and directly the summary states the 'bottom line' of the case: who won, what the court's official order was, and what the immediate practical consequence is. This is the most crucial information for a stakeholder to grasp instantly.",
+        "sub_criteria": [
+          {
+            "name": "Identification of Winning/Losing Party",
+            "description": "Assesses how clearly the summary identifies which party practically won and which party lost the case.",
+            "accepted_values": [
+              "Excellent: The winning and losing parties are explicitly and immediately identifiable.",
+              "Good: The winner can be determined with minimal reading and inference.",
+              "Fair: Determining the winner requires careful reading and significant inference from the text.",
+              "Poor: It is unclear or ambiguous who won or lost."
+            ]
+          },
+          {
+            "name": "Statement of Court's Holding",
+            "description": "Evaluates if the summary explicitly states the court's final disposition using standard legal terms (e.g., 'affirmed,' 'reversed,' 'vacated,' 'remanded').",
+            "accepted_values": [
+              "Excellent: The holding is explicitly stated using standard legal terms, and its meaning is clear.",
+              "Good: The holding is explicitly stated, but its precise meaning may require some inference.",
+              "Fair: The holding is not stated directly but is strongly implied by the text.",
+              "Poor: The holding is not stated or is ambiguous."
+            ]
+          },
+          {
+            "name": "Explanation of Immediate Consequence",
+            "description": "Evaluates if the summary explains the direct, practical result of the holding (e.g., 'the regulation is blocked nationwide,' 'the case is sent back to the lower court for a new trial based on this standard').",
+            "accepted_values": [
+              "Excellent: The immediate, real-world consequence is clearly and practically explained.",
+              "Good: The consequence is mentioned but lacks practical detail or clarity.",
+              "Fair: The consequence can only be inferred by the reader with effort.",
+              "Poor: The practical consequence is not explained."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Analysis of Policy & Strategic Implications",
+        "description": "Assesses whether the summary explains the 'so what?' of the decision for the stakeholder's work. This connects the legal ruling to the real world of policy-making, legislative strategy, and future advocacy.",
+        "sub_criteria": [
+          {
+            "name": "Impact on Existing/Future Policy",
+            "description": "Assesses if the summary explains how the ruling affects current laws, regulations, or established policies, and whether it creates openings or barriers for future legislation.",
+            "accepted_values": [
+              "Excellent: Provides specific analysis of the impact on named policies, statutes, or legislative efforts.",
+              "Good: Mentions the general policy area affected without naming specific statutes or efforts.",
+              "Fair: The impact on policy can only be inferred; it is not stated.",
+              "Poor: The impact on policy is not addressed."
+            ]
+          },
+          {
+            "name": "Effect on Legal Precedent",
+            "description": "Evaluates if the summary contextualizes the decision by explaining if it sets, affirms, narrows, or overturns a significant legal precedent.",
+            "accepted_values": [
+              "Excellent: Clearly explains the specific effect on precedent (e.g., 'overturns Roe v. Wade', 'narrows the scope of Chevron deference').",
+              "Good: States there is an effect on precedent but the significance or nature of the effect is unclear.",
+              "Fair: Mentions key prior cases but does not clarify the new decision's effect on them.",
+              "Poor: Does not address the decision's precedential impact."
+            ]
+          },
+          {
+            "name": "Identification of Strategic Openings",
+            "description": "Assesses if the summary highlights potential next steps for advocates, such as specific grounds for further litigation, arguments for legislative fixes, or key points for public communication campaigns.",
+            "accepted_values": [
+              "Excellent: Clearly identifies one or more concrete strategic openings or actionable next steps.",
+              "Good: Hints at potential openings without being explicit or actionable.",
+              "Fair: Provides no strategic guidance, but the information could be used by an expert to devise a strategy.",
+              "Poor: Provides no information that could inform future strategy."
+            ]
+          },
+          {
+            "name": "Contextualization of Impact Scope",
+            "description": "Assesses if the summary clarifies the geographic or jurisdictional breadth of the decision's impact (e.g., local, state, specific federal circuit, nationwide).",
+            "accepted_values": [
+              "Excellent: The geographic and jurisdictional scope of the impact is explicitly stated and clear.",
+              "Good: The scope is mentioned but is ambiguous or requires inference (e.g., mentions the court but not the binding area).",
+              "Fair: The scope is not mentioned, but clues are present for a knowledgeable reader to determine it.",
+              "Poor: The scope of the impact is not addressed and cannot be determined from the summary."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Clarity of Core Legal Reasoning",
+        "description": "Evaluates how well the summary explains the 'why' behind the outcome. This is crucial for stakeholders to understand the court's logic, anticipate future legal arguments, and craft their own messaging.",
+        "sub_criteria": [
+          {
+            "name": "Identification of Key Legal Standard",
+            "description": "Evaluates if the summary identifies the specific legal doctrine, test (e.g., 'strict scrutiny'), or constitutional principle the court used as the basis for its reasoning.",
+            "accepted_values": [
+              "Excellent: The key legal standard is explicitly named and its function is explained in simple terms.",
+              "Good: The standard is named but not explained.",
+              "Fair: The standard is alluded to (e.g., 'the court looked at whether the law was necessary') but not named.",
+              "Poor: The legal standard is not addressed."
+            ]
+          },
+          {
+            "name": "Summary of Key Facts Relied Upon",
+            "description": "Evaluates if the summary isolates the specific facts of the case that were determinative or pivotal for the court's reasoning and application of the law.",
+            "accepted_values": [
+              "Excellent: The summary clearly identifies the key facts the court relied on and explains their significance to the outcome.",
+              "Good: The key facts are mentioned, but their direct link to the outcome is not explicitly explained.",
+              "Fair: The summary provides a general background but does not distinguish which facts were legally significant.",
+              "Poor: The summary omits the factual basis necessary to understand the court's reasoning."
+            ]
+          },
+          {
+            "name": "Explanation of Court's Logic",
+            "description": "Assesses how well the summary explains the court's application of the legal standard to the specific facts of the case to reach its conclusion.",
+            "accepted_values": [
+              "Excellent: Provides a clear and logical step-by-step explanation of the court's reasoning.",
+              "Good: The explanation is present but contains some logical gaps or confusing steps.",
+              "Fair: The reasoning is stated but not explained, leaving the reader to connect the dots.",
+              "Poor: The explanation of the court's logic is missing or incoherent."
+            ]
+          },
+          {
+            "name": "Inclusion of Dissenting/Concurring Arguments",
+            "description": "Evaluates if the summary acknowledges significant dissenting or concurring opinions to provide a fuller picture of the legal debate and potential arguments for future cases.",
+            "accepted_values": [
+              "Excellent: The core argument of any significant dissent/concurrence is summarized and its key point of disagreement with the majority is explained.",
+              "Good: The existence of a dissent/concurrence is noted, and its general stance is mentioned (e.g., 'Judge Smith dissented, arguing for a different standard').",
+              "Fair: The existence of a dissent/concurrence is mentioned, but its reasoning is not provided.",
+              "Poor: A significant dissent or concurrence is not mentioned at all."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Advocacy-Readiness of Content",
+        "description": "Evaluates whether the summary's content is formatted and written in a way that allows for direct use in advocacy materials like press releases, talking points, social media, or legislative memos.",
+        "sub_criteria": [
+          {
+            "name": "Inclusion of Impactful Quotes",
+            "description": "Assesses if the summary extracts powerful, concise, and impactful quotes from any opinion (majority, dissent, or concurrence) suitable for advocacy messaging.",
+            "accepted_values": [
+              "Excellent: Includes one or more well-chosen, impactful quotes that are ideal for messaging.",
+              "Good: Includes quotes that are relevant but may be too long or academic for direct use.",
+              "Fair: Paraphrases the court's language instead of providing direct quotes.",
+              "Poor: No quotes are included."
+            ]
+          },
+          {
+            "name": "Distillation of Usable Arguments",
+            "description": "Evaluates if the summary provides a concise distillation of legal arguments (from any opinion) that can be easily repurposed for the stakeholder's cause.",
+            "accepted_values": [
+              "Excellent: Key favorable arguments are presented as clear, standalone points that are easy to copy and paste.",
+              "Good: Favorable arguments are present but are mixed in with other analysis, requiring extraction.",
+              "Fair: Favorable arguments can be inferred but are not clearly stated or summarized.",
+              "Poor: Favorable arguments are not identifiable."
+            ]
+          },
+          {
+            "name": "Identification of Key Stakeholders/Affected Groups",
+            "description": "Assesses if the summary clearly identifies the specific groups, industries, or populations directly affected by the ruling, which is crucial for targeted advocacy and communications.",
+            "accepted_values": [
+              "Excellent: The summary explicitly names the primary groups or populations affected by the decision.",
+              "Good: The affected groups are strongly implied but not explicitly named.",
+              "Fair: The summary provides enough information to infer the affected groups with significant effort.",
+              "Poor: It is unclear from the summary who is directly impacted by the decision."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Accessibility and Conciseness",
+        "description": "Evaluates the overall readability of the summary for a non-lawyer. Policy stakeholders must be able to quickly understand the summary and explain it to others without getting bogged down in jargon or complex prose.",
+        "sub_criteria": [
+          {
+            "name": "Clarity of Language",
+            "description": "Assesses the use of legal-specific terminology ('jargon'). Ideally, it is avoided or, if necessary, clearly explained for a non-lawyer audience.",
+            "accepted_values": [
+              "Excellent: Written in plain English. Any necessary legal term is avoided or immediately explained in simple terms.",
+              "Good: Mostly clear, but contains some unexplained legal jargon that a non-lawyer may need to look up, though it doesn't block overall comprehension.",
+              "Fair: Contains significant legal jargon that makes understanding parts of the summary difficult without legal expertise.",
+              "Poor: Overly reliant on unexplained legal jargon and complex sentence structures, making it largely inaccessible to a non-lawyer."
+            ]
+          },
+          {
+            "name": "Conciseness and Focus",
+            "description": "Evaluates if the summary is appropriately brief and stays focused on the most essential information, avoiding extraneous details or rambling prose.",
+            "accepted_values": [
+              "Excellent: The summary is concise and every sentence serves a clear purpose in explaining the case's utility.",
+              "Good: The summary is mostly concise but includes some minor extraneous information.",
+              "Fair: The summary is noticeably long-winded and contains significant detail that is not essential for the target user.",
+              "Poor: The summary is excessively long, rambling, and unfocused."
+            ]
+          },
+          {
+            "name": "Scannability and Formatting",
+            "description": "Evaluates the use of structural elements like headings, bullet points, and bold text to help a busy reader quickly scan the document and locate key information.",
+            "accepted_values": [
+              "Excellent: Effectively uses formatting (e.g., headings, bullets, bolding) to create a clear hierarchy of information that is easy to scan.",
+              "Good: Uses some basic formatting (e.g., paragraphs) but lacks strong structural cues like headings or bullets for quick scanning.",
+              "Fair: Presented as a single block of text, hindering the ability to find specific information quickly.",
+              "Poor: The formatting is confusing, inconsistent, or actively makes the summary harder to read."
+            ]
+          }
+        ]
+      }
+    ],
+    "Public Self-Help Users": [
+      {
+        "name": "Ease of Relevance Assessment",
+        "description": "Evaluates how quickly and easily a user can determine if the case is relevant to their own legal problem. This depends on how clearly the summary presents the key facts and the specific legal question at issue, allowing for a quick comparison.",
+        "sub_criteria": [
+          {
+            "name": "Clarity of Key Facts",
+            "description": "Assesses if the most important facts for determining relevance are presented clearly and prominently. The user needs to see if the situation in the case is similar to their own.",
+            "accepted_values": [
+              "Excellent: The few, most critical facts are presented upfront and are easy to distinguish from the narrative.",
+              "Good: The key facts are present but mixed in with less critical details.",
+              "Fair: The key facts are present but buried in the text, requiring careful reading to extract.",
+              "Poor: The key facts needed to assess relevance are missing or hopelessly vague."
+            ]
+          },
+          {
+            "name": "Clarity of the Legal Question",
+            "description": "Assesses if the specific legal issue the court had to decide is clearly articulated for the user. The user needs to know if the legal problem is the same as theirs.",
+            "accepted_values": [
+              "Excellent: The specific legal question is explicitly stated in simple terms (e.g., 'The main question was whether...').",
+              "Good: The legal question is not explicitly stated but is clearly implied by the summary's focus.",
+              "Fair: The legal question is difficult to infer from the text.",
+              "Poor: It is impossible to understand the specific legal question the court was answering."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Clarity and Readability",
+        "description": "Assesses how easy the summary is for a non-lawyer to read and understand. It focuses on the language and sentence structure, evaluating whether the summary avoids legal jargon and uses plain English.",
+        "sub_criteria": [
+          {
+            "name": "Use of Plain Language",
+            "description": "Evaluates the extent to which the summary avoids legal jargon and uses simple, everyday language.",
+            "accepted_values": [
+              "Excellent: Uses plain English exclusively. No unexplained legal jargon.",
+              "Good: Primarily plain English, with minimal, commonly understood legal terms. Any complex terms are explained.",
+              "Fair: Contains some unnecessary legal jargon that hinders understanding.",
+              "Poor: Overloaded with legal jargon, making it largely incomprehensible to a non-lawyer."
+            ]
+          },
+          {
+            "name": "Explanation of Necessary Legal Concepts",
+            "description": "Evaluates whether essential legal terms that cannot be avoided are clearly and simply explained for a layperson.",
+            "accepted_values": [
+              "Excellent: All necessary legal concepts are explicitly defined in simple terms within the text.",
+              "Good: Most necessary legal concepts are explained, but some definitions may be slightly unclear or assumed.",
+              "Fair: Attempts to explain legal concepts are made but are confusing or insufficient.",
+              "Poor / Not Applicable: Necessary legal concepts are used without any explanation, or no such concepts were necessary."
+            ]
+          },
+          {
+            "name": "Sentence and Paragraph Structure",
+            "description": "Assesses the complexity of sentence construction and the length of paragraphs. Short, direct sentences and well-defined paragraphs improve readability for non-experts.",
+            "accepted_values": [
+              "Excellent: Consistently uses short, clear sentences. Paragraphs are focused and concise.",
+              "Good: Mostly clear sentences, with occasional complex structures that are still readable. Paragraphs are generally well-structured.",
+              "Fair: Contains run-on sentences or overly complex clauses that require re-reading. Paragraphs are long and cover multiple ideas.",
+              "Poor: Dominated by long, convoluted sentences and dense paragraphs, making it very difficult to parse."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Logical Organization",
+        "description": "Assesses if the summary is organized in a logical, predictable way that helps the user find information quickly and understand the relationships between different parts of the case. It evaluates the overall structure and flow of the summary.",
+        "sub_criteria": [
+          {
+            "name": "Information Hierarchy and Flow",
+            "description": "Evaluates if the information is presented in a logical order (e.g., facts first, then the issue, then the decision) and if the connections between sections are clear.",
+            "accepted_values": [
+              "Excellent: Information is presented in a highly logical and intuitive sequence. It's easy to follow the case from problem to solution.",
+              "Good: The overall flow is logical, but there may be minor instances where the information order is slightly confusing.",
+              "Fair: The summary jumps between different parts of the case (e.g., mixing facts with reasoning) making it hard to follow.",
+              "Poor: The information is presented in a chaotic or random order, making the summary very difficult to understand."
+            ]
+          },
+          {
+            "name": "Use of Formatting for Scannability",
+            "description": "Evaluates the use of structural cues like headings, bullet points, or bold text to break up the text and highlight key information, making it easy to scan.",
+            "accepted_values": [
+              "Excellent: Effectively uses formatting (e.g., clear headings for 'Facts,' 'Issue,' 'Decision') to structure the summary and guide the reader.",
+              "Good: Uses some basic formatting (like paragraphs), but could be improved with more explicit headings or lists.",
+              "Fair: Presented as a single block of text with little to no formatting, making it hard to scan.",
+              "Poor: The formatting is non-existent or confusing, hindering readability."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Focus and Conciseness",
+        "description": "Assesses whether the summary is concise and focused on the essential information, omitting irrelevant procedural details or minor legal arguments that would confuse a self-help user.",
+        "sub_criteria": [
+          {
+            "name": "Exclusion of Irrelevant Details",
+            "description": "Evaluates whether the summary successfully omits information that is confusing or non-essential for a layperson (e.g., complex procedural history, withdrawn arguments, names of specific judges).",
+            "accepted_values": [
+              "Excellent: The summary is completely free of distracting or irrelevant information.",
+              "Good: The summary includes minor, non-essential details that are slightly distracting.",
+              "Fair: The summary contains significant distracting information that makes it harder to grasp the main points.",
+              "Poor: The summary is bloated with irrelevant information, obscuring the key takeaways."
+            ]
+          },
+          {
+            "name": "Brevity",
+            "description": "Evaluates the overall length and succinctness of the summary. Is it as short as possible without sacrificing critical information?",
+            "accepted_values": [
+              "Excellent: The summary is extremely concise. No wasted words or sentences.",
+              "Good: The summary is reasonably brief but contains some minor wordiness.",
+              "Fair: The summary is noticeably long-winded and could be significantly shortened.",
+              "Poor: The summary is excessively verbose and rambling."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Completeness of Essential Information",
+        "description": "Evaluates whether the summary includes all the core components a self-help user needs to understand the case: the basic problem (core conflict), the court's final decision (outcome), and a simple explanation of why the court made that decision (reasoning).",
+        "sub_criteria": [
+          {
+            "name": "Inclusion of Core Conflict",
+            "description": "Assesses if the summary clearly states the fundamental dispute or problem that brought the parties to court.",
+            "accepted_values": [
+              "Excellent: The core conflict is clearly and concisely stated upfront.",
+              "Good: The core conflict is stated but requires some reading to identify.",
+              "Fair: The core conflict is hinted at or described in vague terms.",
+              "Poor: The core conflict is missing or impossible to determine."
+            ]
+          },
+          {
+            "name": "Inclusion of Court's Decision (Outcome)",
+            "description": "Assesses if the summary clearly states the court's final, definitive answer to the core conflict.",
+            "accepted_values": [
+              "Excellent: The final outcome is stated explicitly and unambiguously.",
+              "Good: The outcome is stated but could be clearer or more direct.",
+              "Fair: The outcome is implied but not stated directly, leaving room for interpretation.",
+              "Poor: The outcome of the case is not stated."
+            ]
+          },
+          {
+            "name": "Inclusion of Court's Reasoning",
+            "description": "Assesses if the summary provides a simplified explanation of *why* the court reached its decision in this specific case.",
+            "accepted_values": [
+              "Excellent: The summary clearly explains the court's reasoning in simple, logical terms.",
+              "Good: The reasoning is present but is overly brief or slightly unclear.",
+              "Fair: The reasoning is alluded to but not explained, leaving the user to guess why the court decided as it did.",
+              "Poor: The reasoning is completely absent."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Practical Utility",
+        "description": "Assesses whether the summary provides a practical takeaway. This measures if the summary explains the 'rule' or 'test' the court used in a way that a user could understand and potentially apply to their own situation, providing a 'lesson' rather than just a story.",
+        "sub_criteria": [
+          {
+            "name": "Identification of the Core Legal Principle",
+            "description": "Evaluates if the summary explicitly identifies the key legal rule, test, or principle that was central to the decision and can be applied to other situations.",
+            "accepted_values": [
+              "Excellent: The key legal principle or rule is clearly and explicitly stated as a general takeaway.",
+              "Good: The legal principle is mentioned but not highlighted as the key takeaway.",
+              "Fair: The legal principle is vaguely referenced or implied, but not clearly stated.",
+              "Poor: No general legal principle or rule is identified."
+            ]
+          },
+          {
+            "name": "Explanation of the Principle's Application",
+            "description": "Evaluates how well the summary explains the 'lesson' of the case\u2014how the legal principle applies to the facts and what it means for similar situations.",
+            "accepted_values": [
+              "Excellent: Clearly explains how the rule was applied to the facts and what this means as a practical takeaway for the reader.",
+              "Good: Connects the rule to the outcome but doesn't fully explain the practical implications for the reader.",
+              "Fair: The connection between the rule and the outcome is weak or confusing, offering little practical insight.",
+              "Poor: No connection is made between a legal rule and the outcome; there is no practical lesson."
+            ]
+          },
+          {
+            "name": "Contextualization of Outcome",
+            "description": "Assesses whether the summary provides context for the court's decision, such as its potential impact or limitations. This helps the user understand the scope and significance of the ruling.",
+            "accepted_values": [
+              "Excellent: Clearly explains the scope or limitations of the ruling (e.g., 'This rule only applies if...'), providing crucial context for its application.",
+              "Good: Hints at the significance or scope of the ruling but does not explicitly state it.",
+              "Fair: The ruling is presented in a vacuum, with no context on its broader applicability or importance.",
+              "Poor: The presentation of the ruling is potentially misleading about its scope or impact."
+            ]
+          }
+        ]
+      }
+    ],
+    "Academic & Data-Science Researchers": [
+      {
+        "name": "Structural Parsability",
+        "description": "Evaluates how well the summary is structured into discrete, machine-readable sections. High parsability means key components (like parties, facts, legal question, holding, disposition) are clearly delineated with headers or in a key-value format, facilitating automated information extraction.",
+        "accepted_values": [
+          "Fully Structured (e.g., JSON/XML format, clear key-value pairs)",
+          "Semi-Structured (e.g., uses consistent headings for sections)",
+          "Loosely Structured (e.g., uses paragraphs with some implicit structure like bolding)",
+          "Unstructured (e.g., a single block of free text)"
+        ]
+      },
+      {
+        "name": "Extraction of Key Data Entities",
+        "description": "Assesses whether the summary explicitly identifies and isolates key, quantifiable data points needed for statistical analysis. This includes names of parties, court, judges, specific dates (filing, decision), cited statutes/regulations, and any monetary amounts mentioned in the case.",
+        "accepted_values": [
+          "Excellent (All key entities are present and clearly formatted for extraction)",
+          "Good (Most key entities are present, but may require minor parsing effort)",
+          "Fair (Some key entities are present but are embedded in prose and difficult to extract)",
+          "Poor (Key entities are mostly missing or impossible to extract cleanly)"
+        ]
+      },
+      {
+        "name": "Terminological Consistency",
+        "description": "Measures the use of a standardized vocabulary for legal concepts, roles, and outcomes within the summary. Consistent terminology (e.g., always using 'affirmed' vs. 'upheld', 'plaintiff' vs. 'petitioner' correctly and consistently) is critical for aggregating data across many cases.",
+        "accepted_values": [
+          "Highly Consistent (Uses a strict, predefined vocabulary for all legal terms and roles)",
+          "Mostly Consistent (Minor deviations in terminology that are easily reconciled)",
+          "Inconsistent (Uses multiple different terms for the same concept, requiring significant normalization)",
+          "Highly Inconsistent (Vocabulary is ad-hoc and varies unpredictably)"
+        ]
+      },
+      {
+        "name": "Factual Objectivity and Neutrality",
+        "description": "Evaluates the extent to which the summary presents information factually, without subjective interpretation, emotional language, or analytical bias not present in the source text. The summary should report the court's reasoning and findings, not add its own layer of analysis or opinion.",
+        "accepted_values": [
+          "Strictly Objective (Purely factual reporting, no interpretive or emotive language)",
+          "Mostly Objective (Contains minor, non-impactful subjective phrasing)",
+          "Partially Subjective (Includes some legal analysis or interpretation not explicitly stated by the court)",
+          "Highly Subjective (Dominated by opinion, emotional language, or significant analytical bias)"
+        ]
+      },
+      {
+        "name": "Coverage of Core Legal Components",
+        "description": "Checks for the presence and completeness of essential sections required for legal trend analysis. A useful summary must contain distinct information on the case's background, procedural history, the legal question(s) addressed, the court's holding(s), and the final disposition.",
+        "accepted_values": [
+          "Comprehensive Coverage (All core components are present and detailed)",
+          "Good Coverage (All core components are present, but some lack detail)",
+          "Partial Coverage (One or more core components are missing)",
+          "Poor Coverage (Multiple core components are missing or merely mentioned)"
+        ]
+      },
+      {
+        "name": "Information Granularity",
+        "description": "Assesses the level of detail provided for key legal elements. For data analysis, high granularity is key, such as specifying the exact statute subsection cited, distinguishing between primary and secondary holdings, or detailing the sequence of procedural events.",
+        "accepted_values": [
+          "High Granularity (Provides specific details like statute numbers, multi-part holdings, and detailed procedural steps)",
+          "Moderate Granularity (Provides general information, e.g., 'violated a tax law' instead of the specific code)",
+          "Low Granularity (Information is highly generalized or aggregated, e.g., 'procedural issues were raised')",
+          "No Granularity (Information is abstract and lacks any specific, usable detail)"
+        ]
+      },
+      {
+        "name": "Absence of Redundancy",
+        "description": "Evaluates how concise the summary is and whether it avoids repeating the same information in different sections or phrasings. Redundant information adds noise to data models and increases processing overhead.",
+        "accepted_values": [
+          "No Redundancy (Information is stated once in the most appropriate section)",
+          "Minimal Redundancy (Minor repetition of facts or findings that doesn't hinder parsing)",
+          "Moderate Redundancy (Key information is repeated multiple times across the summary)",
+          "High Redundancy (The summary is excessively repetitive, significantly increasing noise)"
+        ]
+      }
+    ]
+  },
+  "timestamp": "2025-08-10T23:19:11.661770"
+}

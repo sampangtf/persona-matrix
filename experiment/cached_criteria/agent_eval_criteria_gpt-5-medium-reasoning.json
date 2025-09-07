@@ -1,0 +1,354 @@
+{
+  "task_key": "legal_summary_eval_gpt-5-medium-reasoning",
+  "criteria": [
+    {
+      "name": "Audience Fit and Tailoring",
+      "description": "Assesses how well the summary targets and serves its intended user types (e.g., legal professionals, students, policymakers, laypersons) based solely on the text. Evaluates alignment of detail, terminology, and explanations with the stated or clearly implied audience and usage context.",
+      "sub_criteria": [
+        {
+          "name": "Target User Identification",
+          "description": "Whether the summary explicitly states or clearly implies who it is for and the intended usage context."
+        },
+        {
+          "name": "Jargon Level Appropriateness",
+          "description": "Alignment of legal terminology density and complexity with the stated or implied audience."
+        },
+        {
+          "name": "Explanations and Definitions",
+          "description": "Provision of brief definitions or clarifications for non-obvious terms needed for comprehension by the audience."
+        },
+        {
+          "name": "Layering for Mixed Audiences",
+          "description": "Use of plain-language sections, tiered detail, or summaries to serve both novice and expert readers when applicable."
+        },
+        {
+          "name": "Assumed Prior Knowledge Calibration",
+          "description": "Assesses whether the summary\u2019s content assumes an appropriate level of prior legal knowledge for the audience."
+        }
+      ]
+    },
+    {
+      "name": "Coverage of Essential Case Elements",
+      "description": "Evaluates presence and clarity of core components needed to understand the case from the summary alone: parties, material facts, issues, rules, holding, reasoning, procedural posture, disposition/remedy, and any separate opinions.",
+      "sub_criteria": [
+        {
+          "name": "Parties and Roles",
+          "description": "Identification of parties and their roles (e.g., plaintiff/defendant, appellant/appellee)."
+        },
+        {
+          "name": "Material Facts",
+          "description": "Inclusion of dispositive facts necessary to understand the decision."
+        },
+        {
+          "name": "Issues/Questions Presented",
+          "description": "Clear articulation of the legal issue(s) addressed by the court."
+        },
+        {
+          "name": "Rule/Legal Standard",
+          "description": "Statement of the governing rule(s) or standard(s) applied."
+        },
+        {
+          "name": "Standard of Review",
+          "description": "Statement of the appellate or decision-making standard applied (e.g., de novo, abuse of discretion) when applicable."
+        },
+        {
+          "name": "Holding",
+          "description": "Court\u2019s answer to each issue, stated clearly and specifically."
+        },
+        {
+          "name": "Reasoning/Rationale",
+          "description": "Key steps in the court\u2019s analysis supporting the holding, concise and traceable."
+        },
+        {
+          "name": "Procedural Posture/History",
+          "description": "Status and path of the case when decided (e.g., on appeal, remand, motion stage)."
+        },
+        {
+          "name": "Disposition/Remedy",
+          "description": "Outcome (e.g., affirmed, reversed) and remedies/damages if applicable and stated in the summary."
+        },
+        {
+          "name": "Separate Opinions (if applicable)",
+          "description": "Noting concurrences/dissents and their central points when present in the summary."
+        }
+      ]
+    },
+    {
+      "name": "Actionability for Intended Use",
+      "description": "Evaluates whether the summary provides practical takeaways aligned with the intended user tasks (e.g., compliance choices, litigation strategy cues, study notes), based solely on the summary\u2019s content.",
+      "sub_criteria": [
+        {
+          "name": "Practical Implications",
+          "description": "Explicit statements of what changes or matters for the user as a result of the case."
+        },
+        {
+          "name": "Use Cases/Examples",
+          "description": "Illustrative scenarios showing how the rule/holding applies in practice, when appropriate for the audience."
+        },
+        {
+          "name": "Next Steps/Decision Guidance",
+          "description": "Concrete options or considerations the user should weigh (e.g., preserve issue, adjust policy, gather evidence)."
+        },
+        {
+          "name": "Risk/Uncertainty Flags",
+          "description": "Clear flagging of ambiguities, split authority signals, or unresolved questions as described in the summary itself (presence noted, not externally verified)."
+        }
+      ]
+    },
+    {
+      "name": "Clarity and Readability",
+      "description": "Assesses writing clarity, precision, and readability appropriate to the audience, including avoidance of vague language and unnecessary complexity.",
+      "sub_criteria": [
+        {
+          "name": "Sentence Clarity",
+          "description": "Straightforward sentences without convoluted structure."
+        },
+        {
+          "name": "Specificity and Precision",
+          "description": "Avoids vague qualifiers; uses concrete, specific phrasing (e.g., states outcomes and conditions)."
+        },
+        {
+          "name": "Terminology and Acronyms Defined",
+          "description": "Defines specialized terms and acronyms when needed for comprehension by the intended audience."
+        },
+        {
+          "name": "Readability Level vs Audience",
+          "description": "Overall readability level appropriate to the target audience (e.g., novice vs expert)."
+        }
+      ]
+    },
+    {
+      "name": "Structure and Navigability",
+      "description": "Evaluates organization for easy scanning and retrieval, including logical sectioning, headings, ordering, and internal cross-references.",
+      "sub_criteria": [
+        {
+          "name": "Logical Flow",
+          "description": "Elements appear in a coherent, expected order (e.g., facts -> issues -> rule -> analysis -> holding -> disposition)."
+        },
+        {
+          "name": "Headings and Signposting",
+          "description": "Clear section titles and transitions for quick navigation."
+        },
+        {
+          "name": "Skimmability",
+          "description": "Use of bullets, lists, or summaries to enable quick grasp of key points."
+        },
+        {
+          "name": "Cross-Referencing Within Summary",
+          "description": "Clear references within the summary (e.g., 'see Reasoning') that help readers locate related details without redundancy."
+        },
+        {
+          "name": "Summary-at-a-Glance",
+          "description": "Presence of a brief TL;DR or key takeaways section at the top or end."
+        }
+      ]
+    },
+    {
+      "name": "Objectivity and Balance",
+      "description": "Assesses neutrality in tone and balanced presentation of parties\u2019 positions and the court\u2019s analysis, with clear separation between objective summary and any commentary.",
+      "sub_criteria": [
+        {
+          "name": "Neutral Tone",
+          "description": "Avoids loaded language and subjective judgments in the summary portions."
+        },
+        {
+          "name": "Balanced Presentation",
+          "description": "Fairly represents key arguments from both sides as described in the summary content."
+        },
+        {
+          "name": "Separation of Facts and Commentary",
+          "description": "Any analysis or opinion is clearly labeled and separated from neutral case description."
+        }
+      ]
+    },
+    {
+      "name": "Citation and Source Anchoring",
+      "description": "Evaluates how the summary anchors statements to identifiable case details and citations. Only the presence and clarity of identifiers and references are assessed; no external verification.",
+      "sub_criteria": [
+        {
+          "name": "Case Identification Completeness",
+          "description": "Presence of case name, reporter/docket, court, and decision date within the summary."
+        },
+        {
+          "name": "Citation Consistency",
+          "description": "Uniform, readable citation formatting throughout the summary."
+        },
+        {
+          "name": "Pinpoint References/Quotations",
+          "description": "Pinpoints or brief quotations for dispositive rules/holdings when helpful for users, as provided in the summary."
+        },
+        {
+          "name": "Precedential Status Signaling",
+          "description": "States whether the decision is binding or persuasive and the court level, if indicated by the summary; presence assessed without external verification."
+        },
+        {
+          "name": "Statutory/Regulatory Anchoring",
+          "description": "Presence of references to statutes/regulations when central to the decision (as stated within the summary), without external verification.",
+          "accepted_values": [
+            "Exemplary (5) \u2014 Central statutes/regulations named with sections.",
+            "Strong (4) \u2014 Most central authorities referenced.",
+            "Adequate (3) \u2014 General references; few specifics.",
+            "Weak (2) \u2014 Vague or incomplete references.",
+            "Fails (1) \u2014 None where applicable."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Conciseness and Information Density",
+      "description": "Assesses whether the summary delivers maximum useful content with minimal redundancy and digression, based on the text itself.",
+      "sub_criteria": [
+        {
+          "name": "Redundancy Avoidance",
+          "description": "Minimizes repeated statements unless for emphasis or clarity."
+        },
+        {
+          "name": "Essential vs. Optional Detail Balance",
+          "description": "Prioritizes dispositive points over peripheral commentary."
+        },
+        {
+          "name": "Signal-to-Noise Ratio",
+          "description": "Proportion of sentences conveying actionable or essential information versus filler.",
+          "accepted_values": [
+            "Exemplary (5) \u2014 Nearly every sentence adds value.",
+            "Strong (4) \u2014 High ratio; occasional filler.",
+            "Adequate (3) \u2014 Mixed value; many neutral sentences.",
+            "Weak (2) \u2014 Low ratio; frequent filler.",
+            "Fails (1) \u2014 Mostly filler."
+          ]
+        },
+        {
+          "name": "Length Appropriateness vs Use",
+          "description": "Overall length is appropriate for the intended purpose and audience.",
+          "accepted_values": [
+            "Exemplary (5) \u2014 Length optimized for use-case and audience.",
+            "Strong (4) \u2014 Slightly long/short but effective.",
+            "Adequate (3) \u2014 Noticeable mismatch; still usable.",
+            "Weak (2) \u2014 Length significantly hinders use.",
+            "Fails (1) \u2014 Grossly mismatched length."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Internal Consistency and Logical Coherence",
+      "description": "Evaluates whether elements within the summary align without contradictions and whether the logic from issues to holding is coherent.",
+      "sub_criteria": [
+        {
+          "name": "Issue\u2013Rule\u2013Holding Alignment",
+          "description": "Stated rules and holdings directly address the framed issues."
+        },
+        {
+          "name": "Procedural Consistency",
+          "description": "Procedural posture and disposition align with the described history in the summary.",
+          "accepted_values": [
+            "Exemplary (5) \u2014 Fully consistent across sections.",
+            "Strong (4) \u2014 Mostly consistent; minor tension.",
+            "Adequate (3) \u2014 Some inconsistencies.",
+            "Weak (2) \u2014 Frequent contradictions.",
+            "Fails (1) \u2014 Incoherent procedural narrative."
+          ]
+        },
+        {
+          "name": "Terminology Consistency",
+          "description": "Party names, abbreviations, and terms are used consistently throughout.",
+          "accepted_values": [
+            "Exemplary (5) \u2014 No inconsistencies.",
+            "Strong (4) \u2014 Rare minor inconsistencies.",
+            "Adequate (3) \u2014 Several inconsistencies; context reveals meaning.",
+            "Weak (2) \u2014 Frequent inconsistencies; confusing.",
+            "Fails (1) \u2014 Pervasively inconsistent."
+          ]
+        },
+        {
+          "name": "Temporal Sequence Consistency",
+          "description": "Events and procedural steps maintain a coherent temporal order.",
+          "accepted_values": [
+            "Exemplary (5) \u2014 Temporal order consistently coherent.",
+            "Strong (4) \u2014 Minor timing ambiguities.",
+            "Adequate (3) \u2014 Some sequence confusion.",
+            "Weak (2) \u2014 Frequent temporal contradictions.",
+            "Fails (1) \u2014 Chronology incoherent."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Self-Containment and Contextualization",
+      "description": "Assesses whether a reader unfamiliar with the case can understand its significance and boundaries from the summary alone, including scope, assumptions, and why the case matters.",
+      "sub_criteria": [
+        {
+          "name": "Background Context",
+          "description": "Minimal necessary background provided to frame the issues and facts."
+        },
+        {
+          "name": "Significance/Why It Matters",
+          "description": "Explains the decision\u2019s importance or impact as stated within the summary (e.g., clarification, new standard)."
+        },
+        {
+          "name": "Scope and Limitations",
+          "description": "States boundaries and conditions of applicability; distinguishes what the case does not decide, if described by the summary."
+        }
+      ]
+    },
+    {
+      "name": "Reusability and Extractability",
+      "description": "Evaluates how easily the summary\u2019s content can be reused in downstream workflows (e.g., outlines, knowledge bases) through standardized labels, metadata, and formatting patterns.",
+      "sub_criteria": [
+        {
+          "name": "Standardized Section Labels",
+          "description": "Use of conventional headings (e.g., Facts, Issue, Rule, Holding, Reasoning, Disposition)."
+        },
+        {
+          "name": "Key Metadata Presence",
+          "description": "Presence of extractable fields (case name, court, date, citation) within the summary text with clear labeling."
+        },
+        {
+          "name": "List and Bullet Use for Key Points",
+          "description": "Use of lists/tables for rules, factors, or elements to aid extraction.",
+          "accepted_values": [
+            "Exemplary (5) \u2014 Lists used for all multi-part elements.",
+            "Strong (4) \u2014 Lists used for most multi-part elements.",
+            "Adequate (3) \u2014 Lists used occasionally.",
+            "Weak (2) \u2014 Rare or ineffective list use.",
+            "Fails (1) \u2014 None."
+          ]
+        },
+        {
+          "name": "Formatting Consistency for Extraction",
+          "description": "Consistency of typography, numbering, and label patterns that facilitate automated or manual extraction."
+        }
+      ]
+    },
+    {
+      "name": "Jurisdictional and Practice Relevance Signaling",
+      "description": "Assesses whether the summary helps readers quickly determine relevance to their jurisdiction and practice area based solely on the summary\u2019s own content.",
+      "sub_criteria": [
+        {
+          "name": "Practice Area Tagging/Keywords",
+          "description": "Presence of explicit practice area labels or keywords (e.g., contracts, criminal procedure)."
+        },
+        {
+          "name": "Jurisdictional Scope/Applicability",
+          "description": "Clarity on geographic or court-level scope of applicability (e.g., state vs federal; circuit/region)."
+        },
+        {
+          "name": "Subsequent Treatment/Currentness Signals",
+          "description": "Mentions within the summary of subsequent history, split authority, or noted changes affecting reliance (presence only; no external verification)."
+        },
+        {
+          "name": "Statutory/Regulatory Domain Cues",
+          "description": "Indication of implicated statutes/regulations and practice subdomain (e.g., ERISA, Title VII) as stated in the summary.",
+          "accepted_values": [
+            "Exemplary (5) \u2014 Clear statute/regulatory domain indicated.",
+            "Strong (4) \u2014 Mostly clear; minor gaps.",
+            "Adequate (3) \u2014 General domain hinted.",
+            "Weak (2) \u2014 Vague/ambiguous domain.",
+            "Fails (1) \u2014 No domain cues."
+          ]
+        }
+      ]
+    }
+  ],
+  "timestamp": "2025-08-11T00:54:18.355806"
+}

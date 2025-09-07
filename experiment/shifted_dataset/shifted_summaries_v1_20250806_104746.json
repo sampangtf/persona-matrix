@@ -1,0 +1,1724 @@
+{
+  "metadata": {
+    "generation_timestamp": "2025-08-06T10:53:23.592005",
+    "generator_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_cases": 1,
+    "dimensions": [
+      {
+        "id": "Depth",
+        "name": "Depth ⇄ Conciseness",
+        "description": "Transform from detailed to concise"
+      },
+      {
+        "id": "Precision",
+        "name": "Technical Precision ⇄ Lay Accessibility",
+        "description": "Transform from technical to accessible"
+      },
+      {
+        "id": "Procedural",
+        "name": "Procedural Detail ⇄ Narrative Clarity",
+        "description": "Transform from procedural to narrative"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case_id": 15837,
+      "original_case_data": {
+        "attorney_orgs": [],
+        "available_documents": [
+          "Complaint (any)",
+          "Monetary Relief",
+          "Injunctive (or Injunctive-like) Relief",
+          "Any published opinion"
+        ],
+        "case_defendants": [
+          {
+            "defendant_level": null,
+            "institution": "",
+            "institution_alt_state": null,
+            "institution_city": "",
+            "institution_county": null,
+            "name": "Central New York Psychiatric Center ",
+            "defendant_level_other": "",
+            "is_active": true
+          },
+          {
+            "defendant_level": null,
+            "institution": "",
+            "institution_alt_state": null,
+            "institution_city": "",
+            "institution_county": null,
+            "name": "New York State Office of Mental Health",
+            "defendant_level_other": "",
+            "is_active": true
+          }
+        ],
+        "case_ongoing": "No reason to think so",
+        "case_status": "Approved",
+        "case_types": [
+          "Mental Health (Facility)"
+        ],
+        "cause_other": "",
+        "causes": [
+          "42 U.S.C. § 1983"
+        ],
+        "class_action_granted": "Not sought",
+        "class_action_sought": "No",
+        "closing_year": 2012,
+        "constitutional_clause": [
+          {
+            "value": "Due Process"
+          },
+          {
+            "value": "Free Exercise Clause"
+          },
+          {
+            "value": "Cruel and Unusual Punishment"
+          }
+        ],
+        "content_of_injunction": [
+          {
+            "value": "Hire"
+          },
+          {
+            "value": "Reasonable Accommodation"
+          }
+        ],
+        "court": "Northern District of New York",
+        "custom_issues": [],
+        "defendant_payment": "$15,000",
+        "defendant_type": [
+          {
+            "value": "Hospital/Health Department"
+          }
+        ],
+        "docket_status": "Complete as of retrieval date",
+        "facility_type": [
+          {
+            "value": "Government-run"
+          }
+        ],
+        "filing_date": "2009-02-20",
+        "filing_year": 2009,
+        "id": 15837,
+        "injunction_duration": "",
+        "issues": [
+          "General/Misc.: Food service / nutrition / hydration",
+          "General/Misc.: Language access/needs",
+          "Jails, Prisons, Detention Centers, and Other Institutions: Placement in mental health facilities",
+          "General/Misc.: Conditions of confinement",
+          "General/Misc.: Religious programs / policies",
+          "Discrimination Basis: Religion discrimination"
+        ],
+        "last_checked_date": "2017-10-08T00:00:00-04:00",
+        "main_docket": {
+          "id": 29010,
+          "docket_entries": [
+            {
+              "row_number": 69,
+              "id": 1743627,
+              "entry_number": "55",
+              "date_filed": "2011-11-15T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512513170?caseid=75456&de_seq_num=249&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ORDER directing Mental Hygiene Legal Service to release Plaintiff's records. Signed by Magistrate Judge George H. Lowe on 11/15/11. (rjb, ) (Entered: 11/15/2011)"
+            },
+            {
+              "row_number": 80,
+              "id": 1743638,
+              "entry_number": "59",
+              "date_filed": "2012-02-08T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512593228?caseid=75456&de_seq_num=279&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "STIPULATION AND ORDER of Discontinuance Pursuant to Rule 41(A). Signed by Magistrate Judge George H. Lowe on 2/8/12. (served on plaintiff by regular mail)(alh, ) (Entered: 02/08/2012)"
+            },
+            {
+              "row_number": 2,
+              "id": 1743560,
+              "entry_number": "4",
+              "date_filed": "2009-03-10T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511584353?caseid=75456&de_seq_num=15&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Summons Issued as to Teri Maxymillian, Michael Hogan, Donald Sawyer. (nas, ) (Entered: 03/10/2009)"
+            },
+            {
+              "row_number": 47,
+              "id": 1743605,
+              "entry_number": "42",
+              "date_filed": "2010-12-23T00:00:00-05:00",
+              "attachments": null,
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512200221?caseid=75456&de_seq_num=169&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "REPORT−RECOMMENDATIONS and ORDER: RECOMMENDED that Defendants' motion for summary judgment (Dkt. No. 37 ) be GRANTED IN PART AND DENIED IN PART. Recommend that the Court grant Defendants' motion and dismiss the following claims: (1) the free exercise and RLUIPA claims regarding the use of bowls and utensils; (2) the free exercise and RLUIPA claims regarding CNYPC's practice of serving fish on Fridays; (3) any Establishment Clause claim regarding CNYPC's practice of serving fish on Fridays; (4) the due process claim; (5) the Eighth Amendment claim; and (6) all claims against Defendant Hogan. RECOMMENDED that Plaintiff's motion for summary judgment (Dkt. No. 33 ) be DENIED. RECOMMENDED that the following claims survive the pending motions: (1) the free exercise and RLUIPA claims regarding the lack of Al Jumu'ah services at CNYPC; (2) the free exercise and RLUIPA claims regarding the lack of a Halal menu at CNYPC; (3) the claim regarding CNYPC's requirement that Plaintiff attend classes on Fridays; and (4) the claim that Defendants denied Plaintiff sacred foods on holidays. The parties should be prepared, in further proceedings, to fully brief whether the legitimate Penological interest or the compelling government interest test should be applied to this case. Objections to R&R due by 1/6/2011 Case Review Deadline 1/13/2011. Signed by Magistrate Judge George H. Lowe on 12/22/10. {r&r and copies of the cited cases served via regular mail on plaintiff}(nas ) (Entered: 12/23/2010)"
+            },
+            {
+              "row_number": 50,
+              "id": 1743608,
+              "entry_number": "45",
+              "date_filed": "2011-01-20T00:00:00-05:00",
+              "attachments": null,
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512223535?caseid=75456&de_seq_num=188&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "DECISION AND ORDER: The 42 Report and Recommendations is accepted and adopted in all respects. ORDERED that plaintiff's 33 Motion for Summary Judgment is DENIED. ORDERED that 37 Motion for Summary Judgment is GRANTED IN PART and DENIED IN PART as set forth in this Decision and Order. The parties are advised that in all further proceedings, they should be prepared to fully brief whether the legitimate Penological interest or the compelling government interest test should be applied to this case. Signed by Judge Hurd on 1/20/11.{order served via regular mail on all non−ecf parties}(nas) (Entered: 01/20/2011)"
+            },
+            {
+              "row_number": 36,
+              "id": 1743594,
+              "entry_number": "32",
+              "date_filed": "2010-03-04T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511916654?caseid=75456&de_seq_num=110&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ORDER THAT FOR GOOD CAUSE SHOWN, granting 31 Letter Request, Dispositive Motions to be filed by 3/17/2010. Signed by NAS as per direction of Magistrate Judge George H. Lowe on 3/4/10. {order served via regular mail on all non−ecf parties}(nas) (Entered: 03/04/2010)"
+            },
+            {
+              "row_number": 32,
+              "id": 1743590,
+              "entry_number": "29",
+              "date_filed": "2010-01-20T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511874922?caseid=75456&de_seq_num=102&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ORDER granting 28 Letter Request, Dispositive Motions to be filed by 3/1/2010. Signed by MNC per the direction of Magistrate Judge George H. Lowe on 1/20/10. (order served on plaintiff by regular mail) (mnc) (Entered: 01/20/2010)"
+            },
+            {
+              "row_number": 68,
+              "id": 1743626,
+              "entry_number": "54",
+              "date_filed": "2011-11-15T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512512549?caseid=75456&de_seq_num=247&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "STATUS REPORT regarding discovery and possible resolution by Teri Maxymillian, Donald Sawyer. (Higgins, Dean) (Entered: 11/15/2011)"
+            },
+            {
+              "row_number": 64,
+              "id": 1743622,
+              "entry_number": "51",
+              "date_filed": "2011-11-14T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12502510863?caseid=75456&de_seq_num=230&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "First MOTION in Limine Concerning the Standard of Review for Plaintiff's Claims filed by Edward Kalwasinski. (Attachments: # 1 Memorandum of Law) (Dignam, Brett) (Entered: 11/14/2011)"
+            },
+            {
+              "row_number": 29,
+              "id": 1743587,
+              "entry_number": null,
+              "date_filed": "2009-12-14T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Set Deadline: Per Order dated 12/14/09, Dispositive Motion deadline is 1/10/2010. (alh, ) (Entered: 12/14/2009)"
+            },
+            {
+              "row_number": 74,
+              "id": 1743632,
+              "entry_number": null,
+              "date_filed": "2011-11-21T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT Minute Entry for proceedings held before Magistrate Judge George H. Lowe: Telephone Settlement Conference held on 11/21/2011. Appearances: Brett Dignam, Esq. for Plaintiff; Dean Higgins, AAG for Defendants. Case did not settle, further conference to be held on 11/22/2011. (rjb, ) (Entered: 11/21/2011)"
+            },
+            {
+              "row_number": 81,
+              "id": 3869672,
+              "entry_number": "42",
+              "date_filed": "2010-12-23T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://www.courtlistener.com/docket/5505552/42/kalwasinski-v-maxymillian/",
+              "recap_pdf_url": "https://www.courtlistener.com/recap/gov.uscourts.nynd.75456/gov.uscourts.nynd.75456.42.0.pdf",
+              "pacer_doc_id": "12502200221",
+              "description": " REPORT-RECOMMENDATIONS and ORDER: RECOMMENDED that Defendants' motion for summary judgment (Dkt. No.  37 ) be GRANTED IN PART AND DENIED IN PART.  Recommend that the Court grant Defendants' motion and dismiss the following claims: (1) the f ree exercise and RLUIPA claims regarding the use of bowls and utensils; (2) the free exercise and RLUIPA claims regarding CNYPC's practice of serving fish on Fridays; (3) any Establishment Clause claim regarding CNYPC's practice of serving  fish on Fridays; (4) the due process claim; (5) the Eighth Amendment claim; and (6) all claims against Defendant Hogan.  RECOMMENDED that Plaintiff's motion for summary judgment (Dkt. No.  33 ) be DENIED.  RECOMMENDED that the following claims s urvive the pending motions: (1) the free exercise and RLUIPA claims regarding the lack of Al Jumu'ah services at CNYPC; (2) the free exercise and RLUIPA claims regarding the lack of a Halal menu at CNYPC; (3) the claim regarding CNYPC's req uirement that Plaintiff attend classes on Fridays; and (4) the claim that Defendants denied Plaintiff sacred foods on holidays. The parties should be prepared, in further proceedings, to fully brief whether the legitimate Penological interest or the  compelling government interest test should be applied to this case.  Objections to R&R due by 1/6/2011 Case Review Deadline 1/13/2011.  Signed by Magistrate Judge George H. Lowe on 12/22/10. {r&r and copies of the cited cases served via regular mail on plaintiff}(nas )"
+            },
+            {
+              "row_number": 51,
+              "id": 1743609,
+              "entry_number": "46",
+              "date_filed": "2011-02-09T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512241679?caseid=75456&de_seq_num=197&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "NOTICE by Edward Kalwasinski that in 3 weeks he will be released from CNYPC and his new address will be: c/o Cheryl Kalwasinski; 3019 Eastchester Rd #3, Bronx NY 10469 and request for a copy of the docket sheet to be sent to him at CNYPC. (nas) (Entered: 02/09/2011)"
+            },
+            {
+              "row_number": 63,
+              "id": 1743621,
+              "entry_number": "50",
+              "date_filed": "2011-11-10T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12502510265?caseid=75456&de_seq_num=228&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "NOTICE by Teri Maxymillian, Donald Sawyer of signed consent for reference of matter to Magistrate Judge for trial (Attachments: # 1 Declaration of service of consent to refer matter to Magistrate Judge)(Higgins, Dean) (Entered: 11/10/2011)"
+            },
+            {
+              "row_number": 72,
+              "id": 1743630,
+              "entry_number": null,
+              "date_filed": "2011-11-17T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing: Telephone Settlement Conference set for 11/21/2011 at 01:00 PM before Magistrate Judge George H. Lowe. Chambers will initiate the call.(rjb, ) (Entered: 11/17/2011)"
+            },
+            {
+              "row_number": 0,
+              "id": 1743558,
+              "entry_number": "1",
+              "date_filed": "2009-02-20T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511584311?caseid=75456&de_seq_num=7&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "COMPLAINT against Teri Maxymillian, Michael Hogan, Donald Sawyer filed by Edward Kalwasinski.(mnm) (Entered: 02/24/2009)"
+            },
+            {
+              "row_number": 8,
+              "id": 1743566,
+              "entry_number": null,
+              "date_filed": "2009-04-17T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT ORDER granting 9 Letter Request, Teri Maxymillian answer due 5/29/2009; Michael Hogan answer due 5/29/2009; Donald Sawyer answer due 5/29/2009. Authorized by NAS as per direction of Magistrate Judge George H. Lowe on 4/17/09. {order served via regular mail on all non−ecf parties}(nas) (Entered: 04/17/2009)"
+            },
+            {
+              "row_number": 24,
+              "id": 1743582,
+              "entry_number": "22",
+              "date_filed": "2009-11-04T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511808636?caseid=75456&de_seq_num=77&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "MOTION to Compel filed by Edward Kalwasinski. Motions referred to George H. Lowe. (nas) (Entered: 11/04/2009)"
+            },
+            {
+              "row_number": 44,
+              "id": 1743602,
+              "entry_number": "40",
+              "date_filed": "2010-04-29T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511971560?caseid=75456&de_seq_num=152&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "RESPONSE in Opposition re 37 First MOTION for Summary Judgment filed by Edward Kalwasinski. (nas) (Entered: 04/29/2010)"
+            },
+            {
+              "row_number": 82,
+              "id": 9518319,
+              "entry_number": "45",
+              "date_filed": "2011-01-20T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://www.courtlistener.com/docket/5505552/45/kalwasinski-v-maxymillian/",
+              "recap_pdf_url": "https://www.courtlistener.com/recap/gov.uscourts.nynd.75456/gov.uscourts.nynd.75456.45.0.pdf",
+              "pacer_doc_id": "12502223535",
+              "description": " DECISION AND ORDER: The  42  Report and Recommendations is accepted and adopted in all respects.  ORDERED that plaintiff's  33  Motion for Summary Judgment is DENIED.  ORDERED that  37  Motion for Summary Judgment is GRANTED IN PART and DENIED I N PART as set forth in this Decision and Order.  The parties are advised that in all further proceedings, they should be prepared to fully brief whether the legitimate Penological interest or the compelling government interest test should be applied to this case.  Signed by Judge Hurd on 1/20/11.{order served via regular mail on all non-ecf parties}(nas)"
+            },
+            {
+              "row_number": 16,
+              "id": 1743574,
+              "entry_number": null,
+              "date_filed": "2009-08-31T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing on Motion 15 MOTION to Compel : ON SUBMISSION ONLY, returnable on 9/24/09. Response to Motion due by 9/8/2009 {notice served via regular mail on all non−ecf parties}(nas) (Entered: 08/31/2009)"
+            },
+            {
+              "row_number": 23,
+              "id": 1743581,
+              "entry_number": null,
+              "date_filed": "2009-10-13T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Set/Reset Scheduling Order Deadlines: Discovery due by 11/20/2009. (nas, ) (Entered: 10/13/2009)"
+            },
+            {
+              "row_number": 52,
+              "id": 1743610,
+              "entry_number": null,
+              "date_filed": "2011-02-09T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE: The Court is in receipt of plaintiff's 46 Notice that he will be relased from CNYPC in 3 weeks and of his new address. Plaintiff is advised to confirm in writing to the Court and opposing counsel of his new address upon release from CNYPC. An updated copy of the docket sheet is provided to plaintiff with this Notice via regular mail. (nas) (Entered: 02/09/2011)"
+            },
+            {
+              "row_number": 43,
+              "id": 1743601,
+              "entry_number": "38",
+              "date_filed": "2010-04-20T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511961724?caseid=75456&de_seq_num=144&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "REQUEST FOR ENTRY OF DEFAULT as to Michael Hogan, Teri Maxymillian, Donald Sawyer for failure to respond to 33 MOTION for Summary Judgment by Edward Kalwasinski. (nas) (Entered: 04/20/2010)"
+            },
+            {
+              "row_number": 21,
+              "id": 1743579,
+              "entry_number": null,
+              "date_filed": "2009-10-09T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT ORDER that the Clerk shall vacate 20 Order on Letter Request and modify the docket to reflect that Discovery is due by 11/20/2009. Authorized by NAS as per direction of Magistrate Judge George H. Lowe on 10/9/09. {order served via regular mail on all non−ecf parties}(nas) (Entered: 10/09/2009)"
+            },
+            {
+              "row_number": 54,
+              "id": 1743612,
+              "entry_number": null,
+              "date_filed": "2011-05-12T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Notice of Hearing of Status Conference served via regular mail on all non−ecf parties (nas) (Entered: 05/12/2011)"
+            },
+            {
+              "row_number": 66,
+              "id": 1743624,
+              "entry_number": "52",
+              "date_filed": "2011-11-14T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512511846?caseid=75456&de_seq_num=240&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "CONSENT to Jurisdiction by US Magistrate Judge. So Ordered by Judge Hurd on 11/14/11. (nas) (Entered: 11/14/2011)"
+            },
+            {
+              "row_number": 78,
+              "id": 1743636,
+              "entry_number": "58",
+              "date_filed": "2012-02-07T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512591323?caseid=75456&de_seq_num=273&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "STIPULATION Stipulation and Order of Discontinuance Pursuant to Rule 41(a) by Edward Kalwasinski submitted to Judge Lowe. (Dignam, Brett) (Entered: 02/07/2012)"
+            },
+            {
+              "row_number": 58,
+              "id": 1743616,
+              "entry_number": null,
+              "date_filed": "2011-08-29T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing: Status Conference set for 9/27/2011 at 02:30 PM before Magistrate Judge George H. Lowe. Chambers will initiate the call (text notice served on Plaintiff via regular mail).(rjb, ) (Entered: 08/29/2011)"
+            },
+            {
+              "row_number": 62,
+              "id": 1743620,
+              "entry_number": null,
+              "date_filed": "2011-11-09T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing: Telephone Conference set for 11/15/2011 at 02:00 PM before Magistrate Judge George H. Lowe. Chambers will initiate the call.(rjb, ) (Entered: 11/09/2011)"
+            },
+            {
+              "row_number": 53,
+              "id": 1743611,
+              "entry_number": null,
+              "date_filed": "2011-05-12T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "NOTICE of Hearing: Status Telephone Conference set for 5/19/2011 at 10:00 AM in Syracuse before Magistrate Judge George H. Lowe. Court shall initiate telephone conference call. (ptm, ) (Entered: 05/12/2011)"
+            },
+            {
+              "row_number": 59,
+              "id": 1743617,
+              "entry_number": null,
+              "date_filed": "2011-09-27T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT Minute Entry for proceedings held before Magistrate Judge George H. Lowe: Status Conference held on 9/27/2011. Appearances: Brett Dignam, Esq. for Plaintiff; Dean Higgins, AAG for Defendants. A settlement conference will be scheduled with Judge Lowe in Albany. Parties will file a consent to proceed before Judge Lowe for trial. (FTR Recorded) (rjb, ) (Entered: 09/27/2011)"
+            },
+            {
+              "row_number": 61,
+              "id": 1743619,
+              "entry_number": "49",
+              "date_filed": "2011-10-07T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12502476200?caseid=75456&de_seq_num=224&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "NOTICE of Hearing: Settlement Conference set for 11/2/2011 at 09:00 AM in Albany before Magistrate Judge George H. Lowe. (Attachments: # 1 )(rjb, ) (Entered: 10/07/2011)"
+            },
+            {
+              "row_number": 67,
+              "id": 1743625,
+              "entry_number": "53",
+              "date_filed": "2011-11-14T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12502512107?caseid=75456&de_seq_num=244&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "MOTION for Judgment on the Pleadings, MOTION to Strike Motion Hearing set for 11/28/2011 11:00 AM in Albany before Magistrate Judge George H. Lowe Response to Motion due by 11/14/2011 Reply to Response to Motion due by 11/17/2011. filed by Edward Kalwasinski. (Attachments: # 1 Memorandum of Law Memorandum of Law in Support of Plaintiffs Motion for Partial Judgment on the Pleadings Regarding Certain Defenses, or in the Alternative to Strike Those Defenses) (Dignam, Brett) (Entered: 11/14/2011)"
+            },
+            {
+              "row_number": 65,
+              "id": 1743623,
+              "entry_number": null,
+              "date_filed": "2011-11-14T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Magistrate Judge George H. Lowe no longer assigned to case. (nas, ) (Entered: 11/14/2011)"
+            },
+            {
+              "row_number": 18,
+              "id": 1743576,
+              "entry_number": "18",
+              "date_filed": "2009-09-24T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501770680?caseid=75456&de_seq_num=57&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "RESPONSE in Opposition re 15 MOTION to Compel, 16 Letter Motion from Dean J. Higgins, Esq. for Teri Maxymillian, Michael Hogan, Donald Sawyer requesting Extension of time to respond to Motion submitted to Judge George H. Lowe filed by Teri Maxymillian, Michael Hogan, Donald Sawyer. (Attachments: # 1 Exhibit(s) Letter to plaintiff enclosing responses, # 2 Exhibit(s) Response to discovery demand)(Higgins, Dean) (Entered: 09/24/2009)"
+            },
+            {
+              "row_number": 77,
+              "id": 1743635,
+              "entry_number": null,
+              "date_filed": "2012-01-31T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing: Status Conference set for 2/7/2012 at 03:30 PM before Magistrate Judge George H. Lowe. Chambers will initiate the call.(rjb, ) (Entered: 01/31/2012)"
+            },
+            {
+              "row_number": 25,
+              "id": 1743583,
+              "entry_number": null,
+              "date_filed": "2009-11-04T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing on 22 MOTION to Compel : ON SUBMISSION ONLY, returnable on 12/7/09. Response to Motion due by 11/20/2009 {notice mailed to all non−ecf parties}(nas) (Entered: 11/04/2009)"
+            },
+            {
+              "row_number": 9,
+              "id": 1743567,
+              "entry_number": "10",
+              "date_filed": "2009-05-28T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511660757?caseid=75456&de_seq_num=32&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion from Dean J. Higgins, Esq. for Teri Maxymillian, Michael Hogan, Donald Sawyer requesting extension of time to answer submitted to Judge George H. Lowe. (Higgins, Dean) (Entered: 05/28/2009)"
+            },
+            {
+              "row_number": 56,
+              "id": 1743614,
+              "entry_number": null,
+              "date_filed": "2011-08-19T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing: Telephone Conference set for 8/25/2011 at 02:30 PM before Magistrate Judge George H. Lowe. Chambers will initiate the call (text notice served on Plaintiff via regular mail).(rjb, ) (Entered: 08/19/2011)"
+            },
+            {
+              "row_number": 6,
+              "id": 1743564,
+              "entry_number": "8",
+              "date_filed": "2009-04-15T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511620531?caseid=75456&de_seq_num=23&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "BILL OF COSTS submitted by the US Marshals to recover costs of service in the amount of $24.00. (nas) (Entered: 04/15/2009)"
+            },
+            {
+              "row_number": 7,
+              "id": 1743565,
+              "entry_number": "9",
+              "date_filed": "2009-04-17T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501623050?caseid=75456&de_seq_num=25&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Notice of Appearance and Letter Motion from Dean J. Higgins, Esq. for Teri Maxymillian, Michael Hogan, Donald Sawyer requesting Extension of time to answer submitted to Judge George H. Lowe. (Attachments: # 1 Exhibit(s) Notice of Appearance)(Higgins, Dean) (Entered: 04/17/2009)"
+            },
+            {
+              "row_number": 4,
+              "id": 1743562,
+              "entry_number": "6",
+              "date_filed": "2009-04-15T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511620517?caseid=75456&de_seq_num=19&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ACKNOWLEDGEMENT OF SERVICE Executed as to Teri Maxymillian served on 4/13/2009, answer due 5/4/2009. (nas) (Entered: 04/15/2009)"
+            },
+            {
+              "row_number": 17,
+              "id": 1743575,
+              "entry_number": "17",
+              "date_filed": "2009-09-10T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511757987?caseid=75456&de_seq_num=54&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ORDER granting 16 Letter Request, response to 15 MOTION to Compel : due by 9/24/2009. Signed by NAS as per direction of Magistrate Judge George H. Lowe on 9/10/09. {order served via regular mail on all non−ecf parties}(nas) (Entered: 09/10/2009)"
+            },
+            {
+              "row_number": 27,
+              "id": 1743585,
+              "entry_number": "24",
+              "date_filed": "2009-11-25T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501827591?caseid=75456&de_seq_num=87&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "RESPONSE to Motion re 22 MOTION to Compel Confirmation of service of verified responses to interrogatories filed by Teri Maxymillian, Michael Hogan, Donald Sawyer. (Attachments: # 1 Declaration of service of verified responses upon Plaintiff)(Higgins, Dean) (Entered: 11/25/2009)"
+            },
+            {
+              "row_number": 30,
+              "id": 1743588,
+              "entry_number": "26",
+              "date_filed": "2010-01-05T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511859204?caseid=75456&de_seq_num=96&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion from Dean J. Higgins, Esq. for Michael Hogan, Teri Maxymillian, Donald Sawyer requesting brief extension of deadline for dispositive motion submitted to Judge George H. Lowe. (Higgins, Dean) (Entered: 01/05/2010)"
+            },
+            {
+              "row_number": 13,
+              "id": 1743571,
+              "entry_number": "13",
+              "date_filed": "2009-06-18T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511680047?caseid=75456&de_seq_num=42&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "***STRICKEN FROM THE DOCKET PER DKT NO. 14***REQUEST for Production of Documents and Records by Edward Kalwasinski.(nas ) Modified on 7/1/2009 (nas, ). (Entered: 06/18/2009)"
+            },
+            {
+              "row_number": 26,
+              "id": 1743584,
+              "entry_number": "23",
+              "date_filed": "2009-11-20T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501823959?caseid=75456&de_seq_num=82&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "RESPONSE in Opposition re 22 MOTION to Compel filed by Teri Maxymillian, Michael Hogan, Donald Sawyer. (Attachments: # 1 Declaration of service of discovery responses on Plaintiff)(Higgins, Dean) (Entered: 11/20/2009)"
+            },
+            {
+              "row_number": 75,
+              "id": 1743633,
+              "entry_number": null,
+              "date_filed": "2011-11-21T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing: Telephone Settlement Conference set for 11/22/2011 at 12:00 PM before Magistrate Judge George H. Lowe. Chambers will initiate the call.(rjb, ) (Entered: 11/21/2011)"
+            },
+            {
+              "row_number": 15,
+              "id": 1743573,
+              "entry_number": "15",
+              "date_filed": "2009-08-25T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511745069?caseid=75456&de_seq_num=47&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "MOTION to Compel Motion Hearing set for 9/24/2009 Response to Motion due by 9/8/2009 filed by Edward Kalwasinski. Motions referred to George H. Lowe. (nas) (Entered: 08/25/2009)"
+            },
+            {
+              "row_number": 33,
+              "id": 1743591,
+              "entry_number": "30",
+              "date_filed": "2010-02-23T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501906618?caseid=75456&de_seq_num=104&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion from Dean J. Higgins, Esq. for Michael Hogan, Teri Maxymillian, Donald Sawyer requesting one week extension of motion deadline submitted to Judge George H. Lowe. (Attachments: # 1 Affirmation of service of request upon Plaintiff)(Higgins, Dean) (Entered: 02/23/2010)"
+            },
+            {
+              "row_number": 31,
+              "id": 1743589,
+              "entry_number": "28",
+              "date_filed": "2010-01-20T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511874501?caseid=75456&de_seq_num=100&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion from Dean J. Higgins, Esq. for Michael Hogan, Teri Maxymillian, Donald Sawyer requesting extension of time to file dispositive motions submitted to Judge George H. Lowe. (Higgins, Dean) (Entered: 01/20/2010)"
+            },
+            {
+              "row_number": 40,
+              "id": 1743598,
+              "entry_number": "35",
+              "date_filed": "2010-03-18T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511929578?caseid=75456&de_seq_num=125&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ORDER granting 34 Letter Request, Dispositive Motion filing deadline is reset to 4/14/2010, granting an extension of time to file a response to 33 MOTION for Summary Judgment : Response to Motion due by 4/14/2010. Signed by NAS as per direction of Magistrate Judge George H. Lowe on 3/18/10. {order served via regular mail on all non−ecf parties}(nas) (Entered: 03/18/2010)"
+            },
+            {
+              "row_number": 60,
+              "id": 1743618,
+              "entry_number": "48",
+              "date_filed": "2011-09-29T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512468656?caseid=75456&de_seq_num=220&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ATTORNEY APPOINTMENT ORDER: Plaintiff having renewed his request for the appointment of pro bono trial counsel. (Dkt No. 43 ). Good Cause appearing for that respect, it is Ordered that Attorney Brett M. Dignam for Edward Kalwasinski, appointed as pro bono trial counsel. Signed by Magistrate Judge George H. Lowe on 9/29/11. {order served via regular mail on plaintiff}(nas) (Entered: 09/29/2011)"
+            },
+            {
+              "row_number": 12,
+              "id": 1743570,
+              "entry_number": "12",
+              "date_filed": "2009-06-11T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511673236?caseid=75456&de_seq_num=40&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "MANDATORY PRETRIAL DISCOVERY AND SCHEDULING ORDER: Discovery due by 10/11/2009. Dispositive Motions to be filed by 1/10/2010. Signed by Magistrate Judge George H. Lowe on 6/11/09. {order served via regular mail on all non−ecf parties}(nas) (Entered: 06/11/2009)"
+            },
+            {
+              "row_number": 48,
+              "id": 1743606,
+              "entry_number": "43",
+              "date_filed": "2011-01-12T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512216984?caseid=75456&de_seq_num=178&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "MOTION to Appoint Counsel filed by Edward Kalwasinski. Motions referred to George H. Lowe. (nas, ) (Entered: 01/12/2011)"
+            },
+            {
+              "row_number": 57,
+              "id": 1743615,
+              "entry_number": null,
+              "date_filed": "2011-08-25T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT Minute Entry for proceedings held before Magistrate Judge George H. Lowe: Status Conference held on 8/25/2011. Appearances: Brett Dignam, Esq. and Edward Kalwasinski for Plaintiff; Dean Higgins, AAG for Defendants. Attorney Dignam will work on getting admitted ASAP and will provide AAG Higgins with a list of needed documents. Parties will consent to trial before Judge Lowe. Jury trial tentatively scheduled for 11/30/2011 in Albany. Pretrial submissions will be due one week before trial. A follow up conference will be scheduled. (FTR Recorded) (rjb, ) (Entered: 08/26/2011)"
+            },
+            {
+              "row_number": 79,
+              "id": 1743637,
+              "entry_number": null,
+              "date_filed": "2012-02-07T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE: The conference call scheduled for 2/7/12 is hereby cancelled. (rjb, ) (Entered: 02/07/2012)"
+            },
+            {
+              "row_number": 34,
+              "id": 1743592,
+              "entry_number": null,
+              "date_filed": "2010-02-23T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT ORDER granting 30 Letter Request, Dispositive Motions to be filed by 3/8/2010. No further extensions will be granted absent a showing of good cause. Authorized by NAS as per direction of Magistrate Judge George H. Lowe on 2/23/10. {order served via regular mail on all non−ecf parties}(nas) (Entered: 02/23/2010)"
+            },
+            {
+              "row_number": 37,
+              "id": 1743595,
+              "entry_number": "33",
+              "date_filed": "2010-03-17T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501928941?caseid=75456&de_seq_num=114&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "MOTION for Summary Judgment filed by Edward Kalwasinski. (Attachments: # 1 Statement of Material Facts, # 2 Memorandum of Law) (nas) (Entered: 03/17/2010)"
+            },
+            {
+              "row_number": 19,
+              "id": 1743577,
+              "entry_number": "19",
+              "date_filed": "2009-10-08T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511784548?caseid=75456&de_seq_num=65&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion from Dean J. Higgins, Esq. for Teri Maxymillian, Michael Hogan, Donald Sawyer requesting Extension of discovery deadline to take deposition submitted to Judge George H. Lowe. (Higgins, Dean) (Entered: 10/08/2009)"
+            },
+            {
+              "row_number": 10,
+              "id": 1743568,
+              "entry_number": null,
+              "date_filed": "2009-05-29T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT ORDER granting 10 Letter Request, Teri Maxymillian answer due 6/12/2009; Michael Hogan answer due 6/12/2009; Donald Sawyer answer due 6/12/2009. Authorized by NAS as per direction of Magistrate Judge George H. Lowe on 5/29/09. {order served via regular mail on plaintiff}(nas) (Entered: 05/29/2009)"
+            },
+            {
+              "row_number": 20,
+              "id": 1743578,
+              "entry_number": "20",
+              "date_filed": "2009-10-09T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511785182?caseid=75456&de_seq_num=67&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "****VACATED***ORDER granting 19 Letter Request, Dispositive Motions to be filed by 11/20/2009. Signed by NAS as per direction of Magistrate Judge George H. Lowe on 10/8/09. {order served via regular mail on all non−ecf parties}(nas) Modified on 10/9/2009 (nas, ). (Entered: 10/09/2009)"
+            },
+            {
+              "row_number": 22,
+              "id": 1743580,
+              "entry_number": "21",
+              "date_filed": "2009-10-13T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511787087?caseid=75456&de_seq_num=73&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ORDER granting in part and denying in part 15 Motion to Compel. ORDERED, that defendants shall provide any additional discovery materials responsive to the Pretrial Order within twenty (20) days of the filing date of this Order. ORDERED that the discovery completition deadline is reset to 11/20/09.Signed by Magistrate Judge George H. Lowe on 10/13/09.{order served via regular mail on all non−ecf parties} (nas) (Entered: 10/13/2009)"
+            },
+            {
+              "row_number": 3,
+              "id": 1743561,
+              "entry_number": "5",
+              "date_filed": "2009-04-15T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511620514?caseid=75456&de_seq_num=17&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ACKNOWLEDGEMENT OF SERVICE Executed as to Michael Hogan served on 4/13/2009, answer due 5/4/2009. (nas) (Entered: 04/15/2009)"
+            },
+            {
+              "row_number": 55,
+              "id": 1743613,
+              "entry_number": null,
+              "date_filed": "2011-05-19T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT Minute Entry for proceedings held before Magistrate Judge George H. Lowe: Status Conference held on 5/19/2011. Brett Dignam, Esq.; Dean Higgins, AAG for Defendants. Court reviews case with prospective Pro Bono Counsel. Ms. Dignam will discuss case with Mr. Kalwasinski and report to Court with decision as to pro bono representation and further conference call. (FTR Recorded) (ptm, ) (Entered: 05/26/2011)"
+            },
+            {
+              "row_number": 35,
+              "id": 1743593,
+              "entry_number": "31",
+              "date_filed": "2010-03-04T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511916070?caseid=75456&de_seq_num=108&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion from Dean J. Higgins, Esq. for Michael Hogan, Teri Maxymillian, Donald Sawyer requesting extension to 3/17/2010 to file and serve dispositive motion submitted to Judge George H. Lowe. (Higgins, Dean) (Entered: 03/04/2010)"
+            },
+            {
+              "row_number": 38,
+              "id": 1743596,
+              "entry_number": null,
+              "date_filed": "2010-03-17T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT NOTICE of Hearing on Motion 33 MOTION for Summary Judgment : ON SUBMISSION ONLY, returnable on 4/19/10. Response to Motion due by 4/2/2010 Reply to Response to Motion due by 4/8/2010. {notice served via regular mail on all non−ecf parties}(nas) (Entered: 03/17/2010)"
+            },
+            {
+              "row_number": 39,
+              "id": 1743597,
+              "entry_number": "34",
+              "date_filed": "2010-03-17T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511929163?caseid=75456&de_seq_num=123&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion from Dean J. Higgins, Esq. for Michael Hogan, Teri Maxymillian, Donald Sawyer requesting extension to file dispositive motions submitted to Judge George H. Lowe. (Higgins, Dean) (Entered: 03/17/2010)"
+            },
+            {
+              "row_number": 41,
+              "id": 1743599,
+              "entry_number": "36",
+              "date_filed": "2010-04-14T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501957038?caseid=75456&de_seq_num=134&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "RESPONSE in Opposition re 33 MOTION for Summary Judgment Main response contained in Defendants' Motion for Summary Judgment filed by Michael Hogan, Teri Maxymillian, Donald Sawyer. (Attachments: # 1 Exhibit(s) Response to plaintiff's Rule 7 statement)(Higgins, Dean) (Entered: 04/14/2010)"
+            },
+            {
+              "row_number": 42,
+              "id": 1743600,
+              "entry_number": "37",
+              "date_filed": "2010-04-14T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501957220?caseid=75456&de_seq_num=137&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "First MOTION for Summary Judgment Motion Hearing set for 5/20/2010 09:30 AM in Syracuse before Magistrate Judge George H. Lowe Response to Motion due by 5/3/2010 Reply to Response to Motion due by 5/10/2010. filed by Michael Hogan, Teri Maxymillian, Donald Sawyer. (Attachments: # 1 Statement of Material Facts, # 2 Exhibit(s) Cautionary warning to pro se litigant regarding responsive papers, # 3 Declaration of Dean Higgins, # 4 Exhibit(s) numbers 1−14 attached to and described in Higgins declaration, # 5 Declaration of Imam Najeeullah, # 6 Declaration of Elaine Dziadyk, # 7 Declaration of Valerie Fasteson, # 8 Memorandum of Law, # 9 Appendix Simmons case, # 10 Appendix Majid case) (Higgins, Dean) (Attachment 8 replaced on 4/15/2010) (nas, ). (Entered: 04/14/2010)"
+            },
+            {
+              "row_number": 46,
+              "id": 1743604,
+              "entry_number": null,
+              "date_filed": "2010-07-28T00:00:00-04:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT ORDER granting 41 Letter Request. The Clerk is directed to provide plaintiff with a copy of defendants' response to his motion for summary judgment (dkt no. 36) and a copy of the docket sheet. Authorized by NAS as per direction of Magistrate Judge George H. Lowe on 7/28/10. {order, dkt no. 36 and docket sheet served via regular mail on plaintiff}(nas) (Entered: 07/28/2010)"
+            },
+            {
+              "row_number": 45,
+              "id": 1743603,
+              "entry_number": "41",
+              "date_filed": "2010-07-28T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512057099?caseid=75456&de_seq_num=161&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion for Edward Kalwasinski requesting a copy of defendants' response to plaintiff's motion for summary judgment and an updated copy of the docket sheet. (nas ) (Entered: 07/28/2010)"
+            },
+            {
+              "row_number": 49,
+              "id": 1743607,
+              "entry_number": "44",
+              "date_filed": "2011-01-13T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512218770?caseid=75456&de_seq_num=180&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter Motion from Dean J. Higgins for Michael Hogan, Teri Maxymillian, Donald Sawyer requesting extension of case review deadline submitted to Judge George H. Lowe. (Higgins, Dean) (Entered: 01/13/2011)"
+            },
+            {
+              "row_number": 5,
+              "id": 1743563,
+              "entry_number": "7",
+              "date_filed": "2009-04-15T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511620520?caseid=75456&de_seq_num=21&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ACKNOWLEDGEMENT OF SERVICE Executed as to Donald Sawyer served on 4/13/2009, answer due 5/4/2009. (nas) (Entered: 04/15/2009)"
+            },
+            {
+              "row_number": 14,
+              "id": 1743572,
+              "entry_number": "14",
+              "date_filed": "2009-07-01T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511691897?caseid=75456&de_seq_num=44&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ORDER TO STRIKE 13 Request for Production of Documents filed by Edward Kalwasinski. Signed by Magistrate Judge George H. Lowe on 7/1/09. {order served via regular mail on all non−ecf parties}(nas) (Entered: 07/01/2009)"
+            },
+            {
+              "row_number": 73,
+              "id": 1743631,
+              "entry_number": "57",
+              "date_filed": "2011-11-18T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12512517799?caseid=75456&de_seq_num=259&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "Letter from Judge Lowe to counsel dated 11/18/11. (rjb, ) (Entered: 11/18/2011)"
+            },
+            {
+              "row_number": 1,
+              "id": 1743559,
+              "entry_number": "3",
+              "date_filed": "2009-03-10T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511584317?caseid=75456&de_seq_num=11&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ORDER that the Clerk shall revise the designation of this case, No. 09−CV−00214(DNH/GHL), to reflect a division nine case assignment; granting 2 Motion for Leave to Proceed in forma pauperis and service is directed of the complaint. Signed by Magistrate Judge George H. Lowe on 3/10/09. {order served via regular mail on plaintiff}(nas) (Entered: 03/10/2009)"
+            },
+            {
+              "row_number": 11,
+              "id": 1743569,
+              "entry_number": "11",
+              "date_filed": "2009-06-10T00:00:00-04:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12501672495?caseid=75456&de_seq_num=38&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "ANSWER to 1 Complaint by Teri Maxymillian, Michael Hogan, Donald Sawyer. (Attachments: # 1 Declaration of service of Answer on Plaintiff)(Higgins, Dean) (Entered: 06/10/2009)"
+            },
+            {
+              "row_number": 28,
+              "id": 1743586,
+              "entry_number": "25",
+              "date_filed": "2009-12-14T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12511843021?caseid=75456&de_seq_num=90&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "DECISION AND ORDER: ORDERED, that plaintiff's 22 Motion to Compel is DENIED AS MOOT. ORDERED, that the discovery in this action is now closed. ORDERED, that the dispositive motion filing deadline is 1/10/2010. Signed by Magistrate Judge George H. Lowe on 12/14/09. (Decision and Order served on plaintiff by regular mail) (alh, ) (Entered: 12/14/2009)"
+            },
+            {
+              "row_number": 76,
+              "id": 1743634,
+              "entry_number": null,
+              "date_filed": "2011-11-22T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT Minute Entry for proceedings held before Magistrate Judge George H. Lowe: Telephone Settlement Conference held on 11/22/2011. Appearances: Brett Dignam, Esq. for Plaintiff; Dean Higgins, AAG for Defendants. Case has settled. Counsel will confer on the injunctive relief part of the settlement. The Court will contact counsel in a week or so for a status report. (FTR Recorded) (rjb, ) (Entered: 11/23/2011)"
+            },
+            {
+              "row_number": 71,
+              "id": 1743629,
+              "entry_number": null,
+              "date_filed": "2011-11-15T00:00:00-05:00",
+              "attachments": [],
+              "url": "nan",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "TEXT Minute Entry for proceedings held before Magistrate Judge George H. Lowe: Telephonic Settlement Conference held on 11/15/2011. Appearances: Brett Dignam, Esq. and Edward Kalwasinski for Plaintiff; Dean Higgins, AAG for Defendants. Mr. Higgins still does not have any monetary settlement authority but hopes to by the end of the week. Judge Lowe and counsel confer on trial issues. Ms. Dignam will provide Mr. Higgins with documents that Plaintiff intends to enter into evidence by Friday, except for the documents from the MHLS file that they do not have yet. Plaintiff intends to file a partial summary judgment motion. No trial briefs will be filed. A follow up conference will be scheduled. (FTR Recorded) (rjb, ) (Entered: 11/18/2011)"
+            },
+            {
+              "row_number": 70,
+              "id": 1743628,
+              "entry_number": "56",
+              "date_filed": "2011-11-15T00:00:00-05:00",
+              "attachments": [],
+              "url": "https://ecf.nynd.uscourts.gov/doc1/12502513215?caseid=75456&de_seq_num=251&pdf_header=1&pdf_toggle_possible=1",
+              "recap_pdf_url": null,
+              "pacer_doc_id": null,
+              "description": "MOTION for Partial Summary Judgment Motion Hearing set for 11/28/2011 11:00 AM in Albany before Magistrate Judge George H. Lowe Response to Motion due by 11/14/2011 Reply to Response to Motion due by 11/17/2011. filed by Edward Kalwasinski. (Attachments: # 1 Memorandum of Law, # 2 Statement of Material Facts, # 3 Exhibit(s)) (Dignam, Brett) (Entered: 11/15/2011)"
+            }
+          ],
+          "docket_case_type": "cv",
+          "docket_year": 2009,
+          "docket_filing_number": 214,
+          "is_main_docket": true,
+          "court": "Northern District of New York",
+          "state": "New York",
+          "docket_office_number": "9",
+          "docket_number_manual": "9:09-cv-00214-GHL",
+          "scales_html": "https://clearinghouse-umich-production.s3.amazonaws.com/media/docket-html/nynd--9-09-cv-00214.html",
+          "recap_link": "https://www.courtlistener.com/docket/5505552/kalwasinski-v-maxymillian/",
+          "is_active": true
+        },
+        "name": "Kalwasinski v. Maxymillian",
+        "never_filed": false,
+        "non_docket_case_number": "",
+        "non_docket_case_number_type": null,
+        "non_docket_case_number_type_other": "",
+        "order_end_year": null,
+        "order_start_year": null,
+        "permanent_injunction": false,
+        "plaintiff_description": "Muslim inmate at the Central New York Psychiatric Center who alleged that the facility violated his right to freely exercise his religion.",
+        "plaintiff_type": [
+          {
+            "value": "Private Plaintiff"
+          }
+        ],
+        "prevailing_party": "Plaintiff",
+        "pro_se_status": "Yes",
+        "public_interest_lawyer": "Yes",
+        "related_cases": [],
+        "relief_natures": [
+          "Injunction / Injunctive-like Settlement",
+          "Attorneys fees",
+          "Damages"
+        ],
+        "relief_nature_other": "",
+        "relief_sources": [
+          "Settlement"
+        ],
+        "settlement_agreement": [
+          "Court Approved Settlement or Consent Decree"
+        ],
+        "settlement_judgment_date": null,
+        "settlement_judgment_year": null,
+        "special_collections": [
+          "Multi-LexSum (in sample)"
+        ],
+        "special_case_type": [],
+        "state": "New York",
+        "summary": "<p>On February 20, 2009, a Muslim prisoner at the Central New York Psychiatric Center filed this lawsuit in the U.S. District Court for the Northern District of New York. The pro se plaintiff sued the Director of the Sex Offender Treatment Program, the New York State Office of Health Commissioner, and the Executive Director of the Central New York Psychiatric Center under 42 U.S.C. §1983. The plaintiff sought injunctive and monetary relief, claiming violations of the First Amendment Free Exercise Clause, the Fifth and Fourteenth Amendment Due Process Clauses, and the Eighth Amendment prohibition against cruel and unusual punishment. The plaintiff alleged that his facility, the Central New York Psychiatric Center (CNYPC) did not allow him to properly participate in Al-Jumu’ah prayer services, forced him to attend classes on Fridays in violation of Muslim practice, and denied him food in compliance with Halal. </p><p>On March 17, 2010, the plaintiff moved for summary judgment. He argued there was clear evidence the CNYPC misunderstood the requirements for Al-Jumu’ah prayer and in doing so deprived him of Free Exercise. On April 14, 2010, the defendants filed a cross-motion for summary judgment, arguing (1) that the reason Al-Jumu’ah prayer has not been provided is that there are no Imams in the area who are available to facilitate, (2) the food offered in the cafeteria allows those following a Halal diet to sustain good health without violating their dietary laws, and (3) the utensils are sufficiently washed so as to be in compliance with Halal. </p><p>On December 23, 2010, Magistrate Judge George Lowe issued a report and recommendation to Judge David Hurd, (2010 WL 5620908), which Judge Hurd then adopted in full on January 20, 2011. Judge Hurd denied the plaintiff’s motion for summary judgment while granting in part and denying in part the defendant’s motion for summary judgment. The surviving claims included the Free Exercise and Religious Land Use and Institutionalized Persons Act claims regarding the lack of Al-Jumu’ah services, the lack of a Halal-compliant menu, the denial of access to sacred food on religious holidays, and the requirement to attend classes on Fridays. The court dismissed the Free Exercise claims regarding bowls, utensils, and serving fish on Fridays; the Establishment Clause claim regarding serving fish on Fridays; the Due Process Claims; the Eighth Amendment claim; and the claim against the New York State Office of Health Commissioner. 2011 WL 195648. </p><p>After the appointment of pro bono counsel on September 29, 2011, parties moved to settle the lawsuit. On November 14, 2011, the parties consented to have Magistrate Judge Lowe oversee the negotiations and final resolution of the case. On February 7, 2012, the parties settled and Magistrate Judge Lowe signed off on the settlement the next day. According to the settlement,  the defendants would pay the plaintiff $15,000, which included all damages, costs, and attorney’s fees, and the defendants further agreed to have a Halal menu in place and retain an Imam to lead Al-Jumu’ah services on Fridays. As no action has been taken on this case since, it is likely this case is closed. </p><p></p>",
+        "summary_published_date": "2017-10-01T00:00:00-04:00",
+        "summary_short": "On February 20, 2009, a Muslim prisoner at the Central New York Psychiatric Center filed this lawsuit in the U.S. District Court for the Northern District of New York. The pro se plaintiff sued affiliates of CNYPC under 42 U.S.C. §1983 for various constitutional violations which he alleged denied him of freedom to freely practice his faith. After both parties were denied summary judgment, the parties settled on February 7, 2012, agreeing that the defendants would take measures to ensure the inmate’s religious requirements were met. ",
+        "summary_tiny": null,
+        "terminating_date": null,
+        "clearinghouse_link": "clearinghouse.net/case/15837",
+        "is_active": true,
+        "case_documents_url": "https://clearinghouse.net/api/v2/documents/?case=15837",
+        "case_dockets_url": "https://clearinghouse.net/api/v2/dockets/?case=15837",
+        "case_resources_url": "https://clearinghouse.net/api/v2/resources/?case=15837"
+      },
+      "dimension_variations": {
+        "Depth": {
+          "dimension_name": "Depth ⇄ Conciseness",
+          "dimension_description": "Transform from detailed to concise",
+          "levels": {
+            "0": {
+              "text": "<p>On February 20, 2009, a Muslim prisoner at the Central New York Psychiatric Center filed this lawsuit in the U.S. District Court for the Northern District of New York. The pro se plaintiff sued the Director of the Sex Offender Treatment Program, the New York State Office of Health Commissioner, and the Executive Director of the Central New York Psychiatric Center under 42 U.S.C. §1983. The plaintiff sought injunctive and monetary relief, claiming violations of the First Amendment Free Exercise Clause, the Fifth and Fourteenth Amendment Due Process Clauses, and the Eighth Amendment prohibition against cruel and unusual punishment. The plaintiff alleged that his facility, the Central New York Psychiatric Center (CNYPC) did not allow him to properly participate in Al-Jumu’ah prayer services, forced him to attend classes on Fridays in violation of Muslim practice, and denied him food in compliance with Halal. </p><p>On March 17, 2010, the plaintiff moved for summary judgment. He argued there was clear evidence the CNYPC misunderstood the requirements for Al-Jumu’ah prayer and in doing so deprived him of Free Exercise. On April 14, 2010, the defendants filed a cross-motion for summary judgment, arguing (1) that the reason Al-Jumu’ah prayer has not been provided is that there are no Imams in the area who are available to facilitate, (2) the food offered in the cafeteria allows those following a Halal diet to sustain good health without violating their dietary laws, and (3) the utensils are sufficiently washed so as to be in compliance with Halal. </p><p>On December 23, 2010, Magistrate Judge George Lowe issued a report and recommendation to Judge David Hurd, (2010 WL 5620908), which Judge Hurd then adopted in full on January 20, 2011. Judge Hurd denied the plaintiff’s motion for summary judgment while granting in part and denying in part the defendant’s motion for summary judgment. The surviving claims included the Free Exercise and Religious Land Use and Institutionalized Persons Act claims regarding the lack of Al-Jumu’ah services, the lack of a Halal-compliant menu, the denial of access to sacred food on religious holidays, and the requirement to attend classes on Fridays. The court dismissed the Free Exercise claims regarding bowls, utensils, and serving fish on Fridays; the Establishment Clause claim regarding serving fish on Fridays; the Due Process Claims; the Eighth Amendment claim; and the claim against the New York State Office of Health Commissioner. 2011 WL 195648. </p><p>After the appointment of pro bono counsel on September 29, 2011, parties moved to settle the lawsuit. On November 14, 2011, the parties consented to have Magistrate Judge Lowe oversee the negotiations and final resolution of the case. On February 7, 2012, the parties settled and Magistrate Judge Lowe signed off on the settlement the next day. According to the settlement,  the defendants would pay the plaintiff $15,000, which included all damages, costs, and attorney’s fees, and the defendants further agreed to have a Halal menu in place and retain an Imam to lead Al-Jumu’ah services on Fridays. As no action has been taken on this case since, it is likely this case is closed. </p><p></p>",
+              "success": true,
+              "metadata": {
+                "word_count": 513,
+                "citation_count": 0,
+                "procedure_keyword_count": 50,
+                "procedure_keyword_frequency": 0.09746588693957114,
+                "fkgl_score": 14.685623781676416,
+                "ncr_score": 12.468014230019493
+              }
+            },
+            "1": {
+              "success": true,
+              "transformed_text": "On February 20, 2009, a pro se Muslim prisoner at the Central New York Psychiatric Center initiated a lawsuit in the U.S. District Court for the Northern District of New York against the Director of the Sex Offender Treatment Program, the New York State Office of Health Commissioner, and the Executive Director of the Central New York Psychiatric Center under 42 U.S.C. §1983. The plaintiff sought both injunctive and monetary relief, asserting claims for violations of the First Amendment Free Exercise Clause, the Fifth and Fourteenth Amendment Due Process Clauses, and the Eighth Amendment prohibition against cruel and unusual punishment. His allegations focused on the Central New York Psychiatric Center (CNYPC)'s failure to permit proper participation in Al-Jumu’ah prayer services, its requirement that he attend classes on Fridays in violation of Muslim practice, and its denial of food compliant with Halal dietary laws.\n\nThe plaintiff subsequently moved for summary judgment, arguing that clear evidence demonstrated CNYPC's misunderstanding of Al-Jumu’ah prayer requirements and its resultant deprivation of his Free Exercise rights. In response, the defendants filed a cross-motion for summary judgment, asserting that Al-Jumu’ah prayer was unavailable due to a lack of available local Imams, that the cafeteria food adequately accommodated Halal diets without violating religious dietary laws, and that all utensils were sufficiently washed to ensure Halal compliance.\n\nMagistrate Judge George Lowe issued a report and recommendation to Judge David Hurd, which Judge Hurd adopted in full on January 20, 2011 (2010 WL 5620908; 2011 WL 195648). Judge Hurd denied the plaintiff’s motion for summary judgment while granting in part and denying in part the defendants’ cross-motion. Surviving claims included Free Exercise and Religious Land Use and Institutionalized Persons Act claims concerning the lack of Al-Jumu’ah services, absence of a Halal-compliant menu, denial of access to sacred food on religious holidays, and the mandatory attendance at Friday classes. The court dismissed Free Exercise claims regarding bowls, utensils, and serving fish on Fridays; the Establishment Clause claim regarding serving fish on Fridays; the Due Process Claims; the Eighth Amendment claim; and the claim against the New York State Office of Health Commissioner.\n\nFollowing the appointment of pro bono counsel, the parties moved to settle the lawsuit and consented to Magistrate Judge Lowe overseeing negotiations and final resolution. On February 7, 2012, the parties settled, with Magistrate Judge Lowe signing off the following day. The settlement stipulated defendants would pay the plaintiff $15,000, covering all damages, costs, and attorney’s fees, and further agreed to implement a Halal menu and retain an Imam to lead Al-Jumu’ah services on Fridays. No further action has been taken, indicating the case is likely closed.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 438,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 43,
+                  "procedure_keyword_frequency": 0.09817351598173515,
+                  "fkgl_score": 17.75983039791259,
+                  "ncr_score": 13.371673255055446
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "target_words": 436,
+                  "actual_words": 438,
+                  "tolerance": 87,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 438,
+                "citation_count": 0,
+                "procedure_keyword_count": 43,
+                "procedure_keyword_frequency": 0.09817351598173515,
+                "fkgl_score": 17.75983039791259,
+                "ncr_score": 13.371673255055446
+              }
+            },
+            "2": {
+              "success": true,
+              "transformed_text": "On February 20, 2009, a pro se Muslim prisoner at the Central New York Psychiatric Center commenced an action in the U.S. District Court for the Northern District of New York against the Director of the Sex Offender Treatment Program, the New York State Office of Health Commissioner, and the Executive Director of the Central New York Psychiatric Center. Proceeding under 42 U.S.C. §1983, the plaintiff sought injunctive and monetary relief, alleging violations of the First Amendment Free Exercise Clause, the Fifth and Fourteenth Amendment Due Process Clauses, and the Eighth Amendment. His complaint asserted that the Central New York Psychiatric Center (CNYPC) failed to permit proper participation in Al-Jumu’ah prayer, mandated Friday class attendance contrary to Muslim practice, and denied Halal-compliant food.\n\nFollowing cross-motions for summary judgment, Magistrate Judge George Lowe issued a report and recommendation, which Judge David Hurd adopted in full on January 20, 2011. The court denied the plaintiff’s motion for summary judgment and granted in part, denied in part, the defendants’ cross-motion. Surviving claims included those under the Free Exercise Clause and the Religious Land Use and Institutionalized Persons Act (RLUIPA) concerning the lack of Al-Jumu’ah services, the absence of a Halal-compliant menu, the denial of access to sacred food on religious holidays, and the mandatory attendance at Friday classes. Dismissed claims encompassed Free Exercise allegations regarding bowls, utensils, and serving fish on Fridays; the Establishment Clause claim regarding serving fish on Fridays; the Due Process claims; the Eighth Amendment claim; and the claim against the New York State Office of Health Commissioner.\n\nAfter pro bono counsel was appointed, the parties pursued settlement, consenting to Magistrate Judge Lowe’s oversight of negotiations and final resolution. On February 7, 2012, the parties reached a settlement, which Magistrate Judge Lowe approved the following day. The agreement stipulated the defendants would pay the plaintiff $15,000, encompassing all damages, costs, and attorney’s fees. Furthermore, the defendants committed to implementing a Halal menu and retaining an Imam to lead Al-Jumu’ah services on Fridays. No subsequent action has occurred, indicating the case’s probable closure.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 342,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 35,
+                  "procedure_keyword_frequency": 0.1023391812865497,
+                  "fkgl_score": 15.156441102756897,
+                  "ncr_score": 13.112513868003342
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "target_words": 359,
+                  "actual_words": 342,
+                  "tolerance": 71,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 342,
+                "citation_count": 0,
+                "procedure_keyword_count": 35,
+                "procedure_keyword_frequency": 0.1023391812865497,
+                "fkgl_score": 15.156441102756897,
+                "ncr_score": 13.112513868003342
+              }
+            },
+            "3": {
+              "success": true,
+              "transformed_text": "This action, commenced by a pro se Muslim prisoner against Central New York Psychiatric Center officials under 42 U.S.C. §1983, alleging First, Fifth, Eighth, and Fourteenth Amendment violations related to religious accommodations, including Al-Jumu’ah prayer, Friday class attendance, and Halal food, ultimately concluded in a comprehensive settlement.\n\n*   The plaintiff sought injunctive and monetary relief. Following cross-motions for summary judgment, Magistrate Judge George Lowe’s report and recommendation, adopted by Judge David Hurd on January 20, 2011, denied the plaintiff’s motion while granting in part and denying in part the defendants’ cross-motion.\n*   Claims surviving summary judgment included those under the Free Exercise Clause and RLUIPA concerning the lack of Al-Jumu’ah services, absence of a Halal-compliant menu, denial of access to sacred food on religious holidays, and mandatory attendance at Friday classes.\n*   Conversely, claims dismissed encompassed Free Exercise allegations regarding bowls, utensils, and serving fish on Fridays; the Establishment Clause claim regarding serving fish on Fridays; all Due Process claims; the Eighth Amendment claim; and the claim against the New York State Office of Health Commissioner.\n*   After pro bono counsel was appointed, the parties settled on February 7, 2012. The agreement stipulated defendants would pay the plaintiff $15,000, encompassing all damages, costs, and attorney’s fees. Furthermore, defendants committed to implementing a Halal menu and retaining an Imam to lead Al-Jumu’ah services on Fridays.",
+              "attempts": 2,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 224,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 26,
+                  "procedure_keyword_frequency": 0.11607142857142858,
+                  "fkgl_score": 16.148787878787882,
+                  "ncr_score": 13.964080808080809
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "target_words": 256,
+                  "actual_words": 224,
+                  "tolerance": 51,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 224,
+                "citation_count": 0,
+                "procedure_keyword_count": 26,
+                "procedure_keyword_frequency": 0.11607142857142858,
+                "fkgl_score": 16.148787878787882,
+                "ncr_score": 13.964080808080809
+              }
+            },
+            "4": {
+              "success": true,
+              "transformed_text": "Prisoner's §1983 Religious Claims Against Psychiatric Center Settled\n\n*   **Who Sued Who?** A pro se Muslim prisoner sued Central New York Psychiatric Center officials.\n*   **Why?** Allegations under 42 U.S.C. §1983 for First, Fifth, Eighth, and Fourteenth Amendment violations, plus RLUIPA claims, concerning religious accommodations. Specifically, denial of Al-Jumu’ah prayer, mandatory Friday class attendance, and lack of Halal food options. Plaintiff sought injunctive and monetary relief.\n*   **What Happened?** Following cross-motions for summary judgment, a Magistrate Judge's report, adopted by a District Judge, denied plaintiff's motion and partially granted defendants'. Surviving claims involved Free Exercise/RLUIPA regarding Al-Jumu’ah, Halal menu, sacred food, and Friday classes. Dismissed claims included Due Process and Eighth Amendment. After pro bono counsel, parties settled: defendants paid $15,000 and agreed to implement a Halal menu and retain an Imam for Al-Jumu’ah services.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 135,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 17,
+                  "procedure_keyword_frequency": 0.1259259259259259,
+                  "fkgl_score": 11.995878787878791,
+                  "ncr_score": 14.578644242424243
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "target_words": 153,
+                  "actual_words": 135,
+                  "tolerance": 30,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 135,
+                "citation_count": 0,
+                "procedure_keyword_count": 17,
+                "procedure_keyword_frequency": 0.1259259259259259,
+                "fkgl_score": 11.995878787878791,
+                "ncr_score": 14.578644242424243
+              }
+            }
+          }
+        },
+        "Precision": {
+          "dimension_name": "Technical Precision ⇄ Lay Accessibility",
+          "dimension_description": "Transform from technical to accessible",
+          "levels": {
+            "0": {
+              "text": "<p>On February 20, 2009, a Muslim prisoner at the Central New York Psychiatric Center filed this lawsuit in the U.S. District Court for the Northern District of New York. The pro se plaintiff sued the Director of the Sex Offender Treatment Program, the New York State Office of Health Commissioner, and the Executive Director of the Central New York Psychiatric Center under 42 U.S.C. §1983. The plaintiff sought injunctive and monetary relief, claiming violations of the First Amendment Free Exercise Clause, the Fifth and Fourteenth Amendment Due Process Clauses, and the Eighth Amendment prohibition against cruel and unusual punishment. The plaintiff alleged that his facility, the Central New York Psychiatric Center (CNYPC) did not allow him to properly participate in Al-Jumu’ah prayer services, forced him to attend classes on Fridays in violation of Muslim practice, and denied him food in compliance with Halal. </p><p>On March 17, 2010, the plaintiff moved for summary judgment. He argued there was clear evidence the CNYPC misunderstood the requirements for Al-Jumu’ah prayer and in doing so deprived him of Free Exercise. On April 14, 2010, the defendants filed a cross-motion for summary judgment, arguing (1) that the reason Al-Jumu’ah prayer has not been provided is that there are no Imams in the area who are available to facilitate, (2) the food offered in the cafeteria allows those following a Halal diet to sustain good health without violating their dietary laws, and (3) the utensils are sufficiently washed so as to be in compliance with Halal. </p><p>On December 23, 2010, Magistrate Judge George Lowe issued a report and recommendation to Judge David Hurd, (2010 WL 5620908), which Judge Hurd then adopted in full on January 20, 2011. Judge Hurd denied the plaintiff’s motion for summary judgment while granting in part and denying in part the defendant’s motion for summary judgment. The surviving claims included the Free Exercise and Religious Land Use and Institutionalized Persons Act claims regarding the lack of Al-Jumu’ah services, the lack of a Halal-compliant menu, the denial of access to sacred food on religious holidays, and the requirement to attend classes on Fridays. The court dismissed the Free Exercise claims regarding bowls, utensils, and serving fish on Fridays; the Establishment Clause claim regarding serving fish on Fridays; the Due Process Claims; the Eighth Amendment claim; and the claim against the New York State Office of Health Commissioner. 2011 WL 195648. </p><p>After the appointment of pro bono counsel on September 29, 2011, parties moved to settle the lawsuit. On November 14, 2011, the parties consented to have Magistrate Judge Lowe oversee the negotiations and final resolution of the case. On February 7, 2012, the parties settled and Magistrate Judge Lowe signed off on the settlement the next day. According to the settlement,  the defendants would pay the plaintiff $15,000, which included all damages, costs, and attorney’s fees, and the defendants further agreed to have a Halal menu in place and retain an Imam to lead Al-Jumu’ah services on Fridays. As no action has been taken on this case since, it is likely this case is closed. </p><p></p>",
+              "success": true,
+              "metadata": {
+                "word_count": 513,
+                "citation_count": 0,
+                "procedure_keyword_count": 50,
+                "procedure_keyword_frequency": 0.09746588693957114,
+                "fkgl_score": 14.685623781676416,
+                "ncr_score": 12.468014230019493
+              }
+            },
+            "1": {
+              "success": true,
+              "transformed_text": "On February 20, 2009, a Muslim prisoner at the Central New York Psychiatric Center filed this lawsuit in the U.S. District Court for the Northern District of New York. The plaintiff, representing himself, sued the Director of the Sex Offender Treatment Program, the New York State Office of Health Commissioner, and the Executive Director of the Central New York Psychiatric Center under a federal civil rights law. The plaintiff asked the court for orders and money, claiming his rights were violated under the First Amendment (right to practice religion), the Fifth and Fourteenth Amendments (right to fair treatment), and the Eighth Amendment (protection against cruel and unusual punishment). The plaintiff alleged that his facility, the Central New York Psychiatric Center (CNYPC), did not allow him to properly participate in Al-Jumu’ah prayer services, forced him to attend classes on Fridays in violation of Muslim practice, and denied him food that followed Halal dietary laws.\n\nOn March 17, 2010, the plaintiff asked the court to rule in his favor without a full trial. He argued there was clear evidence that the CNYPC misunderstood the requirements for Al-Jumu’ah prayer, which violated his right to practice his religion. On April 14, 2010, the defendants filed their own request for a ruling in their favor. They argued (1) that Al-Jumu’ah prayer wasn't provided because no Imams were available in the area to lead services, (2) the food offered in the cafeteria allowed those following a Halal diet to eat healthily without breaking their dietary laws, and (3) the utensils were cleaned well enough to meet Halal standards.\n\nOn December 23, 2010, Magistrate Judge George Lowe made a recommendation to Judge David Hurd, which Judge Hurd fully accepted on January 20, 2011. Judge Hurd rejected the plaintiff's request for a ruling in his favor. However, he partially granted and partially denied the defendants' request for a ruling in their favor. The claims that remained active included those related to his right to practice religion and claims under the Religious Land Use and Institutionalized Persons Act. These claims concerned the lack of Al-Jumu’ah services, the absence of a Halal menu, being denied sacred food on religious holidays, and the requirement to attend classes on Fridays. The court dismissed (or threw out) other claims. These included the religious freedom claims about bowls, utensils, and serving fish on Fridays; the claim about the separation of church and state regarding serving fish on Fridays; the claims about fair treatment; the claim about cruel and unusual punishment; and the claim against the New York State Office of Health Commissioner.\n\nAfter a lawyer was appointed to work for free (pro bono) on September 29, 2011, both sides moved to settle the lawsuit. On November 14, 2011, both sides agreed to have Magistrate Judge Lowe supervise the settlement discussions and the final agreement. On February 7, 2012, the parties reached a settlement, which Magistrate Judge Lowe approved the next day. Under the settlement, the defendants agreed to pay the plaintiff $15,000. This amount covered all money for harm, court costs, and legal fees. The defendants also agreed to provide a Halal menu and hire a religious leader (Imam) to lead Al-Jumu’ah services on Fridays. As no action has been taken on this case since, it is likely this case is closed.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 548,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 47,
+                  "procedure_keyword_frequency": 0.08576642335766424,
+                  "fkgl_score": 12.6295461758172,
+                  "ncr_score": 11.387835956839098
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "fkgl_passed": true,
+                  "ncr_passed": true,
+                  "citation_passed": true,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 548,
+                "citation_count": 0,
+                "procedure_keyword_count": 47,
+                "procedure_keyword_frequency": 0.08576642335766424,
+                "fkgl_score": 12.6295461758172,
+                "ncr_score": 11.387835956839098
+              }
+            },
+            "2": {
+              "success": true,
+              "transformed_text": "On February 20, 2009, a Muslim prisoner at the Central New York Psychiatric Center filed a lawsuit in a federal court in New York. The prisoner, acting as his own lawyer, sued several officials, including the Director of the Sex Offender Treatment Program and the Executive Director of the Central New York Psychiatric Center. He brought the case under a federal civil rights law that allows people to sue government officials for violating their rights. He asked the court to order changes and pay him money, claiming his rights were violated. These rights included the First Amendment's guarantee of religious freedom, the Fifth and Fourteenth Amendments' promise of fair treatment (known as 'due process'), and the Eighth Amendment's protection against cruel and unusual punishment. The prisoner claimed that his facility, the Central New York Psychiatric Center (CNYPC), did not allow him to properly participate in Al-Jumu’ah prayer services, forced him to attend classes on Fridays in violation of Muslim practice, and denied him food that followed Halal dietary laws.\n\nOn March 17, 2010, the prisoner asked the court to decide the case in his favor without a full trial, a request known as a \"motion for summary judgment.\" He argued there was clear evidence that the CNYPC misunderstood the requirements for Al-Jumu’ah prayer, which violated his right to practice his religion. On April 14, 2010, the officials he sued filed their own request for a ruling in their favor. They argued (1) that Al-Jumu’ah prayer wasn't provided because no Imams were available in the area to lead services, (2) the food offered in the cafeteria allowed those following a Halal diet to eat healthily without breaking their dietary laws, and (3) the utensils were cleaned well enough to meet Halal standards.\n\nOn December 23, 2010, a lower-level judge, Magistrate Judge George Lowe, made a recommendation to the main judge, Judge David Hurd. Judge Hurd fully agreed with this recommendation on January 20, 2011. Judge Hurd denied the prisoner's request to rule in his favor. However, he partly approved and partly rejected the officials' request for a ruling in their favor. Some of the prisoner's claims were allowed to continue. These included those related to his right to practice religion, specifically under a law called the Religious Land Use and Institutionalized Persons Act (RLUIPA), which protects the religious freedom of people in institutions. These claims concerned the lack of Al-Jumu’ah services, the absence of a Halal menu, being denied sacred food on religious holidays, and the requirement to attend classes on Fridays. The court dismissed, or threw out, other claims. These dismissed claims included religious freedom complaints about bowls, utensils, and serving fish on Fridays; a claim about the separation of church and state regarding serving fish on Fridays; the claims about fair treatment; the claim about cruel and unusual punishment; and the claim against the New York State Office of Health Commissioner.\n\nAfter a lawyer was appointed to work for free, or \"pro bono,\" on September 29, 2011, both sides decided to try and settle the lawsuit. On November 14, 2011, both sides agreed to have Magistrate Judge Lowe oversee the settlement talks and the final agreement. On February 7, 2012, the parties reached a settlement, which Magistrate Judge Lowe approved the next day. Under the agreement, the officials agreed to pay the prisoner $15,000. This money covered damages, court costs, and legal fees. The officials also agreed to provide a Halal menu and hire a religious leader, an Imam, to lead Al-Jumu’ah services on Fridays. As no action has been taken on this case since, it is likely this case is closed.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 603,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 41,
+                  "procedure_keyword_frequency": 0.06799336650082918,
+                  "fkgl_score": 12.554170812603648,
+                  "ncr_score": 11.33327295573415
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "fkgl_passed": true,
+                  "ncr_passed": true,
+                  "citation_passed": true,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 603,
+                "citation_count": 0,
+                "procedure_keyword_count": 41,
+                "procedure_keyword_frequency": 0.06799336650082918,
+                "fkgl_score": 12.554170812603648,
+                "ncr_score": 11.33327295573415
+              }
+            },
+            "3": {
+              "success": true,
+              "transformed_text": "On February 20, 2009, a Muslim prisoner at the Central New York Psychiatric Center started a lawsuit in a federal court in New York. The prisoner, acting as his own lawyer, sued several officials, including the Director of the Sex Offender Treatment Program and the Executive Director of the Central New York Psychiatric Center. He brought the case under a federal civil rights law that allows people to sue government officials for violating their rights. He asked the court to order changes and pay him money, claiming his rights were violated. These rights included the First Amendment's guarantee of religious freedom, the Fifth and Fourteenth Amendments' promise of fair treatment (known as 'due process'), and the Eighth Amendment's protection against cruel and unusual punishment. The prisoner claimed that his facility, the Central New York Psychiatric Center (CNYPC), did not allow him to properly participate in Al-Jumu’ah prayer services, forced him to attend classes on Fridays in violation of Muslim practice, and denied him food that followed Halal dietary laws.\n\nOn March 17, 2010, the prisoner asked the court to decide the case in his favor without a full trial, a request known as a \"motion for summary judgment.\" He argued there was clear evidence that the CNYPC misunderstood the requirements for Al-Jumu’ah prayer, which violated his right to practice his religion. On April 14, 2010, the officials he sued filed their own request for a ruling in their favor. They argued (1) that Al-Jumu’ah prayer wasn't provided because no Imams (religious leaders) were available in the area to lead services, (2) the food offered in the cafeteria allowed those following a Halal diet to eat healthily without breaking their dietary laws, and (3) the utensils were cleaned well enough to meet Halal standards.\n\nOn December 23, 2010, a lower-level judge, Magistrate Judge George Lowe, made a recommendation to the main judge, Judge David Hurd. Think of it like a teacher's aide giving a detailed report to the main teacher. Judge Hurd fully agreed with this recommendation on January 20, 2011. Judge Hurd denied the prisoner's request to rule in his favor. However, he partly approved and partly rejected the officials' request for a ruling in their favor. Some of the prisoner's claims were allowed to continue. These included those related to his right to practice religion, specifically under a law called the Religious Land Use and Institutionalized Persons Act (RLUIPA), which protects the religious freedom of people in institutions. These claims concerned the lack of Al-Jumu’ah services, the absence of a Halal menu, being denied sacred food on religious holidays, and the requirement to attend classes on Fridays. The court dismissed, or threw out, other claims. These dismissed claims included religious freedom complaints about bowls, utensils, and serving fish on Fridays; a claim about the separation of church and state regarding serving fish on Fridays; the claims about fair treatment; the claim about cruel and unusual punishment; and the claim against the New York State Office of Health Commissioner.\n\nAfter a lawyer was appointed to work for free, or \"pro bono,\" on September 29, 2011, both sides decided to try and settle the lawsuit. On November 14, 2011, both sides agreed to have Magistrate Judge Lowe oversee the settlement talks and the final agreement. On February 7, 2012, the parties reached a settlement, which Magistrate Judge Lowe approved the next day. Under the agreement, the officials agreed to pay the prisoner $15,000. This money covered damages, court costs, and legal fees. The officials also agreed to provide a Halal menu and hire a religious leader, an Imam, to lead Al-Jumu’ah services on Fridays. As no action has been taken on this case since, it is likely this case is closed.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 620,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 40,
+                  "procedure_keyword_frequency": 0.06451612903225806,
+                  "fkgl_score": 12.43587813620072,
+                  "ncr_score": 11.295204898446833
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "fkgl_passed": true,
+                  "ncr_passed": true,
+                  "citation_passed": true,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 620,
+                "citation_count": 0,
+                "procedure_keyword_count": 40,
+                "procedure_keyword_frequency": 0.06451612903225806,
+                "fkgl_score": 12.43587813620072,
+                "ncr_score": 11.295204898446833
+              }
+            },
+            "4": {
+              "success": true,
+              "transformed_text": "In 2009, a Muslim prisoner started a lawsuit. He was at a place called the Central New York Psychiatric Center. He sued some people in charge. These included the head of a program and the main boss of the center. He didn't have a lawyer at first.\n\nHe said they broke a federal law. This law lets people sue if their rights are taken away. He wanted the court to make changes. He also wanted money. He said his rights were broken. He said his rights to practice his religion were broken. He also said he wasn't treated fairly. And he said he was treated in a cruel way.\n\nHe claimed the center didn't let him pray properly. This was for a special Friday prayer called Al-Jumu’ah. He also said they made him go to classes on Fridays. This went against his Muslim beliefs. And he said they didn't give him Halal food.\n\nLater, the prisoner asked the judge to decide the case without a full trial. He wanted the judge to rule in his favor right away. He said it was clear the center didn't understand his prayer needs. He said this broke his right to practice his religion.\n\nThe people he sued also asked the judge to rule in their favor. They said they couldn't find religious leaders for the prayers. They also said the food was fine for a Halal diet. And they said the dishes were clean enough for Halal rules.\n\nThen, a judge named George Lowe gave his ideas to the main judge, Judge David Hurd. Judge Hurd agreed with him. Judge Hurd said no to the prisoner's request. But he partly agreed and partly disagreed with the officials' request.\n\nSome of the prisoner's complaints could still go forward. These were about his right to practice his religion. This was under a special law that protects religious freedom for people in places like the center. These complaints were about not having Al-Jumu’ah prayers. They were also about not having a Halal food menu. He also said he didn't get special food on religious holidays. And he had to go to classes on Fridays.\n\nThe court threw out his other complaints. These included complaints about bowls, dishes, and fish on Fridays. He also complained about church and state being mixed up because of the fish. His complaints about fair treatment and cruel treatment were also thrown out. And a complaint against a health office was thrown out too.\n\nLater, a lawyer started working for the prisoner for free. Then, both sides decided to try and solve the problem without more court fights. They agreed that Judge Lowe would help them talk and make a deal.\n\nIn 2012, they made a deal. Judge Lowe approved it. The officials agreed to pay the prisoner $15,000. This money was for his troubles, court costs, and lawyer fees. The officials also agreed to offer Halal food. And they agreed to hire a religious leader, called an Imam, for the Friday prayers. Nothing else has happened in this case. So it is probably finished.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 513,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 25,
+                  "procedure_keyword_frequency": 0.04873294346978557,
+                  "fkgl_score": 4.4012799293832074,
+                  "ncr_score": 8.21029426974144
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "fkgl_passed": true,
+                  "ncr_passed": true,
+                  "citation_passed": true,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 513,
+                "citation_count": 0,
+                "procedure_keyword_count": 25,
+                "procedure_keyword_frequency": 0.04873294346978557,
+                "fkgl_score": 4.4012799293832074,
+                "ncr_score": 8.21029426974144
+              }
+            }
+          }
+        },
+        "Procedural": {
+          "dimension_name": "Procedural Detail ⇄ Narrative Clarity",
+          "dimension_description": "Transform from procedural to narrative",
+          "levels": {
+            "0": {
+              "text": "<p>On February 20, 2009, a Muslim prisoner at the Central New York Psychiatric Center filed this lawsuit in the U.S. District Court for the Northern District of New York. The pro se plaintiff sued the Director of the Sex Offender Treatment Program, the New York State Office of Health Commissioner, and the Executive Director of the Central New York Psychiatric Center under 42 U.S.C. §1983. The plaintiff sought injunctive and monetary relief, claiming violations of the First Amendment Free Exercise Clause, the Fifth and Fourteenth Amendment Due Process Clauses, and the Eighth Amendment prohibition against cruel and unusual punishment. The plaintiff alleged that his facility, the Central New York Psychiatric Center (CNYPC) did not allow him to properly participate in Al-Jumu’ah prayer services, forced him to attend classes on Fridays in violation of Muslim practice, and denied him food in compliance with Halal. </p><p>On March 17, 2010, the plaintiff moved for summary judgment. He argued there was clear evidence the CNYPC misunderstood the requirements for Al-Jumu’ah prayer and in doing so deprived him of Free Exercise. On April 14, 2010, the defendants filed a cross-motion for summary judgment, arguing (1) that the reason Al-Jumu’ah prayer has not been provided is that there are no Imams in the area who are available to facilitate, (2) the food offered in the cafeteria allows those following a Halal diet to sustain good health without violating their dietary laws, and (3) the utensils are sufficiently washed so as to be in compliance with Halal. </p><p>On December 23, 2010, Magistrate Judge George Lowe issued a report and recommendation to Judge David Hurd, (2010 WL 5620908), which Judge Hurd then adopted in full on January 20, 2011. Judge Hurd denied the plaintiff’s motion for summary judgment while granting in part and denying in part the defendant’s motion for summary judgment. The surviving claims included the Free Exercise and Religious Land Use and Institutionalized Persons Act claims regarding the lack of Al-Jumu’ah services, the lack of a Halal-compliant menu, the denial of access to sacred food on religious holidays, and the requirement to attend classes on Fridays. The court dismissed the Free Exercise claims regarding bowls, utensils, and serving fish on Fridays; the Establishment Clause claim regarding serving fish on Fridays; the Due Process Claims; the Eighth Amendment claim; and the claim against the New York State Office of Health Commissioner. 2011 WL 195648. </p><p>After the appointment of pro bono counsel on September 29, 2011, parties moved to settle the lawsuit. On November 14, 2011, the parties consented to have Magistrate Judge Lowe oversee the negotiations and final resolution of the case. On February 7, 2012, the parties settled and Magistrate Judge Lowe signed off on the settlement the next day. According to the settlement,  the defendants would pay the plaintiff $15,000, which included all damages, costs, and attorney’s fees, and the defendants further agreed to have a Halal menu in place and retain an Imam to lead Al-Jumu’ah services on Fridays. As no action has been taken on this case since, it is likely this case is closed. </p><p></p>",
+              "success": true,
+              "metadata": {
+                "word_count": 513,
+                "citation_count": 0,
+                "procedure_keyword_count": 50,
+                "procedure_keyword_frequency": 0.09746588693957114,
+                "fkgl_score": 14.685623781676416,
+                "ncr_score": 12.468014230019493
+              }
+            },
+            "1": {
+              "success": true,
+              "transformed_text": "In February 2009, a Muslim prisoner at the Central New York Psychiatric Center initiated a legal challenge, asserting that the facility's practices infringed upon his fundamental religious freedoms. Seeking both a change in policy and financial compensation, he claimed that the Central New York Psychiatric Center (CNYPC) prevented him from properly participating in Al-Jumu’ah prayer services, compelled him to attend classes on Fridays contrary to Muslim practice, and denied him food compliant with Halal dietary laws. This lawsuit was his attempt to rectify what he perceived as violations of his constitutional rights, particularly his right to free exercise of religion.\n\nA year later, in March 2010, the prisoner sought a decisive victory without the need for a full trial, arguing that the evidence unequivocally showed the CNYPC's failure to respect his religious practices, particularly concerning Al-Jumu’ah prayer. The defendants, in turn, countered in April 2010 with their own request for a judgment in their favor, aiming to dismiss the case by explaining their actions. They contended that the lack of Al-Jumu’ah services was due to the unavailability of Imams, that their cafeteria food adequately met Halal dietary needs, and that their utensils were properly maintained, thereby asserting their compliance with religious requirements.\n\nThe court's decision in early 2011 marked a pivotal moment, allowing certain core claims to move forward while dismissing others. While the prisoner's broad request for an immediate victory was denied, the court recognized the validity of his concerns regarding the absence of Al-Jumu’ah services, the lack of a Halal-compliant menu, the denial of sacred food on religious holidays, and the mandatory Friday classes. This ruling narrowed the scope of the dispute, focusing the legal battle on the most significant alleged infringements of his religious freedom.\n\nWith the assistance of newly appointed counsel, the parties ultimately sought to resolve the dispute outside of further litigation. This strategic move towards negotiation, overseen by the court, aimed to achieve a mutually agreeable resolution, avoiding the uncertainties and costs of a full trial. In February 2012, a settlement was reached: the defendants agreed to pay the prisoner $15,000 and, crucially, committed to implementing a Halal menu and retaining an Imam to lead Al-Jumu’ah services on Fridays. This outcome brought the long-standing dispute to a close, securing significant accommodations for the prisoner's religious practices.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 382,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 20,
+                  "procedure_keyword_frequency": 0.05235602094240838,
+                  "fkgl_score": 17.678376963350782,
+                  "ncr_score": 12.658296294804671
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "frequency_passed": true,
+                  "term_count_passed": true,
+                  "current_frequency": 0.05235602094240838,
+                  "previous_frequency": 0.09746588693957114,
+                  "current_term_count": 20,
+                  "previous_term_count": 50,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 382,
+                "citation_count": 0,
+                "procedure_keyword_count": 20,
+                "procedure_keyword_frequency": 0.05235602094240838,
+                "fkgl_score": 17.678376963350782,
+                "ncr_score": 12.658296294804671
+              }
+            },
+            "2": {
+              "success": true,
+              "transformed_text": "The central legal conflict in this case emerged when a Muslim prisoner at the Central New York Psychiatric Center asserted that the facility's practices infringed upon his fundamental religious freedoms, specifically regarding his participation in Al-Jumu’ah prayer services, mandatory attendance at Friday classes, and access to Halal-compliant food. Seeking both policy changes and financial compensation, the prisoner claimed these actions violated his constitutional rights.\n\nAfter filing the initial complaint, the parties filed cross-motions for summary judgment, each arguing for a decisive victory based on their interpretations of the facility's religious accommodations. The court's decision ultimately allowed certain core claims to proceed, recognizing the validity of the prisoner's concerns regarding the absence of Al-Jumu’ah services, the lack of a Halal-compliant menu, the denial of sacred food on religious holidays, and the requirement to attend classes on Fridays. This ruling narrowed the scope of the dispute, focusing the legal battle on the most significant alleged infringements of his religious freedom.\n\nWith the assistance of newly appointed counsel, the parties ultimately sought to resolve the dispute outside of further litigation. This strategic move towards negotiation, overseen by the court, aimed to achieve a mutually agreeable resolution, avoiding the uncertainties and costs of a full trial. A settlement was reached: the defendants agreed to pay the prisoner $15,000 and, crucially, committed to implementing a Halal menu and retaining an Imam to lead Al-Jumu’ah services on Fridays. This outcome brought the long-standing dispute to a close, securing significant accommodations for the prisoner's religious practices.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 249,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 16,
+                  "procedure_keyword_frequency": 0.0642570281124498,
+                  "fkgl_score": 18.373493975903617,
+                  "ncr_score": 13.442782730923696
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "frequency_passed": false,
+                  "term_count_passed": true,
+                  "current_frequency": 0.0642570281124498,
+                  "previous_frequency": 0.05235602094240838,
+                  "current_term_count": 16,
+                  "previous_term_count": 20,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 249,
+                "citation_count": 0,
+                "procedure_keyword_count": 16,
+                "procedure_keyword_frequency": 0.0642570281124498,
+                "fkgl_score": 18.373493975903617,
+                "ncr_score": 13.442782730923696
+              }
+            },
+            "3": {
+              "success": true,
+              "transformed_text": "A significant victory for religious freedom in correctional facilities was achieved when a Muslim prisoner secured a settlement requiring the Central New York Psychiatric Center to implement a Halal menu and retain an Imam to lead Al-Jumu’ah services on Fridays. This crucial agreement also included a $15,000 payment to the prisoner.\n\nThis outcome brought to a close a long-standing dispute where the prisoner asserted that the facility's practices infringed upon his fundamental religious freedoms. He argued he was unable to participate in Al-Jumu’ah prayer services, was forced to attend mandatory Friday classes, and was denied access to Halal-compliant food. His challenge sought both essential policy changes and financial compensation.\n\nHis persistent advocacy led to a court recognizing the validity of his core concerns, allowing his claims regarding the absence of Al-Jumu’ah services, the lack of a Halal-compliant menu, the denial of sacred food on religious holidays, and the requirement to attend classes on Fridays to move forward.\n\nUltimately, with the assistance of newly appointed counsel, the parties negotiated a resolution outside of further litigation. This strategic move ensured that the facility would now provide critical accommodations for the prisoner's religious practices, setting an important precedent for ensuring religious liberty within institutional settings.",
+              "attempts": 1,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 202,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 8,
+                  "procedure_keyword_frequency": 0.039603960396039604,
+                  "fkgl_score": 17.565420792079212,
+                  "ncr_score": 12.705731683168318
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "frequency_passed": true,
+                  "term_count_passed": true,
+                  "current_frequency": 0.039603960396039604,
+                  "previous_frequency": 0.0642570281124498,
+                  "current_term_count": 8,
+                  "previous_term_count": 16,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 202,
+                "citation_count": 0,
+                "procedure_keyword_count": 8,
+                "procedure_keyword_frequency": 0.039603960396039604,
+                "fkgl_score": 17.565420792079212,
+                "ncr_score": 12.705731683168318
+              }
+            },
+            "4": {
+              "success": true,
+              "transformed_text": "A Muslim man, held at the Central New York Psychiatric Center, faced a profound challenge to his faith. He felt unable to fully practice his religion. He was denied the special Halal meals his beliefs required, even on sacred holidays. Crucially, he couldn't join his community for the important Friday Al-Jumu’ah prayer services, and instead was made to attend mandatory classes, a direct conflict with his religious observance. This situation left him feeling his most basic religious freedoms were ignored.\n\nFeeling his fundamental rights were being violated, he decided he had to fight for his beliefs. He sought help through the system, asking for changes to the facility's policies and for recognition of the hardship he endured. His determination eventually led to his concerns being seriously considered.\n\nWith the help of new advocates, a path to resolution was found, avoiding further conflict. The facility agreed to significant changes: they would now provide a proper Halal menu and hire a religious leader, an Imam, to guide the Friday Al-Jumu’ah services. As a further acknowledgment of his struggle, the man also received a payment. This outcome not only changed his daily life but also established a vital standard, ensuring that others in similar settings could more freely practice their faith.",
+              "attempts": 2,
+              "validation_result": {
+                "passed": true,
+                "new_metadata": {
+                  "word_count": 208,
+                  "citation_count": 0,
+                  "procedure_keyword_count": 2,
+                  "procedure_keyword_frequency": 0.009615384615384616,
+                  "fkgl_score": 11.47961538461539,
+                  "ncr_score": 10.645223717948719
+                },
+                "hard_checks": {
+                  "passed": true,
+                  "frequency_passed": true,
+                  "term_count_passed": true,
+                  "current_frequency": 0.009615384615384616,
+                  "previous_frequency": 0.039603960396039604,
+                  "current_term_count": 2,
+                  "previous_term_count": 8,
+                  "failure_reason": null
+                },
+                "llm_critique": {
+                  "passed": true,
+                  "critique_text": "Factual Consistency: YES\nDimension Check: YES",
+                  "factual_consistency": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "dimension_check": {
+                    "verdict": "YES",
+                    "explanation": ""
+                  },
+                  "final_verdict": "PASS",
+                  "failure_reason": ""
+                },
+                "failure_reason": null
+              },
+              "metadata": {
+                "word_count": 208,
+                "citation_count": 0,
+                "procedure_keyword_count": 2,
+                "procedure_keyword_frequency": 0.009615384615384616,
+                "fkgl_score": 11.47961538461539,
+                "ncr_score": 10.645223717948719
+              }
+            }
+          }
+        }
+      },
+      "generation_metadata": {
+        "timestamp": "2025-08-06T10:47:48.088346",
+        "model": "gemini-2.5-flash",
+        "dimensions_processed": [
+          "Depth",
+          "Precision",
+          "Procedural"
+        ]
+      }
+    }
+  ]
+}
