@@ -13,6 +13,9 @@ Evaluation framework supporting both **AgentEval** (generic criteria) and **Pers
 ### `experiment/`
 Artifacts produced during dataset generation and evaluation. Contains cached rubric definitions, evaluation outputs for each summary variant, and the resulting controlled, dimension-shifted dataset.
 
+### `dci.pdf`
+The documentation for the proposed **Diversity-Coverage Index (DCI)**, a novel metric for assessing the quality of a persona set. DCI is the harmonic mean of Diversity (distinctiveness among personas) and Coverage (how well personas represent the user space), providing a single score to measure the quality of a persona-based evaluation framework. 
+
 ## Getting Started
 
 Each subdirectory includes detailed documentation and scripts for reproducing the dataset and evaluation results. Please refer to their respective `README.md` files for installation and usage instructions.
